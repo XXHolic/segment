@@ -4,3 +4,4 @@
 - [计量长度](https://github.com/XXHolic/css-point/issues/1)
 - [阻止自动填充帐号input](https://github.com/XXHolic/html-css-point/issues/4)
 - [在IOS下，用了iscroll.js，页面滑动明显卡顿](https://github.com/XXHolic/html-css-point/issues/5)
+- [在IOS下，input文本框获取焦点时，自动全选已有值](https://github.com/XXHolic/html-css-point/issues/6)
