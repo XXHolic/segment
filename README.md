@@ -1,4 +1,4 @@
-# css-point
+# html-css-point
 针对html和css零碎的知识点记录和总结
 
 - [inline-block 元素对齐的问题](https://github.com/XXHolic/html-css-point/issues/7)
