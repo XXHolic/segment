@@ -1,0 +1,21 @@
+{
+  "name": "html-css-point",
+  "version": "1.0.0",
+  "description": "This is blog!",
+  "main": "index.js",
+  "repository": "https://github.com/XXHolic/html-css-point.git",
+  "author": "thy",
+  "license": "MIT",
+  "dependencies": {
+    "commitizen": "^2.10.1"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0",
+    "yarn": "^1.7.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
