@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "^2.1.0",
+    "npx": "^10.2.0",
     "yarn": "^1.7.0"
   },
   "scripts": {
