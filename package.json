@@ -1,6 +1,6 @@
 {
   "name": "html-css-point",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This is blog!",
   "main": "index.js",
   "repository": "https://github.com/XXHolic/html-css-point.git",
@@ -15,11 +15,13 @@
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.3",
     "npx": "^10.2.0",
+    "standard-version": "^4.4.0",
     "yarn": "^1.7.0"
   },
   "scripts": {
     "commit": "git-cz",
-    "commitmsg": "commitlint -E GIT_PARAMS"
+    "commitmsg": "commitlint -E GIT_PARAMS",
+    "release": "standard-version"
   },
   "config": {
     "commitizen": {
