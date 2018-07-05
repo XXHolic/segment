@@ -10,12 +10,16 @@
     "commitizen": "^2.10.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
     "cz-conventional-changelog": "^2.1.0",
+    "husky": "^0.14.3",
     "npx": "^10.2.0",
     "yarn": "^1.7.0"
   },
   "scripts": {
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "commitmsg": "commitlint -E GIT_PARAMS"
   },
   "config": {
     "commitizen": {
