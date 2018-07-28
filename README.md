@@ -1,6 +1,7 @@
 # html-css-point
 针对html和css零碎的知识点记录和总结
 
+- [box-shadow 设置后看不到的问题](https://github.com/XXHolic/html-css-point/issues/10)
 - [安装 node-sass 遇到的问题](https://github.com/XXHolic/html-css-point/issues/9)
 - [移动端 Click 300 毫秒延迟的问题](https://github.com/XXHolic/html-css-point/issues/8)
 - [inline-block 元素对齐的问题](https://github.com/XXHolic/html-css-point/issues/7)
