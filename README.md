@@ -1,6 +1,7 @@
 # segment
 针对前端相关各种零碎问题和知识点的记录总结。
 
+- [模拟事件](https://github.com/XXHolic/segment/issues/11)
 - [box-shadow 设置后看不到的问题](https://github.com/XXHolic/segment/issues/10)
 - [安装 node-sass 遇到的问题](https://github.com/XXHolic/segment/issues/9)
 - [移动端 Click 300 毫秒延迟的问题](https://github.com/XXHolic/segment/issues/8)
