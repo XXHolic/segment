@@ -1,6 +1,7 @@
 # segment
 针对前端相关各种零碎问题和知识点的记录总结。
 
+- [GitHub 上常用之外的 Markdown 语法](https://github.com/XXHolic/segment/issues/12)
 - [模拟事件](https://github.com/XXHolic/segment/issues/11)
 - [box-shadow 设置后看不到的问题](https://github.com/XXHolic/segment/issues/10)
 - [安装 node-sass 遇到的问题](https://github.com/XXHolic/segment/issues/9)
