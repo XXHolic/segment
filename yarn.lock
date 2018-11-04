@@ -1228,7 +1228,7 @@ find-node-modules@1.0.4:
   resolved "http://registry.npm.taobao.org/find-node-modules/download/find-node-modules-1.0.4.tgz#b6deb3cccb699c87037677bcede2c5f5862b2550"
   dependencies:
     findup-sync "0.4.2"
-    merge "^1.2.0"
+    merge "^1.2.1"
 
 find-root@1.0.0:
   version "1.0.0"
@@ -2274,8 +2274,8 @@ meow@^5.0.0:
     trim-newlines "^2.0.0"
     yargs-parser "^10.0.0"
 
-merge@^1.2.0:
-  version "1.2.0"
+merge@^1.2.1:
+  version "1.2.1"
   resolved "http://registry.npm.taobao.org/merge/download/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
 
 micromatch@^2.3.7:
