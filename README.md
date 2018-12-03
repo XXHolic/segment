@@ -1,6 +1,7 @@
 # segment
 针对前端相关各种零碎问题和知识点的记录总结。
 
+- [Date 字符串格式](https://github.com/XXHolic/segment/issues/17)
 - [Date 转换问题](https://github.com/XXHolic/segment/issues/16)
 - [position 属性值 sticky](https://github.com/XXHolic/segment/issues/15)
 - [toString() 和 String() 的区别](https://github.com/XXHolic/segment/issues/14)
