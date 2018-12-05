@@ -1,4 +1,4 @@
-# JavaScript 新旧语法替换一：变量
+# JavaScript 新旧替换一：变量
 ## <a name="index"></a> 目录
 - [场景](#situation)
 - [变量](#style)
