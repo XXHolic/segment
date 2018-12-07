@@ -1,7 +1,7 @@
 # JavaScript 新旧替换一：变量
 ## <a name="index"></a> 目录
 - [场景](#situation)
-- [变量](#style)
+- [变量声明](#style)
   - [变量类型](#link)
   - [变量声明](#link)
 - [参考资料](#reference)
@@ -21,8 +21,9 @@
 
 
 ## <a name="reference"></a> 参考资料
-[wiki Regular Expression](https://en.wikipedia.org/wiki/Regular_expression)
-[正则表达式](http://www.runoob.com/regexp/regexp-tutorial.html)
-[regexr.com](https://regexr.com/)
-[正则表达式30分钟入门教程](http://deerchao.net/tutorials/regex/regex.htm)
-[learning-regular-expressions](https://stackoverflow.com/questions/4736/learning-regular-expressions)
+[ECMA 9th][url-ecma-9th]
+[ECMAScript 6 入门][url-es6-ruanyifeng]
+
+
+[url-ecma-9th]:http://www.ecma-international.org/ecma-262/9.0/index.html#sec-intro
+[url-es6-ruanyifeng]:http://es6.ruanyifeng.com/
