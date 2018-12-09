@@ -1,6 +1,7 @@
 # segment
 针对前端相关各种零碎问题和知识点的记录总结。
 
+- [JavaScript 新旧替换一：变量声明](https://github.com/XXHolic/segment/issues/18)
 - [Date 字符串格式](https://github.com/XXHolic/segment/issues/17)
 - [Date 转换问题](https://github.com/XXHolic/segment/issues/16)
 - [position 属性值 sticky](https://github.com/XXHolic/segment/issues/15)
