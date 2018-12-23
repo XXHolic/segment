@@ -1,6 +1,7 @@
 # segment
 针对前端相关各种零碎问题和知识点的记录总结。
 
+- [npm-Getting started](https://github.com/XXHolic/segment/issues/22)
 - [canvas 设置边框问题](https://github.com/XXHolic/segment/issues/21)
 - [canvas 显示模糊问题](https://github.com/XXHolic/segment/issues/20)
 - [canvas 宽高问题](https://github.com/XXHolic/segment/issues/19)
