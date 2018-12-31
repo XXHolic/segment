@@ -1,6 +1,7 @@
 # segment
 针对前端相关各种零碎问题和知识点的记录总结。
 
+- [canvas 文字换行](https://github.com/XXHolic/segment/issues/25)
 - [canvas 图片圆角问题](https://github.com/XXHolic/segment/issues/24)
 - [Lerna](https://github.com/XXHolic/segment/issues/23)
 - [npm-Getting started](https://github.com/XXHolic/segment/issues/22)
