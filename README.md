@@ -1,6 +1,7 @@
 # segment
 针对前端相关各种零碎问题和知识点的记录总结。
 
+- [npm 发布包遇到的问题](https://github.com/XXHolic/segment/issues/28)
 - [预请求 405 问题](https://github.com/XXHolic/segment/issues/27)
 - [canvas 图片跨域处理](https://github.com/XXHolic/segment/issues/26)
 - [canvas 文字换行](https://github.com/XXHolic/segment/issues/25)
