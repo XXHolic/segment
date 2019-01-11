@@ -1,0 +1,13 @@
+# Mac Tool
+- vscode \ nodejs \ zsh
+- WPS 预览版
+- IINA 播放器
+- Magnet 分页窗口
+- Docker
+- MindNode
+- 欧路词典
+- Sketch
+- Karabiner-Elements
+- xclient.info  破解软件查找网站
+- mysql 工具 Sequel Pro
+- https://brew.sh/index_zh-cn  用于自动从互联网的软件仓库中搜索、安装、升级、卸载软件或操作系统
