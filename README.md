@@ -1,6 +1,7 @@
 # segment
 前端路上碰到的各种零碎问题、知识点，在此进行记录总结。
 
+- [canvas 文本坐标(0,0)显示问题](https://github.com/XXHolic/segment/issues/29)
 - [npm 发布包遇到的问题](https://github.com/XXHolic/segment/issues/28)
 - [预请求 405 问题](https://github.com/XXHolic/segment/issues/27)
 - [canvas 图片跨域处理](https://github.com/XXHolic/segment/issues/26)
