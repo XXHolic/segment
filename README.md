@@ -1,6 +1,7 @@
 # segment
 前端路上碰到的各种零碎问题、知识点，在此进行记录总结。
 
+- [图片 src 为二进制的处理](https://github.com/XXHolic/segment/issues/33)
 - [ASCII 和 Base64](https://github.com/XXHolic/segment/issues/32)
 - [打印分页问题](https://github.com/XXHolic/segment/issues/31)
 - [Chrome Failed to load response data](https://github.com/XXHolic/segment/issues/30)
