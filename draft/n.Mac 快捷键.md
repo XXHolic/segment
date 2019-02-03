@@ -1,6 +1,6 @@
 # n.Mac 快捷键
 ## 场景
-用了 Mac 后，发现需要用到很多快捷键，自身都不配鼠标。为了更加更加方便使用，将一些个人不熟悉的快捷键收集一下。
+用了 Mac 后，发现需要用到很多快捷键，自身都不配鼠标。为了更加方便使用，将一些个人不熟悉的快捷键收集一下。
 
 ## 修饰键
 Mac 上的许多应用菜单在某些菜单选项旁边显示组合键，如 Command 符号，然后 N。组合键中的符号表示特殊的键盘按键，称为修饰键。
@@ -12,6 +12,8 @@ Mac 上的许多应用菜单在某些菜单选项旁边显示组合键，如 Com
 |Control（或 Ctrl） | ⌃|
 |Caps Lock  | ⇪|
 |Tab  | ->\||
+|Delete  | <img src="https://help.apple.com/assets/5BBCEA2409462239278318D5/5BBCEA2809462239278318DE/zh_CN/218d37fa854c02bcf94075c546a8c409.png" alt="Delete 符号" height="23" width="23" originalimagename="SharedGlobalArt/L0062_moddl.png">|
+|Return  | <img src="https://help.apple.com/assets/5BBCEA2409462239278318D5/5BBCEA2809462239278318DE/zh_CN/078689fe0beeb14141babebacd04c2b6.png" alt="Return 符号" height="23" width="23" originalimagename="SharedGlobalArt/L0072_modrtn.png">|
 
 
 在 Windows PC 专用键盘上， Alt 键代替 Option 键，Windows 标志键代替 Command 键。
@@ -37,11 +39,14 @@ Mac 上的许多应用菜单在某些菜单选项旁边显示组合键，如 Com
 - 打开“下载”文件夹：Option-Command-L。
 - 列表视图，打开所选文件夹：右箭头。
 - 列表视图，关闭所选文件夹：左箭头。
+- 重命名文件：return
 
 ## 文本
 - 到当前行开头：fn-左箭头
 - 到当前行末尾：fn-右箭头
 
+## Chrome
+- 打开开发者工具：option-command-i。
 
 
 ## 参考资料
