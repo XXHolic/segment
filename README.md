@@ -1,6 +1,7 @@
 # segment
 前端路上碰到的各种零碎问题、知识点，在此进行记录总结。
 
+- [JavaScript 新旧替换三：参数转换](https://github.com/XXHolic/segment/issues/36)
 - [JavaScript 新旧替换二：赋值和取值](https://github.com/XXHolic/segment/issues/35)
 - [Mac 快捷键](https://github.com/XXHolic/segment/issues/34)
 - [图片 src 为二进制的处理](https://github.com/XXHolic/segment/issues/33)
