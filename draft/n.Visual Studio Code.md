@@ -3,17 +3,32 @@
 ## <a name="index"></a> 目录
 
 - [场景](#situation)
-- [问题 1](#style)
-  - [问题 12](#link)
+- [插件](#plugin)
+- [配置](#config)
+- [快捷键](#shortcut)
+- [其它](#other)
 - [参考资料](#reference)
 
 ## <a name="situation"></a> 场景
 
 为了提升效率，在此记录一下有帮助的插件和操作等等。版本 1.34。
 
-## 插件
+## <a name="plugin"></a> 插件
 
-## 配置
+- Markdown All in One：处理 markdown
+- ESLint：检查 js
+- Code Spell Checker：检查拼写
+- open in browser：在浏览器中打开文件
+- Debugger for Chrome：调试
+- vscode-icons：各类文件图标
+- Path Intellisense：路径自动补充
+- Project Manager：项目管理
+- GitLens：git 查看历史
+- Bracket Pair Colorizer：括号匹配颜色
+- Auto Rename Tag：同时修改匹配标签
+- beautify：格式化代码
+
+## <a name="config"></a> 配置
 
 打开用户设置 `settings.json` ：command-,
 
@@ -59,7 +74,7 @@
 
 `git config --global merge.tool code`
 
-## 快捷键
+## <a name="shortcut"></a> 快捷键
 
 - 命令行模式：Shift-Command-P
 - 快速查找文件：Command-P
@@ -73,7 +88,7 @@
 - 跳转到关键标志：shift-command-G
 - 跳转到对应行：control-G
 
-## 其它
+## <a name="other"></a> 其它
 
 ### 调试
 
