@@ -87,6 +87,7 @@
 - 上下移动行：option-上/下箭头
 - 跳转到关键标志：shift-command-G
 - 跳转到对应行：control-G
+- 格式化：shift + option + F
 
 ## <a name="other"></a> 其它
 
