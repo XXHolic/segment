@@ -1,9 +1,9 @@
 {
-  "name": "html-css-point",
+  "name": "segment",
   "version": "1.1.1",
-  "description": "This is blog!",
+  "description": "",
   "main": "index.js",
-  "repository": "https://github.com/XXHolic/html-css-point.git",
+  "repository": "https://github.com/XXHolic/segment.git",
   "author": "thy",
   "license": "MIT",
   "dependencies": {
