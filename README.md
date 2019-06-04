@@ -1,5 +1,5 @@
 # segment
-前端路上碰到的各种零碎问题、知识点，在此进行记录总结。
+Scattered knowledge points in here. Maybe you can find something useful.
 
 - [关于 this 的误解](https://github.com/XXHolic/segment/issues/40)
 - [The new Operator](https://github.com/XXHolic/segment/issues/39)
