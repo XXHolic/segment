@@ -27,6 +27,7 @@
 - Bracket Pair Colorizer：括号匹配颜色
 - Auto Rename Tag：同时修改匹配标签
 - beautify：格式化代码
+- vscode-mindmap：脑图
 
 ## <a name="config"></a> 配置
 
