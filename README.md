@@ -1,6 +1,7 @@
 # segment
 前端路上碰到的各种零碎问题、知识点，在此进行记录总结。
 
+- [关于 this 的误解](https://github.com/XXHolic/segment/issues/40)
 - [The new Operator](https://github.com/XXHolic/segment/issues/39)
 - [Writing Modes](https://github.com/XXHolic/segment/issues/38)
 - [复制到剪切板的问题](https://github.com/XXHolic/segment/issues/37)
