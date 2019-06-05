@@ -1,5 +1,5 @@
 # segment
-Scattered knowledge points in here. Maybe you can find something useful.
+Scattered knowledge points here. Maybe you can find something useful.
 
 - [关于 this 的误解](https://github.com/XXHolic/segment/issues/40)
 - [The new Operator](https://github.com/XXHolic/segment/issues/39)
