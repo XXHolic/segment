@@ -28,6 +28,7 @@
 - Auto Rename Tag：同时修改匹配标签
 - beautify：格式化代码
 - vscode-mindmap：脑图
+- sass：sass 文件类型支持，默认是不支持的。
 
 ## <a name="config"></a> 配置
 
