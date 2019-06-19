@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [Programming paradigm](https://github.com/XXHolic/segment/issues/42)
 - [apply、call 和 bind 方法](https://github.com/XXHolic/segment/issues/41)
 - [关于 this 的误解](https://github.com/XXHolic/segment/issues/40)
 - [The new Operator](https://github.com/XXHolic/segment/issues/39)
