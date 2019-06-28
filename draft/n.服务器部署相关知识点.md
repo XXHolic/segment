@@ -48,7 +48,9 @@ rm -rf 目录名称
 ```
 - ctrl z ： 终止当前程序
 - cd /：回到根目录
-
+- ps -A: 查看所有运行中的进程
+- pgrep nginx: 搜索 nginx 相关的进程
+- kill PID : 终止 PID 对应进程
 
 ## wget
 - Linux系统中的一个下载文件的工具
