@@ -170,6 +170,23 @@ $ ssh -p 2222 user@host
 ## pm2
 pm2 是 node进程管理工具，可以利用它来简化很多node应用管理的繁琐任务，如性能监控、自动重启、负载均衡等，而且使用非常简单。
 
+https://pm2.io/doc/en/runtime/overview/
+
+
+- pm2 start
+- pm2 stop
+- pm2 restart
+- pm2 delete
+
+运行项目下 package.json 里面的 script
+```shell
+pm2 start npm -- start
+
+pm2 start npm --name test -- start
+
+```
+155864
+
 ## 参考资料
 
 
