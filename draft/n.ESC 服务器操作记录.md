@@ -26,3 +26,9 @@ Are you sure you want to continue connecting (yes/no)?
 
 bin   dev  home  lib64       media  opt   root  sbin  sys  usr <br />
 boot  etc  lib   lost+found  mnt    proc  run   srv   tmp  var
+
+## 安装
+### nginx
+
+
+/Users/thy/Desktop/node-v10.16.0.tar.gz

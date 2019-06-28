@@ -40,7 +40,15 @@ Linux 可安装在各种计算机硬件设备中，比如手机、平板电脑�
 - ls -l ：查看文件的详细列表信息
 - tar -xvzf name.gz : 解压缩包
 - mkdir ： 创建目录
+- rm：删除文件或目录
+- ctrl z ： 终止当前程序
 
+
+## wget
+- Linux系统中的一个下载文件的工具
+- wget支持HTTP，HTTPS和FTP协议，可以使用HTTP代理。
+- wget可以在用户退出系统的之后在后台执行。这意味这你可以登录系统，启动一个wget下载任务，然后退出系统，wget将在后台执行直到任务完成，
+- wget 可以跟踪HTML页面上的链接依次下载来创建远程服务器的本地版本，完全重建原始站点的目录结构。这又常被称作”递归下载”。在递归下载的时候，wget 遵循Robot Exclusion标准(/robots.txt). wget可以在下载的同时，将链接转换成指向本地文件，以方便离线浏览。
 
 ## yum
 - yum（ Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE中的Shell前端软件包管理器。
