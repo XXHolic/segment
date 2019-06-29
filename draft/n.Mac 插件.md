@@ -16,6 +16,12 @@
 ### The Unarchiver
 免费解压各种类型压缩包
 
+### nvm
+node 版本管理工具
+
+### nrm
+npm 源切换
+
 ### tree
 ```
 brew install tree
