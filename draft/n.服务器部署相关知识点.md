@@ -51,6 +51,8 @@ rm -rf 目录名称
 - ps -A: 查看所有运行中的进程
 - pgrep nginx: 搜索 nginx 相关的进程
 - kill PID : 终止 PID 对应进程
+- sudo vi /etc/hosts ： 修改 hosts
+
 
 ## wget
 - Linux系统中的一个下载文件的工具
