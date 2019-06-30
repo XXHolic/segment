@@ -184,10 +184,14 @@ logout
 就是默认访问的页面，直接访问localhost时就会自动需找root文件路径下的index.html或index.htm文件，将其作为第一个找到的结果返回；
 
 #### location
-每个url请求都会对应一个服务，Nginx通过location进行匹配后进入到不同的服务路径，其结果可能对应到另外一个服务器，可能是本地的一个文件路径，也可能是服务器的一个路径。示例中“/”表示localhost下的请求都要走其对应的配置；
+每个url请求都会对应一个服务，Nginx通过location进行匹配后进入到不同的服务路径，其结果可能对应到另外一个服务器，可能是本地的一个文件路径，也可能是服务器的一个路径。示例中“/”表示localhost下的请求都要走其对应的配置；如果有 root 字段，location 的匹配会结合 root 字段，例如 root a/b , location 匹配 /test 那么就会到 a/b 下面去找有没有 test
 
 #### try_files
 含义是Nginx会按照接下来的顺序去访问文件，将第一个匹配的返回。示例中的含义就是例如请求“localhost/test”,，它就会去需找“/test”文件，找不到就去找“/test/”下的文件，再找不到就返回一个404。
+
+#### alias
+root响应的路径：配置的路径+完整访问路径(完整的location配置路径+静态文件)
+alias响应的路径：配置路径+静态文件(去除location中配置的路径)
 
 ### 命令
 - start nginx          启动Nginx
