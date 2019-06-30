@@ -134,3 +134,14 @@ yum -y install gcc make gcc-c++ openssl-deve
 ```
 make && make install
 ```
+
+## 开启 nginx 压缩和缓存
+
+https://www.cnblogs.com/zhongxia/p/5901027.html
+
+看 Rsponse header 是否开启了压缩和缓存：
+accept-encoding : 对主体进行编码的方式
+
+
+## 绑定域名
+在域名解析中添加一条记录，把服务器 ip 填入到 “记录值” 字段就可以了。

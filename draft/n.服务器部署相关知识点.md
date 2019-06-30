@@ -52,6 +52,7 @@ rm -rf 目录名称
 - pgrep nginx: 搜索 nginx 相关的进程
 - kill PID : 终止 PID 对应进程
 - sudo vi /etc/hosts ： 修改 hosts
+- netstat –apn: 查看端口占用情况
 
 
 ## wget
@@ -187,6 +188,16 @@ logout
 
 #### try_files
 含义是Nginx会按照接下来的顺序去访问文件，将第一个匹配的返回。示例中的含义就是例如请求“localhost/test”,，它就会去需找“/test”文件，找不到就去找“/test/”下的文件，再找不到就返回一个404。
+
+### 命令
+- start nginx          启动Nginx
+- nginx -s stop       快速停止Nginx，可能不保存相关信息
+- nginx -s quit        停止Nginx，完整有序的停止Nginx，并保存相关信息
+- nginx -s reload     改变了配置文件时，重新启动
+- nginx -v                显示nginx的版本
+- nginx -V                显示nginx的版本并显示nginx的配置参数信息
+- nginx -s reopen     打开日志文件
+
 
 
 ## pm2
