@@ -229,5 +229,5 @@ pm2 start npm --name test -- start
 
 [url-centos]:https://www.centos.org/
 [url-blog-ssh]:http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html
-[url-local-linux-file-structure]:../images/n/linux-file-structure.jpg
-[url-local-vim]:../images/n/vim-vi-workmodel.jpg
+[url-local-linux-file-structure]:../images/n/linux-file-structure.png
+[url-local-vim]:../images/n/vim-vi-workmodel.png
