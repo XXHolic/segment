@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [Node 遍历文件](https://github.com/XXHolic/segment/issues/45)
 - [Linux 下克隆 GitHub 库很慢](https://github.com/XXHolic/segment/issues/44)
 - [sudo 找不到命令](https://github.com/XXHolic/segment/issues/43)
 - [Programming paradigm](https://github.com/XXHolic/segment/issues/42)
