@@ -17,7 +17,7 @@
 
 ### 模块
 一个模块是在 node_modules 目录下能通过 Node.js 的 require() 方法加载的任何文件或者目录。为了能够让 Node.js 的 require() 加载，一个模块必须要是下面其中之一：
-- 一个有包含 “mian” 字段的 package.json 文件的文件夹。
+- 一个有包含 “main” 字段的 package.json 文件的文件夹。
 - 一个有 index.js 文件的文件夹。
 - 一个 JavaScript 文件。
 
