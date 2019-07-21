@@ -145,3 +145,10 @@ accept-encoding : 对主体进行编码的方式
 
 ## 绑定域名
 在域名解析中添加一条记录，把服务器 ip 填入到 “记录值” 字段就可以了。
+
+## 卸载 node
+安装 yarn 时 会附带安装了低版本的 node 这时候要么安装的时候要注意，不要安装这个版本的 node ，如果安装了，node 版本会变低，这个时候卸载 这个版本的 node
+```
+yum remove nodejs npm -y
+```
+其依赖的 yarn 也会被卸载。卸载后，再 source /etc/profile 一次，让之前设置的变量生效，node 就是设置的版本了。
