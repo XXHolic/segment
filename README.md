@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [Transaction processing](https://github.com/XXHolic/segment/issues/47)
 - [Node Command-line utility](https://github.com/XXHolic/segment/issues/46)
 - [Node 遍历文件](https://github.com/XXHolic/segment/issues/45)
 - [Linux 下克隆 GitHub 库很慢](https://github.com/XXHolic/segment/issues/44)
