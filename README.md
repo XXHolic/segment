@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [JavaScript 新旧替换四：继承](https://github.com/XXHolic/segment/issues/49)
 - [Object Overview](https://github.com/XXHolic/segment/issues/48)
 - [Transaction processing](https://github.com/XXHolic/segment/issues/47)
 - [Node Command-line utility](https://github.com/XXHolic/segment/issues/46)
