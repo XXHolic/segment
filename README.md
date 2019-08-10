@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [stylelint rules](https://github.com/XXHolic/segment/issues/51)
 - [CORS](https://github.com/XXHolic/segment/issues/50)
 - [JavaScript 新旧替换四：继承](https://github.com/XXHolic/segment/issues/49)
 - [Object Overview](https://github.com/XXHolic/segment/issues/48)
