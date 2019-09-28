@@ -217,7 +217,11 @@ Eat supper
 
 
 ## <a name="reference"></a> 其它资料
-- [example][url-base]
+- [Daily-Interview-Question][url-github-interview]
+- [Reverse-Interview-Question][url-github-reverse-interview]
 
 
 [url-base]:https://xxholic.github.io/segment/images
+
+[url-github-interview]:https://github.com/Advanced-Frontend/Daily-Interview-Question
+[url-github-reverse-interview]:https://github.com/yifeikong/reverse-interview-zh
