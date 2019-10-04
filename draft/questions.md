@@ -305,6 +305,64 @@ xss csrf 是什么？防御怎么做？
 使用 new 的时候，过程发生了什么
 
 ## <a name="answer"></a> 问答
+### 基础类
+- 原型链的理解（注意：prototype、 __proto__ ）
+- 闭包的理解
+- HTTP 各版本的差异
+- AMD、CMD、commonjs 规范差异
+- 那些情况算跨域？解决跨域的方法有那些？
+- css3 动画和 js 动画那个性能比较好？
+- 浏览器怎么实现异步操作？
+- 安全方面的知识有那些了解？
+- 使用 new 的时候，过程发生了什么？
+- 函数 this 的绑定有那些情况？
+- 内存泄漏和内存溢出
+- 垃圾回收机制
+- promise、generator 讲解一下
+- 常用设计模式
+- cors 实现的原理
+- https 和 http 区别
+- http 常用请求头
+- js 常用数据结构
+- 对象的一些属性
+- es5 的继承跟 es6 的继承区别
+- 节流和防抖
+- var 变量提升 和 function 变量提升区别
+- bind 方法做了什么
+- 递归中出现相互引用 如何处理
+- babel 转成 es5 后是什么样子的（例如 promise
+- Object.create() 如果用 es5 怎么实现
+- 浏览器加载一个页面到显示经历了什么？
+- 用什么方法可以达到跟递归一样的效果
+- 从浏览器输入地址到渲染过程中会有什么缓存？
+- https 握手过程
+- session 和 cookie 区别
+- promise 规范中 then 和 caught 是如何传值的？
+
+### 框架类
+- Vue 和 React 的差异
+- 虚拟 DOM diff 算法是怎么实现的
+- React 的生命周期，详细说出来
+- React SEO 怎么做
+- saga 的优缺点
+- react 样式解决方案
+- React 如果创建一个弹窗
+- DVA 做了什么
+
+### 工程化类
+- webpack 生成的 manifest 文件作用
+- webpack 中 loader 的原理
+- webpack 打包太大怎么处理？
+
+### 其它类
+- 原生 app 的混合应用，听说过或者用过那些框架？
+- 有没有使用过工具，可以一套代码生成小程序、app 等一些对应的应用？
+- 有没有自己负责搭建过项目框架，用的是什么？
+- 目前比较流行的框架有没有关注？有那些？
+- 登录是用的 cookie 方式还是什么方式 ，是怎么带过去的？（jwt）
+- 前端的发展趋势的看法
+- app 如何保持长久的登录常态
+- 怎么知道用户在线
 
 
 <div align="right"><a href="#index">Back to top :arrow_up:</a></div>
