@@ -309,6 +309,9 @@ xss csrf 是什么？防御怎么做？
 ### <a name="write29"></a> 题目29
 使用 new 的时候，过程发生了什么
 
+
+<div align="right"><a href="#index">Back to top :arrow_up:</a></div>
+
 ## <a name="answer"></a> 问答
 ### 基础类
 - 原型链的理解（注意：prototype、 __proto__ ）
