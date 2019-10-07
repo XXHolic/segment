@@ -14,4 +14,4 @@
 - [example][url-base]
 
 
-[url-base]:https://xxholic.github.io/segment/images
+[url-base]:https://xxholic.github.io/segment
