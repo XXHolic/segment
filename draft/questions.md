@@ -120,6 +120,21 @@ console.log('55')
 编写程序统计 1 到 10000 之间的数字中数字 0 的总数。
 
 （说明：例如 1 到 20 之间带 0 的数字有 10、20，数字 0 的总数就是 2 ）
+<details>
+<summary>解题思路一</summary>
+  
+```js
+function countZero(maxNum) {
+  let numStr = '';
+  for(let i = 1; i<=maxNum; i++) {
+    numStr += `${i}`;
+  }
+
+  return numStr.match(/0/g).length;
+}
+countZero(1000)
+```
+</details>
 
 ### <a name="write11"></a> 题目11：css 布局
 - 居中
