@@ -29,8 +29,6 @@ sql 版本 8.0.17 Homebrew， 环境 Mac 。
 - 查看当前用户： select current_user();
 - 查看密码策略： SHOW VARIABLES LIKE 'validate_password%';
 
-### 重置密码
-
 
 ## 错误
 ### ERROR! The server quit without updating PID file
