@@ -62,6 +62,18 @@ SSR 同构也是在 Node 这门服务端语言兴起后，使得 JS 可以同时
 - SEO
 - 首屏性能
 
+## 要解决的问题
+### 构建
+- 本地构建的时候，同步要编译服务器端的脚本，方式是开启 watch 模式，服务端也要对应脚本
+。
+
+### 路由
+- 只是部分要服务器端渲染
+
+
+
+### 异步
+
 
 <div align="right"><a href="#index">Back to top :arrow_up:</a></div>
 
@@ -74,6 +86,7 @@ SSR 同构也是在 Node 这门服务端语言兴起后，使得 JS 可以同时
 - [React服务端渲染与同构实践][url-blog5]
 - [React 中同构（SSR）原理脉络梳理][url-blog6]
 - [Here’s Why Client-side Rendering Won][url-blog7]
+- [实现SSR服务端渲染][url-blog8]
 
 
 
@@ -86,4 +99,5 @@ SSR 同构也是在 Node 这门服务端语言兴起后，使得 JS 可以同时
 [url-blog5]:https://imweb.io/topic/5d2da910b17a4bd24bd0678a
 [url-blog6]:https://segmentfault.com/a/1190000016722457
 [url-blog7]:https://www.freecodecamp.org/news/heres-why-client-side-rendering-won-46a349fadb52/
+[url-blog8]:https://juejin.im/post/5c8eed02f265da6824186088#heading-0
 
