@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [SEO Concept](https://github.com/XXHolic/segment/issues/60)
 - [JavaScript 新旧替换五：函数嵌套](https://github.com/XXHolic/segment/issues/59)
 - [Webpack Concept](https://github.com/XXHolic/segment/issues/57)
 - [String & Array Method](https://github.com/XXHolic/segment/issues/52)
