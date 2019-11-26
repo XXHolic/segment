@@ -135,6 +135,14 @@ system | String | 操作系统描述
 appVersion | String | 应用版本
 apiVersion | String | 接口版本
 
+除了上面所列之外，还有一些是用于存储时的字段：
+
+字段 | 类型 | 说明
+----- | ----- | -----
+traceId | String | 一个阶段产生一个traceId，用于追踪和一个异常相关的所有日志记录
+hash | String | 这条log的唯一标识码，相当于logId，但它是根据当前日志记录的具体内容而生成的
+time | Number | 当前日志产生的时间（保存时刻）
+
 
 ## <a name="reference"></a> 参考资料
 - [example][url-base]
