@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [textarea](https://github.com/XXHolic/segment/issues/64)
 - [回车和换行](https://github.com/XXHolic/segment/issues/63)
 - [Font](https://github.com/XXHolic/segment/issues/62)
 - [Rich Text Editor](https://github.com/XXHolic/segment/issues/61)
