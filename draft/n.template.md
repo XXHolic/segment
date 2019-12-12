@@ -7,9 +7,8 @@
 
 ## <a name="start"></a> 引子
 
+- [Origin][url-origin]
 - [My GitHub][url-my-github]
-- [My JueJin][url-my-juejin]
-- [My SegmentFault][url-my-github]
 
 <div align="right"><a href="#index">Back to top :arrow_up:</a></div>
 
@@ -19,6 +18,8 @@
 
 
 [url-base]:https://xxholic.github.io/segment
+[url-origin]:https://github.com/XXHolic/segment/issues/61
 [url-my-github]:https://github.com/XXHolic
+
 [url-my-segment]:https://segmentfault.com/u/thyholic
 [url-my-juejin]:https://juejin.im/user/5dedaf556fb9a0162a0b6a80
