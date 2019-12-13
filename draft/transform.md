@@ -22,6 +22,7 @@
 最终决定共同处理有：
 - 将图片的 .. 转换为对应的线上链接
 - 为每篇插入 origin 和 my github 的链接
+- 去掉目录
 
 用脚本生成两个模版：
 - 给简书/CSDN/segmentFault 用：去掉目录相关、detail 标签、html 的锚点

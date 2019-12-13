@@ -22,7 +22,9 @@
   "scripts": {
     "commit": "git-cz",
     "commitmsg": "commitlint -E GIT_PARAMS",
-    "release": "standard-version"
+    "release": "standard-version",
+    "del": "node './script/del.js'",
+    "tf": "node './script/del.js' && node './script/cli.js'"
   },
   "config": {
     "commitizen": {
