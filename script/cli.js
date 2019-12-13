@@ -47,16 +47,21 @@ function traverseFile(file) {
 }
 
 function dealFile(filePath) {
+  var fileName = path.basename(filePath);
+  const fileNameArr = fileName.split('.');
+  const articleLink = fileNameArr[2];
+
   const urlPrefix = 'https://xxholic.github.io/segment';
   const addText = '\r\n- [Origin][url-origin]\r\n- [My GitHub][url-my-github]\r\n\r\n';
-  const addUrl = '\r\n\r\n[url-origin]:https://github.com/XXHolic/segment/issues/1\r\n[url-my-github]:https://github.com/XXHolic';
+  const addUrl = `\r\n\r\n[url-origin]:https://github.com/XXHolic/segment/issues/${articleLink}\r\n[url-my-github]:https://github.com/XXHolic`;
   const str = fs.readFileSync(filePath,{encoding:'utf-8'});
   let splitArr = [];
   let newStr='';
   // 判断是否有目录并处理
   const indexIndex = str.indexOf('name="index"');
+  splitArr = str.split('##');
+
   if (indexIndex > -1) {
-    splitArr = str.split('##');
     splitArr.splice(1,1);
 
   }
@@ -99,9 +104,6 @@ function dealFile(filePath) {
 
   // 最末尾加上 URL
   secondStr = secondStr + addUrl;
-
-  var fileName = path.basename(filePath);
-  console.info('fileName',fileName);
 
   fs.writeFile(`${jjFilePath}/${fileName}`, newStr, dealError);
   fs.writeFile(`${sfFilePath}/${fileName}`, secondStr, dealError);
