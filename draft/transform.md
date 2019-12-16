@@ -20,7 +20,7 @@
 - 可以直接使用外部链接
 
 ## 博客园
-- 支持 GitHub 的 Markdown 语法，就是detail里面第一行换行要自己添加 `<br />`
+- 支持 GitHub 的 Markdown 语法，detail里面换行和链接无效
 - 支持 Markdown 目录导航
 - 可以直接使用外部链接
 
@@ -31,4 +31,4 @@
 用脚本生成两个模版：
 - 给简书/CSDN/segmentFault 用：去掉目录相关、detail 标签、html 的锚点
 - 给掘金用：去掉目录相关就可以了
-- 给博客园：保留目录，detail 后面加个 <br /> 标签
+- 给博客园：保留目录，去掉 detail
