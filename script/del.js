@@ -2,6 +2,10 @@
 var fs = require("fs");
 var path = require("path");
 
+var bkyFilePath = './draft/bky';
+var jjFilePath = './draft/jj';
+var sfFilePath = './draft/sf';
+
 function delDir(path){
   let files = [];
   if(fs.existsSync(path)){
@@ -18,8 +22,8 @@ function delDir(path){
   }
 }
 
-var jjFilePath = './draft/jj';
-var sfFilePath = './draft/sf';
 
+
+delDir(bkyFilePath);
 delDir(jjFilePath);
 delDir(sfFilePath);

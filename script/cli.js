@@ -37,6 +37,7 @@ function readDir(dir) {
 
 function traverseFile(file) {
   // 同步创建目录，没有回调
+  fs.mkdirSync(bkyFilePath, { recursive: true }, (err) => {});
   fs.mkdirSync(jjFilePath, { recursive: true }, (err) => {});
   fs.mkdirSync(sfFilePath, { recursive: true }, (err) => {});
 
@@ -56,27 +57,68 @@ function dealFile(filePath) {
   const addUrl = `\r\n\r\n[url-origin]:https://github.com/XXHolic/segment/issues/${articleLink}\r\n[url-my-github]:https://github.com/XXHolic`;
   const str = fs.readFileSync(filePath,{encoding:'utf-8'});
   let splitArr = [];
-  let newStr='';
-  // 判断是否有目录并处理
-  const indexIndex = str.indexOf('name="index"');
+  let commonDealStr='';
+
   splitArr = str.split('##');
-
+  // 判断是否有目录,在开始第一段插入 origin GitHub 显示文字
+  const indexIndex = str.indexOf('name="index"');
   if (indexIndex > -1) {
-    splitArr.splice(1,1);
-
+    splitArr[2] = splitArr[2] + addText
+  } else {
+    splitArr[1] = splitArr[1] + addText
   }
 
-  // 插入 origin GitHub 显示文字
-  splitArr[1] = splitArr[1] + addText
-
   // 替换 .. 为实际地址
-  newStr = splitArr.join('##');
-  newStr = newStr.replace(/\.\./g,urlPrefix);
+  commonDealStr = splitArr.join('##');
+  commonDealStr = commonDealStr.replace(/\.\./g,urlPrefix);
 
   // 最末尾加上 URL
-  newStr = newStr + addUrl;
+  commonDealStr = commonDealStr + addUrl;
 
-  let secondStr = newStr;
+  // 针对 博客园 的格式
+  let bkyStr = commonDealStr;
+  //去掉 emoji 符号 :wastebasket:  :arrow_up:
+  const wastebasketIndex = commonDealStr.indexOf(':wastebasket:');
+  const arrowUpIndex = commonDealStr.indexOf(':arrow_up:');
+  // const hasArrowUp = commonDealStr.indexOf(':arrow_up:');
+
+  if(arrowUpIndex>-1) {
+    bkyStr = bkyStr.replace(/:arrow_up:/g,'');
+  }
+
+  if (wastebasketIndex>-1) {
+    bkyStr = bkyStr.replace(/:wastebasket:/g,'');
+    const detailsIndex = bkyStr.lastIndexOf('<details>');
+    bkyStr = bkyStr.slice(0, detailsIndex);
+
+    // 最末尾加上 URL
+    bkyStr = bkyStr + addUrl;
+  }
+
+  // 针对 掘金 的格式
+  let jjStr = commonDealStr;
+  let jjStrArr = [];
+  if (indexIndex>-1) {
+    jjStrArr = jjStr.split('##');
+    jjStrArr.splice(1,1);
+  }
+
+  jjStr = jjStrArr.join('##');
+
+  if (wastebasketIndex>-1) {
+    jjStr = jjStr.replace(/:wastebasket:/g,'');
+  }
+
+  if(arrowUpIndex>-1) {
+    let replaceStr1 = '<div align="right"><a href="#index">Top :arrow_up:</a></div>';
+    let replaceStr2 = '<div align="right"><a href="#index">Back to top :arrow_up:</a></div>';
+    jjStr = jjStr.replace(new RegExp(replaceStr1,'g'),'');
+    jjStr = jjStr.replace(new RegExp(replaceStr2,'g'),'');
+  }
+
+
+  // 针对 segmentFault CSDN 简书 格式
+  let secondStr = jjStr;
   let secondStrArr = secondStr.split('##');
   let secondStrArrLen = secondStrArr.length;
   // 清除 title 上的 html 标签
@@ -96,16 +138,15 @@ function dealFile(filePath) {
   secondStr = secondStrArr.join('##');
 
   // 去除 details
-  const luggageIndex = secondStr.indexOf(':wastebasket:');
-  if (luggageIndex > -1) {
+  if (wastebasketIndex > -1) {
     const detailsIndex = secondStr.lastIndexOf('<details>');
     secondStr = secondStr.slice(0, detailsIndex);
+    // 最末尾加上 URL
+    secondStr = secondStr + addUrl;
   }
 
-  // 最末尾加上 URL
-  secondStr = secondStr + addUrl;
-
-  fs.writeFile(`${jjFilePath}/${fileName}`, newStr, dealError);
+  fs.writeFile(`${bkyFilePath}/${fileName}`, bkyStr, dealError);
+  fs.writeFile(`${jjFilePath}/${fileName}`, jjStr, dealError);
   fs.writeFile(`${sfFilePath}/${fileName}`, secondStr, dealError);
 }
 
@@ -120,6 +161,7 @@ function dealError(err) {
 
 var currentPath = './draft'; // 获取当前执行路径
 var fileArr = []; // 存储目标文件路径
+var bkyFilePath = './draft/bky';
 var jjFilePath = './draft/jj';
 var sfFilePath = './draft/sf';
 
