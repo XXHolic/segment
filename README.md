@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [Can I use xxx ?](https://github.com/XXHolic/segment/issues/66)
 - [textarea](https://github.com/XXHolic/segment/issues/64)
 - [回车和换行](https://github.com/XXHolic/segment/issues/63)
 - [Font](https://github.com/XXHolic/segment/issues/62)
