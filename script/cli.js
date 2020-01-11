@@ -101,9 +101,10 @@ function dealFile(filePath) {
   if (indexIndex>-1) {
     jjStrArr = jjStr.split('##');
     jjStrArr.splice(1,1);
+    jjStr = jjStrArr.join('##');
   }
 
-  jjStr = jjStrArr.join('##');
+
 
   if (wastebasketIndex>-1) {
     jjStr = jjStr.replace(/:wastebasket:/g,'');
@@ -148,13 +149,14 @@ function dealFile(filePath) {
   fs.writeFile(`${bkyFilePath}/${fileName}`, bkyStr, dealError);
   fs.writeFile(`${jjFilePath}/${fileName}`, jjStr, dealError);
   fs.writeFile(`${sfFilePath}/${fileName}`, secondStr, dealError);
+  console.info(`${fileName}转换成功`)
 }
 
 function dealError(err) {
   if (err) {
     console.error("文件写入失败");
   } else {
-    console.info("文件写入成功");
+    // console.info("文件写入成功");
   }
 }
 
