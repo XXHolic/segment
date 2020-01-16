@@ -122,7 +122,7 @@ console.log('55')
 （说明：例如 1 到 20 之间带 0 的数字有 10、20，数字 0 的总数就是 2 ）
 <details>
 <summary>解题思路一</summary>
-  
+
 ```js
 function countZero(maxNum) {
   let numStr = '';
@@ -144,7 +144,7 @@ countZero(1000)
 
 
 ### <a name="write12"></a> 题目12
-css link 标签和 @import 区别
+css 定位
 
 ### <a name="write13"></a> 题目13
 css link 标签和 @import 区别
@@ -352,7 +352,7 @@ xss csrf 是什么？防御怎么做？
 - var 变量提升 和 function 变量提升区别
 - bind 方法做了什么
 - 递归中出现相互引用 如何处理
-- babel 转成 es5 后是什么样子的（例如 promise
+- babel 转成 es5 后是什么样子的（例如 promise ）
 - Object.create() 如果用 es5 怎么实现
 - 浏览器加载一个页面到显示经历了什么？
 - 用什么方法可以达到跟递归一样的效果
