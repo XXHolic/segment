@@ -7,6 +7,7 @@
   "author": "thy",
   "license": "MIT",
   "dependencies": {
+    "@thynpm/nyx": "^1.0.2",
     "braces": "^2.3.1",
     "commitizen": "^2.10.1"
   },
