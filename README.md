@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [Safari 导航栏](https://github.com/XXHolic/segment/issues/70)
 - [粘性头部效果](https://github.com/XXHolic/segment/issues/68)
 - [浮层滚动问题](https://github.com/XXHolic/segment/issues/67)
 - [Can I use xxx ?](https://github.com/XXHolic/segment/issues/66)
