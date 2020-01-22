@@ -35,6 +35,7 @@ function readDir(dir) {
 
 function traverseFile(file) {
   // 同步创建目录，没有回调
+  fs.mkdirSync(originFilePath, { recursive: true }, err => {});
   fs.mkdirSync(bkyFilePath, { recursive: true }, err => {});
   fs.mkdirSync(jjFilePath, { recursive: true }, err => {});
   fs.mkdirSync(sfFilePath, { recursive: true }, err => {});
@@ -55,7 +56,14 @@ function dealFile(filePath) {
   const addText =
     "\r\n- [Origin][url-origin]\r\n- [My GitHub][url-my-github]\r\n\r\n";
   const addUrl = `\r\n\r\n[url-origin]:https://github.com/XXHolic/segment/issues/${articleLink}\r\n[url-my-github]:https://github.com/XXHolic`;
-  const str = fs.readFileSync(filePath, { encoding: "utf-8" });
+  let str = fs.readFileSync(filePath, { encoding: "utf-8" });
+
+  // 替换 .. 为实际地址
+  str = str.replace(/\.\./g, urlPrefix);
+
+  // 用于 GitHub
+  let githubStr = str;
+
   let splitArr = [];
   let commonDealStr = "";
 
@@ -70,7 +78,7 @@ function dealFile(filePath) {
 
   // 替换 .. 为实际地址
   commonDealStr = splitArr.join("##");
-  commonDealStr = commonDealStr.replace(/\.\./g, urlPrefix);
+  // commonDealStr = commonDealStr.replace(/\.\./g, urlPrefix);
 
   // 最末尾加上 URL
   commonDealStr = commonDealStr + addUrl;
@@ -163,6 +171,7 @@ function dealFile(filePath) {
 
 
 
+  fs.writeFile(`${originFilePath}/${fileName}`, githubStr, dealError);
   fs.writeFile(`${bkyFilePath}/${fileName}`, bkyStr, dealError);
   fs.writeFile(`${jjFilePath}/${fileName}`, jjStr, dealError);
   fs.writeFile(`${sfFilePath}/${fileName}`, secondStr, dealError);
@@ -171,6 +180,7 @@ function dealFile(filePath) {
 
 function dealError(err) {
   if (err) {
+    console.info('err',err);
     console.error("文件写入失败");
   } else {
     // console.info("文件写入成功");
@@ -179,6 +189,7 @@ function dealError(err) {
 
 var currentPath = "./draft"; // 获取当前执行路径
 var fileArr = []; // 存储目标文件路径
+var originFilePath = "./draft/origin";
 var bkyFilePath = "./draft/bky";
 var jjFilePath = "./draft/jj";
 var sfFilePath = "./draft/sf";

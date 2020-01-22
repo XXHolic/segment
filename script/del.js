@@ -1,10 +1,11 @@
 #! /usr/bin/env node
 var fs = require("fs");
-var path = require("path");
+// var path = require("path");
 
 var bkyFilePath = './draft/bky';
 var jjFilePath = './draft/jj';
 var sfFilePath = './draft/sf';
+var originFilePath = './draft/origin';
 
 function delDir(path){
   let files = [];
@@ -27,3 +28,4 @@ function delDir(path){
 delDir(bkyFilePath);
 delDir(jjFilePath);
 delDir(sfFilePath);
+delDir(originFilePath);

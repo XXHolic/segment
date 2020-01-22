@@ -18,3 +18,7 @@ node_modules/
 _site/
 *.log
 *.plist
+draft/bky/
+draft/jj/
+draft/sf/
+draft/origin/
