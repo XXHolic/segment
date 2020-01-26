@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [h5 穿透滚动](https://github.com/XXHolic/segment/issues/72)
 - [z-index](https://github.com/XXHolic/segment/issues/71)
 - [Safari 导航栏](https://github.com/XXHolic/segment/issues/70)
 - [粘性头部效果](https://github.com/XXHolic/segment/issues/68)
