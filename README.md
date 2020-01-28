@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [Canvas 图像灰度处理](https://github.com/XXHolic/segment/issues/74)
 - [图像](https://github.com/XXHolic/segment/issues/73)
 - [h5 穿透滚动](https://github.com/XXHolic/segment/issues/72)
 - [z-index](https://github.com/XXHolic/segment/issues/71)
