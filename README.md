@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [图像](https://github.com/XXHolic/segment/issues/73)
 - [h5 穿透滚动](https://github.com/XXHolic/segment/issues/72)
 - [z-index](https://github.com/XXHolic/segment/issues/71)
 - [Safari 导航栏](https://github.com/XXHolic/segment/issues/70)
