@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [Canvas 橡皮擦效果](https://github.com/XXHolic/segment/issues/75)
 - [Canvas 图像灰度处理](https://github.com/XXHolic/segment/issues/74)
 - [图像](https://github.com/XXHolic/segment/issues/73)
 - [h5 穿透滚动](https://github.com/XXHolic/segment/issues/72)
