@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [配置环境零碎点](https://github.com/XXHolic/segment/issues/77)
 - [Canvas 橡皮擦效果](https://github.com/XXHolic/segment/issues/75)
 - [Canvas 图像灰度处理](https://github.com/XXHolic/segment/issues/74)
 - [图像](https://github.com/XXHolic/segment/issues/73)
