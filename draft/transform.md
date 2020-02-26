@@ -38,6 +38,7 @@
 
 
 ## 已上传的文章
+### segment
 - 57.textarea.64
 - 54.Rich Text Editor.61
 - 51.Webpack Concept.57
@@ -47,4 +48,9 @@
 - 60.粘性头部效果.68
 - 61.Safari 导航栏.70
 - 63.h5 穿透滚动.72
+- 63.h5 穿透滚动.72
 - 66.Canvas 橡皮擦效果.75
+
+### blog
+- 47.About Performanc.47
+- 48.Performance Guide.48
