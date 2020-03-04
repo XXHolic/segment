@@ -181,6 +181,8 @@ logout
 #### server_name
 一个大型网站通常会有很多下属的站点，有各自的服务器提供相应的服务，再Nginx中用虚拟主机（server_name）将这些不同的服务配置隔离。server_name会和客户端http请求中的host进行匹配后转入到相应的服务器中；
 
+在匹配自域名的时候，例如 a.cc.com 和 b.cc.com，发现匹配不到，那么些全称试试，就是 www.a.cc.com 和 www.b.cc.com
+
 #### default_server
 如果有其它http请求的host在Nginx中不存在设置的话就用这个server的配置来处理；
 
