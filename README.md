@@ -1,6 +1,9 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [GitLab Flow](https://github.com/XXHolic/segment/issues/80)
+- [GitHub flow](https://github.com/XXHolic/segment/issues/79)
+- [Git branching model](https://github.com/XXHolic/segment/issues/78)
 - [配置环境零碎点](https://github.com/XXHolic/segment/issues/77)
 - [Canvas 橡皮擦效果](https://github.com/XXHolic/segment/issues/75)
 - [Canvas 图像灰度处理](https://github.com/XXHolic/segment/issues/74)
