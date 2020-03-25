@@ -1,0 +1,110 @@
+# n.Mac 初次使用录
+## <a name="index"></a> 目录
+- [引子](#reason)
+- [index 1](#index1)
+  - [index 12](#index12)
+- [参考资料](#reference)
+
+
+## <a name="reason"></a> 引子
+拿到一个新的 Mac ，在不翻墙的情况下，想想怎么开始用。
+
+版本 macOS Catalina 10.15.3
+
+## 1 光标设置和 Xcode 安装
+第一次开机会有引导，跟着引导走就可以了。有账号的话登录帐号，没有的就注册一个，会用到的。
+
+默认的光标在引导的时候就可以感觉到，反应比较慢，而且单击都要用力按一下。为了后面使用光标更流畅，就要设置一下。
+
+左上角“系统偏好设置” -> “触摸板”，在“光标与点按”栏中根据自己习惯设置，下面是个人偏好的设置：
+- “轻点来点按”-勾选
+- “跟踪速度”-快
+
+顿时感觉流畅了不少！
+
+然后通过自带的 APP Store 安装 Xcode，里面会包含很多工具，例如 Git 。
+
+## 2 Shell 设置
+接着要按照开发相关的工具，少不了使用 Shell 。因此要选个好用的 Shell。下面是官网的信息：
+- 从 macOS Catalina 版开始，zsh (Z shell) 是所有新建用户帐户的默认 Shell。
+- bash 是 macOS Mojave 及更低版本中的默认 Shell。
+
+可以用命令先查看一下有那些，打开“终端”输入：
+```shell
+cat /etc/shells
+```
+推荐使用 zsh 。
+
+有些时候会出现设置的提示
+```
+chsh -s /bin/zsh
+```
+设置后接着就是配套的 oh-my-zsh 。命令高亮插件 oh-my-zsh 。按照文档中命令执行：
+```
+
+```
+报错 **Failed to connect to raw.github.com port 443: Connection refused** 。这个由于被墙，那就直接修改 host 指向 IP。在 这个网址上找对应ip 地址。发现有个 DNS 地址，开始下面的步骤：
+1. `sudo su`，获取超级管理员权限，host 文件默认是只读的，一般权限无法修改。如果自己一开始就是就可以跳过这步。
+2. `vim /etc/hosts` ，编辑 hosts 文件，加入 `199.232.28.133 github.map.fastly.net`。 vim 基本用法见https://www.cnblogs.com/dongxiaodong/p/10078725.html
+3. 再执行上面安装 oh-my-zsh 的指令，要等一会儿。
+
+
+## 3 homeBrew
+然后就要安装各种包了，这个时候就需要一个包管理工具，推荐 homeBrew 。
+
+### brew
+包管理工具
+
+### The Unarchiver
+免费解压各种类型压缩包
+
+### nvm
+node 版本管理工具
+
+### nrm
+npm 源切换
+
+### tree
+```
+brew install tree
+
+// 显示所有
+tree -a
+```
+参数含义：
+
+- a 显示所有文件和目录。
+- A 使用ASNI绘图字符显示树状图而非以ASCII字符组合。
+- C 在文件和目录清单加上色彩，便于区分各种类型。
+- d 显示目录名称而非内容。
+- D 列出文件或目录的更改时间。
+- f 在每个文件或目录之前，显示完整的相对路径名称。
+- F 在执行文件，目录，Socket，符号连接，管道名称名称，各自加上"*","/","=","@","|"号。
+- g 列出文件或目录的所属群组名称，没有对应的名称时，则显示群组识别码。
+- i 不以阶梯状列出文件或目录名称。
+- I 不显示符合范本样式的文件或目录名称。
+- l 如遇到性质为符号连接的目录，直接列出该连接所指向的原始目录。
+- n 不在文件和目录清单加上色彩。
+- N 直接列出文件和目录名称，包括控制字符。
+- p 列出权限标示。
+- P 只显示符合范本样式的文件或目录名称。
+- q 用"?"号取代控制字符，列出文件和目录名称。
+- s 列出文件或目录大小。
+- t 用文件和目录的更改时间排序。
+- u 列出文件或目录的拥有者名称，没有对应的名称时，则显示用户识别码。
+- x 将范围局限在现行的文件系统中，若指定目录下的某些子目录，其存放于另一个文件系统上，则将该子目录予以排除在寻找范围外。
+
+
+
+<div align="right"><a href="#index">Back to top :arrow_up:</a></div>
+
+
+
+
+## <a name="reference"></a> 参考资料
+- [example][url-base]
+- https://support.apple.com/zh-cn/HT208050
+- https://ohmyz.sh/
+
+
+[url-base]:https://xxholic.github.io/segment/images
