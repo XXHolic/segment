@@ -1,6 +1,7 @@
 # segment
 Scattered knowledge points here. Maybe you can find something useful.
 
+- [Mac 配置记](https://github.com/XXHolic/segment/issues/81)
 - [GitLab Flow](https://github.com/XXHolic/segment/issues/80)
 - [GitHub flow](https://github.com/XXHolic/segment/issues/79)
 - [Git branching model](https://github.com/XXHolic/segment/issues/78)
