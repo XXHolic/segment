@@ -15,8 +15,8 @@
 ssh root@公网IP
 ```
 第一次会出现提示：
-> The authenticity of host '120.25.77.193 (120.25.77.193)' can't be established.
-ECDSA key fingerprint is SHA256:PtZ6R4u9NgENnYGYEUq8/p71XGC38TFWvFmX/EYT+94.
+> The authenticity of host '' can't be established.
+ECDSA key fingerprint is SHA256:PtZ6R4u9NgENnYGYEUq8/p71XGC38TFWvFmX.
 Are you sure you want to continue connecting (yes/no)?
 
 这个是询问公钥，yes 即可。然后会提示输入登录密码。
@@ -151,3 +151,63 @@ accept-encoding : 对主体进行编码的方式
 yum remove nodejs npm -y
 ```
 其依赖的 yarn 也会被卸载。卸载后，再 source /etc/profile 一次，让之前设置的变量生效，node 就是设置的版本了。
+
+## 修复漏洞
+登录到服务器后，检查包更新并更新
+```
+yum check-update
+
+yum upgrade
+```
+然后到控制台重启实例，最后到漏洞列表那里进行批量验证即可。
+可参考这个 ：https://www.cnblogs.com/xiaowus/p/12437001.html
+
+## 安全设置
+root 账户权限太大，而且有人可能会暴力破解，所以要禁用。先添加一个可以登录的用户。
+```
+useradd xxx
+passwd xxx // 表示设置 xxx 账户的密码
+```
+如果要使用这个账户切换到 root，登录后可以执行下面命令：
+```
+su root
+```
+设置成功后，尝试登录一下。登录成功后，修改 ssh 登录端口。为了不占用系统端口，请选择1024-65535之间的端口。
+```
+vim /etc/ssh/sshd_config
+```
+在里面的端口行注释去掉，然后加一个自己的端口：
+```
+Port 22 // 保留这个，测试 12345 成功后再禁用掉
+Port 12345
+```
+然后执行重启的命令：
+```
+systemctl restart sshd.service
+```
+查看端口是否在监听：
+```
+netstat -antlp |grep 12345
+```
+发现在监听了。
+
+最后还要到服务器安全策略里面添加允许 12345 端口访问的策略。
+
+虽然查看 service sshd status 状态，显示是 `Active: activating (auto-restart)`，发现还是可以正常的通过 ssh 访问。
+
+再次重新连接时：
+```
+ssh xxx@ip -p 12345
+```
+通过后，在服务器安全策略里面，禁止 22 端口访问。
+
+禁止 root 用户登录
+```
+vim /etc/ssh/sshd_config
+```
+将文件中在 `permitrootlogin  yes`这一行改为 `permitrootlogin  no`
+
+## 防火墙
+开启防火墙之前，记得一定要添加可访问的端口，否则，开启后，你可能无法ssh连接到远程服务器了。
+
+为了方式 ssh 登录不了，注意要开启 VNC 登录。要试试能不能成功。
