@@ -49,6 +49,7 @@
 - 61.Safari 导航栏.70
 - 63.h5 穿透滚动.72
 - 66.Canvas 橡皮擦效果.75
+- 72.自定义 create-react-app.82
 
 ### blog
 - 47.About Performanc.47
@@ -60,4 +61,3 @@
 - 30.CSS 团队规范参考.30
 - 43.JavaScript 团队规范参考.43
 - 16.Git Commit 规范参考.16
-- 24.超级微型编译器.24
