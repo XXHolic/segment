@@ -69,6 +69,11 @@ JavaScript 有一个基于**事件循环（event loop）**的并发模型，事�
 3. 很常见的例子，就是模仿类，也就是常说的构造函数，用构造函数声明的对象，都是通过原型链相互关联起来，看起来像类一样，但其实有这本质的区别：**类是可以复制多次，就像模具一样，但JavaScript 并没有类似的复制机制** 。 继承示例见 [这里][url-segment-49]
 4. prototype 是函数独有的属性，是保存它们所有实例方法的真正所在
 
+
+重叠的问题：
+- es5 的继承跟 es6 的继承区别，见这里[这里][url-segment-49]
+- Object.create() 如果用 es5 怎么实现，见[这里][url-mdn-2]
+
 </details>
 
 ## 闭包的理解
@@ -90,6 +95,18 @@ JavaScript 有一个基于**事件循环（event loop）**的并发模型，事�
 
 </details>
 
+## 函数 this 的绑定有那些情况？
+<details>
+<summary>理解参考一</summary>
+
+见 [关于 this 的误解][url-segment-40]，[关于 this 绑定 ][url-blog-33]。
+
+
+重叠的问题：
+- bind 方法做了什么，见[这里][url-segment-41]。
+
+</details>
+
 ## 那些情况算跨域？解决跨域的方法有那些？
 
 <details>
@@ -105,41 +122,107 @@ JavaScript 有一个基于**事件循环（event loop）**的并发模型，事�
 2. postMessage(message, targetOrigin, [transfer]) 和对应监听 message 事件，具体见[这里][url-mdn-1]。
 3. JSONP，只支持 GET 请求，基本思想是：网页通过添加一个\<script\>元素，向服务器请求JSON数据，这种做法不受同源政策限制；服务器收到请求后，将数据放在一个指定名字的回调函数里传回来。
 4. WebSocket 是一种通信协议，使用ws://（非加密）和wss://（加密）作为协议前缀。该协议不实行同源政策，只要服务器支持，就可以通过它进行跨源通信。
-5. CORS 是跨源资源分享，在服务器端设置即可，相比 JSONP 有点就是各种类型请求都支持。 具体可见[这里][url-segment-50] 。
+5. CORS 是跨源资源分享，在服务器端设置即可，相比 JSONP 有点就是各种类型请求都支持。 具体可见[这里][url-segment-50]。
+
+
+重叠的问题：
+- cors 实现的原理，[这里][url-segment-50]。
 
 
 </details>
 
+## http 各版本的差异
 
-- 函数 this 的绑定有那些情况？
+<details>
+<summary>理解参考一</summary>
+
+HTTP 最初提出主要是为了信息共享。
+
+第一个版本是 HTTP/0.9，特点是：
+- 只支持 get 方法
+- 只支持简单的 HTML 对象
+
+由于缺陷太多，并没有成为正式的规范，很快被 HTTP 1.0 取代。
+
+第二版本 HTTP 1.0，特点：
+- 是正式的版本。
+- 添加了版本号、各种 HTTP 首部、一些额外的方法，以及对多媒体对象的处理。
+
+这个时期商业和学术快速发展，出现了很多非官方的事实标准，比例虚拟主机和代理。这些统称为 HTTP 1.0+。
+
+第三个版本 HTTP 1.1，特点：
+- 校正 HTTP 设计中的结构性缺陷。
+- 明确语义，
+- 引入重要的性能优化措施，并删除一些不好的特性
+
+第四个版本 HTTP/2，特点：
+- 关注的是性能的大幅优化
+
+更详细介绍见[这里][url-blog-31]
+
+重叠的问题：
+- http 常用请求头，见[这里][url-mdn-3]
+
+</details>
+
+## https 握手过程
+
+<details>
+<summary>理解参考一</summary>
+
+![ques-https][url-local-ans3]
+
+更加详细见[这里][url-article-1]。
+
+附带或重叠问题：
+- 加密的算法是对称还是非对称，见[这里][url-article-2]。
+- https 和 http 区别，见[这里][url-article-3]。
+
+</details>
+
+## 垃圾回收机制
+
+<details>
+<summary>理解参考一</summary>
+
+垃圾回收的原理：找出不再继续使用的变量，然后释放占用的内存。垃圾收集器会周期性的执行这一操作。
+
+常用的策略有：
+### 标记清除
+当变量进入环境时，就将这个变量标记为“进入环境”，当变量离开环境时，则标记为“离开环境”。这个是主流的策略。
+
+### 引用计数
+追踪记录每个值被引用的次数。当值的引用次数变成 0 时，就会回收其占用的内存空间。
+
+但这个策略有个问题：循环引用。例如对象A中包含一个指向B的指针，对象B中包含一个指向对象A的引用。
+
+
+附带或重叠的问题：
+### 内存泄漏和内存溢出
+- 内存泄漏：使用的内存，一直没有得到释放，比较常见的就是变量的引用一直存在。
+
+- 内存溢出：程序向系统申请一定大小的内存，而系统不能满足程序要求，于是产生了溢出。例子是声明一个变量，赋值一个数字，超过了最大值。1.7976931348623157e+308
+
+</details>
+
+## 节流和防抖
+
 - css3 动画和 js 动画那个性能比较好？
 - AMD、CMD、commonjs 规范差异
-- 内存泄漏和内存溢出
-- 垃圾回收机制
 - promise、generator 讲解一下
 - 安全方面的知识有那些了解？
 - 常用设计模式
-- cors 实现的原理
-- HTTP 各版本的差异
-- https 和 http 区别
-- http 常用请求头
 - js 常用数据结构
 - 对象的一些属性
-- es5 的继承跟 es6 的继承区别
-- 节流和防抖
 - var 变量提升 和 function 变量提升区别
-- bind 方法做了什么
 - 递归中出现相互引用 如何处理
 - babel 转成 es5 后是什么样子的（例如 promise ）
-- Object.create() 如果用 es5 怎么实现
 - 浏览器加载一个页面到显示经历了什么？
 - 用什么方法可以达到跟递归一样的效果
 - 从浏览器输入地址到渲染过程中会有什么缓存？
-- https 握手过程
-- session 和 cookie 区别
 - promise 规范中 then 和 caught 是如何传值的？
 
-### 框架类
+## 框架类
 - Vue 和 React 的差异
 - 虚拟 DOM diff 算法是怎么实现的
 - React 的生命周期，详细说出来
@@ -149,12 +232,12 @@ JavaScript 有一个基于**事件循环（event loop）**的并发模型，事�
 - React 如果创建一个弹窗
 - DVA 做了什么
 
-### 工程化类
+## 工程化类
 - webpack 生成的 manifest 文件作用
 - webpack 中 loader 的原理
 - webpack 打包太大怎么处理？
 
-### 其它类
+## 其它类
 - 原生 app 的混合应用，听说过或者用过那些框架？
 - 有没有使用过工具，可以一套代码生成小程序、app 等一些对应的应用？
 - 有没有自己负责搭建过项目框架，用的是什么？
@@ -182,8 +265,19 @@ JavaScript 有一个基于**事件循环（event loop）**的并发模型，事�
 
 
 [url-mdn-1]:https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage
+[url-mdn-2]:https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create
+[url-mdn-3]:https://developer.mozilla.org/zh-CN/docs/Web/HTTP
 [url-segment-49]:https://github.com/XXHolic/segment/issues/49
 [url-segment-50]:https://github.com/XXHolic/segment/issues/50
+[url-segment-40]:https://github.com/XXHolic/segment/issues/40
+[url-segment-41]:https://github.com/XXHolic/segment/issues/41
+[url-blog-31]:https://github.com/XXHolic/blog/issues/31
+[url-blog-33]:https://github.com/XXHolic/blog/issues/33
+
+[url-article-1]:http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html
+[url-article-2]:https://www.cnblogs.com/liluxiang/p/9681635.html
+[url-article-3]:https://www.cnblogs.com/huhuxixi/p/10644829.html
 
 [url-local-ans1]:../images/question/javascript-runtime.svg
 [url-local-ans2]:../images/question/event-loop.png
+[url-local-ans3]:../images/question/https.jpg
