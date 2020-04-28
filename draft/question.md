@@ -1,9 +1,4 @@
 # question
-## <a name="index"></a> 目录
-- [引子](#start)
-- [浏览器怎么实现异步操作？](#ques1)
-- [其它资料](#reference)
-
 ## 引子
 思考的问题。
 
@@ -123,6 +118,7 @@ JavaScript 有一个基于**事件循环（event loop）**的并发模型，事�
 3. JSONP，只支持 GET 请求，基本思想是：网页通过添加一个\<script\>元素，向服务器请求JSON数据，这种做法不受同源政策限制；服务器收到请求后，将数据放在一个指定名字的回调函数里传回来。
 4. WebSocket 是一种通信协议，使用ws://（非加密）和wss://（加密）作为协议前缀。该协议不实行同源政策，只要服务器支持，就可以通过它进行跨源通信。
 5. CORS 是跨源资源分享，在服务器端设置即可，相比 JSONP 有点就是各种类型请求都支持。 具体可见[这里][url-segment-50]。
+6. 图像Ping 最常用于跟踪用户点击页面或动态广告曝光次数。图像Ping 有两个主要的缺点，一是只能发送GET 请求，二是无法访问服务器的响应文本。因此，图像Ping 只能用于浏览器与服务器间的单向通信。
 
 
 相关或重叠的问题：
@@ -299,7 +295,7 @@ CMD 通用模块定义，跟 AMD 不同的是，CMD 推崇依赖就近，AMD 是
 <summary>理解参考一</summary>
 
 - 将变量声明提升，只提升变量，不提升所赋的值；
-- 将函数声明及函数内容提升，既提升函数声明，又提升函数内容，可以理解为将整个function内容提升；
+- 将函数声明及函数内容提升，既提升函数声明，又提升函数内容，可以理解为将整个 function 内容提升；
 - 块内的变量声明和函数声明也会被提升，例如if语句。
 
 
@@ -311,12 +307,25 @@ CMD 通用模块定义，跟 AMD 不同的是，CMD 推崇依赖就近，AMD 是
 
 ## 常用设计模式
 
+<details>
+<summary>理解参考一</summary>
+
+- 单例：保证一个类别只有一个实例，并且提供一个访问它的全局访问点。
+- 工厂模式：将其成员对象的实例化推迟到子类来实现的类，常用于处理具有相同类似属性的对象。
+- 观察者模式：也称为发布-订阅，对象间的一种一对多的依赖关系，常用于处理当一个对象的状态发生变化时，所有依赖于他的对象都将得到通知。
+- 适配器模式：用来处理两个实体间接口不兼容的问题。在原有的基础上再包装一层判断。
+
+
+更多可以见[这里][url-article-7] 。
+
+</details>
+
 ## babel 转成 es5 后是什么样子的
 
 <details>
 <summary>理解参考一</summary>
 
-看个人积累，到 babel 官网尝试[在线转换][url-site-1]。
+看个人积累，可以到 babel 官网尝试[在线转换][url-site-1]。
 
 </details>
 
@@ -334,14 +343,39 @@ CMD 通用模块定义，跟 AMD 不同的是，CMD 推崇依赖就近，AMD 是
 
 </details>
 
-- css3 动画和 js 动画那个性能比较好？
-- 浏览器加载一个页面到显示经历了什么？
+## 浏览器加载一个页面到显示经历了什么？
+
+<details>
+<summary>理解参考一</summary>
+
+见[这里][url-article-6]。
+
+相关或重叠问题：
 - 从浏览器输入地址到渲染过程中会有什么缓存？
 
+</details>
+
 ## 框架类
-- Vue 和 React 的差异
+### Vue 和 React 的差异
+
+<details>
+<summary>理解参考一</summary>
+
+见[这里][url-brain-1] 。
+
+</details>
+
+### React 的生命周期
+
+<details>
+<summary>理解参考一</summary>
+
+见[这里][url-brain-2] 。
+
+</details>
+
+
 - 虚拟 DOM diff 算法是怎么实现的
-- React 的生命周期，详细说出来
 - React SEO 怎么做
 - saga 的优缺点
 - React 样式解决方案
@@ -403,6 +437,11 @@ CMD 通用模块定义，跟 AMD 不同的是，CMD 推崇依赖就近，AMD 是
 [url-article-3]:https://www.cnblogs.com/huhuxixi/p/10644829.html
 [url-article-4]:https://www.cnblogs.com/wanghuaijun/p/7302303.html
 [url-article-5]:https://www.cnblogs.com/nangezi/p/9105778.html
+[url-article-6]:https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/
+[url-article-7]:https://segmentfault.com/a/1190000017787537
+
+[url-brain-1]:https://naotu.baidu.com/file/9717ecbdf6a38856249785dc21bc84f4?token=c83b5c75242eaf6c
+[url-brain-2]:http://naotu.baidu.com/file/6d206f0f44c85d15b00491ed7072630d?token=a953eee1038450a9
 
 [url-local-ans1]:../images/question/javascript-runtime.svg
 [url-local-ans2]:../images/question/event-loop.png
