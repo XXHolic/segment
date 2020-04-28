@@ -70,7 +70,7 @@ JavaScript 有一个基于**事件循环（event loop）**的并发模型，事�
 4. prototype 是函数独有的属性，是保存它们所有实例方法的真正所在
 
 
-重叠的问题：
+相关或重叠的问题：
 - es5 的继承跟 es6 的继承区别，见这里[这里][url-segment-49]
 - Object.create() 如果用 es5 怎么实现，见[这里][url-mdn-2]
 
@@ -102,7 +102,7 @@ JavaScript 有一个基于**事件循环（event loop）**的并发模型，事�
 见 [关于 this 的误解][url-segment-40]，[关于 this 绑定 ][url-blog-33]。
 
 
-重叠的问题：
+相关或重叠的问题：
 - bind 方法做了什么，见[这里][url-segment-41]。
 
 </details>
@@ -125,7 +125,7 @@ JavaScript 有一个基于**事件循环（event loop）**的并发模型，事�
 5. CORS 是跨源资源分享，在服务器端设置即可，相比 JSONP 有点就是各种类型请求都支持。 具体可见[这里][url-segment-50]。
 
 
-重叠的问题：
+相关或重叠的问题：
 - cors 实现的原理，[这里][url-segment-50]。
 
 
@@ -160,7 +160,7 @@ HTTP 最初提出主要是为了信息共享。
 
 更详细介绍见[这里][url-blog-31]
 
-重叠的问题：
+相关或重叠的问题：
 - http 常用请求头，见[这里][url-mdn-3]
 
 </details>
@@ -174,7 +174,7 @@ HTTP 最初提出主要是为了信息共享。
 
 更加详细见[这里][url-article-1]。
 
-附带或重叠问题：
+相关或重叠问题：
 - 加密的算法是对称还是非对称，见[这里][url-article-2]。
 - https 和 http 区别，见[这里][url-article-3]。
 
@@ -197,7 +197,7 @@ HTTP 最初提出主要是为了信息共享。
 但这个策略有个问题：循环引用。例如对象A中包含一个指向B的指针，对象B中包含一个指向对象A的引用。
 
 
-附带或重叠的问题：
+相关或重叠的问题：
 ### 内存泄漏和内存溢出
 - 内存泄漏：使用的内存，一直没有得到释放，比较常见的就是变量的引用一直存在。
 
@@ -207,20 +207,136 @@ HTTP 最初提出主要是为了信息共享。
 
 ## 节流和防抖
 
-- css3 动画和 js 动画那个性能比较好？
-- AMD、CMD、commonjs 规范差异
-- promise、generator 讲解一下
-- 安全方面的知识有那些了解？
-- 常用设计模式
-- js 常用数据结构
-- 对象的一些属性
-- var 变量提升 和 function 变量提升区别
-- 递归中出现相互引用 如何处理
-- babel 转成 es5 后是什么样子的（例如 promise ）
-- 浏览器加载一个页面到显示经历了什么？
-- 用什么方法可以达到跟递归一样的效果
-- 从浏览器输入地址到渲染过程中会有什么缓存？
+<details>
+<summary>理解参考一</summary>
+
+- debounce(防抖)，设定一个周期延迟执行动作，若期间又被触发，则重新设定周期，直到周期结束，执行动作。特点是当事件快速连续不断触发时，动作只会执行一次
+- throttling(节流)：固定的间隔时间执行一次，特点是响应平滑。
+
+</details>
+
+## 对象的一些固有属性
+
+<details>
+<summary>理解参考一</summary>
+
+ECMAScript 中有两种属性：数据属性和访问器属性。
+- 数据属性：Configurable、Enumerable、Writable、Value
+- 访问器属性：Configurable、Enumerable、Get、Set
+
+
+相关或重叠的问题：
+- js 常用数据结构，见[这里][url-article-4]。
+
+</details>
+
+## promise、generator、async 简单介绍一下
+
+<details>
+<summary>理解参考一</summary>
+
+- promise 见[这里][url-blog-34]
+- generator 见[这里][url-blog-35]
+- async 见[这里][url-blog-36]
+
+
+相关或重叠的问题：
 - promise 规范中 then 和 caught 是如何传值的？
+
+</details>
+
+
+## AMD、CMD、commonjs 规范差异
+
+<details>
+<summary>理解参考一</summary>
+
+这个几个概念都跟模块化有关，模块化在软件系统中是一个很重要的概念，模块化有很多好处，比如可以解耦，易维护管理。在 JavaScript 早期是没有模块化概念，为了让 JavaScript 更好的管理和发展，这些规范就诞生了。
+#### commonJS
+commonJS 是为了让 JavaScript 能在浏览器之外的环境使用，制定的一个规范。它定义了模块该怎么写，可以在不同的环境中支持。
+
+common.js 的规范要点有：
+1. 每个文件就是一个模块，内部定义的变量、函数对外不可见。
+2. 导出使用 exports 对外暴露。
+3. 导入使用 require。
+
+后来 commonJS 部分规范引入到 JavaScript 模块的规范中。
+
+与 ES6 的模块规范不同的是：
+- commonJS 导出的是值的拷贝，会缓存，ES6 模块输出的是值的引用。
+
+使用代表有 npm webpack。
+#### AMD
+AMD 就是异步模块定义，写模块的 API define（id,dependence factory）
+- 第一个参数是模块的标识，可选，没有就是配置中指定脚本的名字。
+- 第二个参数是个数组，放依赖的模块，可选
+- 第三个参数是一个对象或函数
+
+实施代表就是 requireJS。
+#### CMD
+CMD 通用模块定义，跟 AMD 不同的是，CMD 推崇依赖就近，AMD 是依赖前置。
+
+代表的实现是 sea.js。
+
+- https://segmentfault.com/a/1190000004873947
+- [CommonJS](http://www.commonjs.org/)
+
+</details>
+
+## 递归中出现相互引用如何处理
+
+<details>
+<summary>理解参考一</summary>
+
+见见[这里][url-blog-40]。
+
+
+</details>
+
+## var 变量提升 和 function 变量提升区别
+
+<details>
+<summary>理解参考一</summary>
+
+- 将变量声明提升，只提升变量，不提升所赋的值；
+- 将函数声明及函数内容提升，既提升函数声明，又提升函数内容，可以理解为将整个function内容提升；
+- 块内的变量声明和函数声明也会被提升，例如if语句。
+
+
+相关或重叠问题：
+- JS中的函数声明和函数表达式的区别，即function(){}和var function(){}，见[这里][url-article-5] 。
+
+</details>
+
+
+## 常用设计模式
+
+## babel 转成 es5 后是什么样子的
+
+<details>
+<summary>理解参考一</summary>
+
+看个人积累，到 babel 官网尝试[在线转换][url-site-1]。
+
+</details>
+
+## 安全方面的知识有那些了解？
+
+<details>
+<summary>理解参考一</summary>
+
+了解到的安全问题有：
+- XSS：跨站点脚本攻击，通过 HTML 注入篡改网页，插入恶意脚本。
+- CSRF：跨站点请求伪造
+- 点击劫持：使用一个透明、不可见的iframe，覆盖在一个网页上，然后诱导用户在该网页上操作，此时用户在不知情的情况下点击了iframe。
+- 注入攻击：把用户输入的数据当做代码执行。
+- 文件上传漏洞：用户上传了了一个可执行的脚本文件，并通过此脚本文件获得执行服务器端命令的能力。
+
+</details>
+
+- css3 动画和 js 动画那个性能比较好？
+- 浏览器加载一个页面到显示经历了什么？
+- 从浏览器输入地址到渲染过程中会有什么缓存？
 
 ## 框架类
 - Vue 和 React 的差异
@@ -273,10 +389,20 @@ HTTP 最初提出主要是为了信息共享。
 [url-segment-41]:https://github.com/XXHolic/segment/issues/41
 [url-blog-31]:https://github.com/XXHolic/blog/issues/31
 [url-blog-33]:https://github.com/XXHolic/blog/issues/33
+[url-blog-34]:https://github.com/XXHolic/blog/issues/34
+[url-blog-35]:https://github.com/XXHolic/blog/issues/35
+[url-blog-36]:https://github.com/XXHolic/blog/issues/36
+[url-blog-40]:https://github.com/XXHolic/blog/issues/40
+
+[url-site-1]:https://www.babeljs.cn/repl
+
+
 
 [url-article-1]:http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html
 [url-article-2]:https://www.cnblogs.com/liluxiang/p/9681635.html
 [url-article-3]:https://www.cnblogs.com/huhuxixi/p/10644829.html
+[url-article-4]:https://www.cnblogs.com/wanghuaijun/p/7302303.html
+[url-article-5]:https://www.cnblogs.com/nangezi/p/9105778.html
 
 [url-local-ans1]:../images/question/javascript-runtime.svg
 [url-local-ans2]:../images/question/event-loop.png
