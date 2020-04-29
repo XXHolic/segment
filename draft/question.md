@@ -370,17 +370,51 @@ CMD 通用模块定义，跟 AMD 不同的是，CMD 推崇依赖就近，AMD 是
 <details>
 <summary>理解参考一</summary>
 
-见[这里][url-brain-2] 。
+见[这里][url-docs-1] 。
+
+相关或重叠的问题：
+- getDerivedStateFromProps 主要用途，见[这里][url-docs-2] 。
+- componentWillReceiveProps 为什么取消了，见[这里][url-docs-3] 。
+
+相关或重叠问题：
+- React 如果创建一个弹窗，见[这里][url-docs-8]。
 
 </details>
 
+### 虚拟 DOM diff 算法是怎么实现的
 
-- 虚拟 DOM diff 算法是怎么实现的
-- React SEO 怎么做
-- saga 的优缺点
-- React 样式解决方案
-- React 如果创建一个弹窗
+<details>
+<summary>理解参考一</summary>
+
+- React 见[这里][url-docs-4] 。
+- Vue 见[这里][url-docs-5] 。
+
+</details>
+
+### React SEO 怎么做
+
+<details>
+<summary>理解参考一</summary>
+
+- 官方文档见[这里][url-docs-6] 。
+- 另外一种方式见[这里][url-docs-7] 。
+
+</details>
+
+### React 样式解决方案
+
+<details>
+<summary>理解参考一</summary>
+
+- 传统直接引入
+- css module
+- Pure CSS in JS，类似直接写在标签上
+- Styled-Components
+
+</details>
+
 - DVA 做了什么
+- saga 的优缺点
 
 ## 工程化类
 - webpack 生成的 manifest 文件作用
@@ -429,6 +463,15 @@ CMD 通用模块定义，跟 AMD 不同的是，CMD 推崇依赖就近，AMD 是
 [url-blog-40]:https://github.com/XXHolic/blog/issues/40
 
 [url-site-1]:https://www.babeljs.cn/repl
+
+[url-docs-1]:https://zh-hans.reactjs.org/docs/react-component.html
+[url-docs-2]:https://zh-hans.reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#what-about-memoization
+[url-docs-3]:https://zh-hans.reactjs.org/docs/react-component.html#unsafe_componentwillreceiveprops
+[url-docs-4]:https://zh-hans.reactjs.org/docs/reconciliation.html#the-diffing-algorithm
+[url-docs-5]:https://github.com/aooy/blog/issues/2
+[url-docs-6]:https://zh-hans.reactjs.org/docs/react-dom-server.html
+[url-docs-7]:https://developers.google.com/web/tools/puppeteer/articles/ssr
+[url-docs-8]:https://zh-hans.reactjs.org/docs/portals.html#gatsby-focus-wrapper
 
 
 
