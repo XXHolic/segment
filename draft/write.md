@@ -2,14 +2,11 @@
 # write
 ## <a name="index"></a> 目录
 - [引子](#start)
-- [笔试](#write)
-- [问答](#answer)
 - [其它资料](#reference)
 
 
 ## <a name="start"></a> 引子
 练习的问题。
-
 
 ## <a name="write"></a> 笔试
 ### <a name="write1"></a> 题目1
@@ -30,6 +27,12 @@
   getA();
   obj.obj2.fun();
 ```
+<details>
+<summary>结果参考</summary>
+
+1
+3
+</details>
 
 ### <a name="write2"></a> 题目2
 下面打印结果什么:
@@ -44,34 +47,25 @@ function fun(n,o) {
   }
 }
 
-var a = fun(1);a.fun(2);a.fun(3);
+var a = fun(1);
+a.fun(2);
+a.fun(3);
 
-var b = fun(1).func(2).fun(3);
-
-var c = fun(1).fun(2);c.fun(3);
+var b = fun(1).fun(2);
 ```
+<details>
+<summary>结果参考</summary>
 
-### <a name="write3"></a> 题目3
-下面打印结果什么:
-```javascript
-function fun(n,o) {
-  console.info(o);
+undefined
+undefined
+undefined
 
-  return {
-    fun:function(m,n) {
-      fun(m,n)
-    }
-  }
-}
+undefined
+undefined
 
-var a = fun(1);a.fun(2);a.fun(3);
+</details>
 
-var b = fun(1).func(2).fun(3);
-
-var c = fun(1).fun(2);c.fun(3);
-```
-
-### <a name="write4"></a> 题目4
+### <a name="write4"></a> 题目3
 下面打印结果什么并简单解释:
 ```javascript
 for(var i =0;i<4;i++) {
@@ -83,11 +77,44 @@ for(var i =0;i<4;i++) {
 console.info(i);
 ```
 
+<details>
+<summary>结果参考</summary>
+
+4
+4
+4
+4
+4
+
+- 原因： 循环里面打印值最终指向的是 i 所储存的值，运行结束后，i 的值是 4 。最后一个打印的值，是因为 var 声明的变量作用域就在其中，所以可以取到这个值。
+
+</details>
+
 ### <a name="write5"></a> 题目5
 var a = [1,2,3,4]，var b = [5,6,7]，怎么把数组 b 插入到 a 中，最后让 a 变为 [1,2,5,6,7,3,4]
 
+<details>
+<summary>参考</summary>
+
+```js
+let a = [1,2,3,4],b = [5,6,7];
+for(let i=0,len = b.length;i<len;i++) {
+  let insertPos = 2+i;
+  a.splice(insertPos,0,b[i]);
+}
+console.info(a);
+```
+
+</details>
+
 ### <a name="write6"></a> 题目6：数组去重
 数组去重，可能会问根据时间和空间复杂度，怎么优化。
+
+<details>
+<summary>参考</summary>
+
+
+</details>
 
 ### <a name="write7"></a> 题目7：冒泡排序
 冒泡排序，可能会问根据时间和空间复杂度，怎么优化。
