@@ -50,6 +50,7 @@
 - 63.h5 穿透滚动.72
 - 66.Canvas 橡皮擦效果.75
 - 72.自定义 create-react-app.82
+- 16.JavaScript 新旧替换一：变量声明.18
 
 ### blog
 - 47.About Performanc.47
@@ -61,3 +62,4 @@
 - 30.CSS 团队规范参考.30
 - 43.JavaScript 团队规范参考.43
 - 16.Git Commit 规范参考.16
+- 53.前端异常类型及捕获方式.53
