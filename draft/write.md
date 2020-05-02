@@ -388,3 +388,14 @@ LazyMan('Hank')
 
 
 <div align="right"><a href="#index">Back to top :arrow_up:</a></div>
+
+
+## <a name="reference"></a> 其它资料
+- [Daily-Interview-Question][url-github-interview]
+- [Reverse-Interview-Question][url-github-reverse-interview]
+
+
+[url-base]:https://xxholic.github.io/segment/images
+
+[url-github-interview]:https://github.com/Advanced-Frontend/Daily-Interview-Question
+[url-github-reverse-interview]:https://github.com/yifeikong/reverse-interview-zh
