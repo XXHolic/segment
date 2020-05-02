@@ -28,7 +28,7 @@
   obj.obj2.fun();
 ```
 <details>
-<summary>结果参考</summary>
+<summary>参考</summary>
 
 1
 3
@@ -54,7 +54,7 @@ a.fun(3);
 var b = fun(1).fun(2);
 ```
 <details>
-<summary>结果参考</summary>
+<summary>参考</summary>
 
 undefined
 undefined
@@ -78,7 +78,7 @@ console.info(i);
 ```
 
 <details>
-<summary>结果参考</summary>
+<summary>参考</summary>
 
 4
 4
@@ -90,7 +90,7 @@ console.info(i);
 
 </details>
 
-### <a name="write5"></a> 题目5
+### <a name="write5"></a> 题目4
 var a = [1,2,3,4]，var b = [5,6,7]，怎么把数组 b 插入到 a 中，最后让 a 变为 [1,2,5,6,7,3,4]
 
 <details>
@@ -107,21 +107,74 @@ console.info(a);
 
 </details>
 
-### <a name="write6"></a> 题目6：数组去重
+### <a name="write6"></a> 题目5：数组去重
 数组去重，可能会问根据时间和空间复杂度，怎么优化。
 
 <details>
 <summary>参考</summary>
 
+```js
+const arr = [2,3,1,4,5,3,2,1];
+let newArr = [];
+arr.reduce((initValue,current,index)=>{
+  if(initValue.indexOf(current) === -1) {
+    initValue.push(current);
+  }
+  return initValue;
+},newArr);
+console.info("newArr",newArr);
+```
+- 时间复杂度 : 对一个算法在运行过程中消耗时间的一个量度，反映的是一个趋势。
+- 空间复杂度 : 对一个算法在运行过程中临时占用存储空间大小的一个量度，反映的是一个趋势。
 
 </details>
 
-### <a name="write7"></a> 题目7：冒泡排序
+### <a name="write6"></a> 题目6：冒泡排序
 冒泡排序，可能会问根据时间和空间复杂度，怎么优化。
+
+<details>
+<summary>参考</summary>
+
+```js
+const arr = [2,3,1,4,5,6];
+
+for(let i=0,len=arr.length;i<len;i++ ) {
+  let sortEle = arr[i];
+  for(let j=i+1;j<len-i;j++){
+    let compareEle = arr[j];
+    if(sortEle > compareEle) {
+      arr[i] = compareEle;
+      arr[j] = sortEle;
+    }
+  }
+}
+
+console.info(arr);
+
+```
+
+</details>
 
 ### <a name="write8"></a> 题目8：正则
 - 正则格式化金额
 - 正则检验手机号码
+
+<details>
+<summary>参考</summary>
+
+正则格式化金额
+```js
+let str = '12344';
+str.replace(/\B(?=(\d{3})+(?!\d))/g,',');
+(123456789).toLocaleString('en-US');
+```
+正则检验手机号码
+```js
+let reg = /^1[3-9]\d{9}$/g;
+reg.test(123);
+```
+
+</details>
 
 ### <a name="write9"></a> 题目9
 下面的输出结果是什么
@@ -139,18 +192,35 @@ new Promise((resolve) => {
   console.log('44');
 })
 
-process.nextTick(function(){console.log(66)});
 
 console.log('55')
 
 ```
+
+<details>
+<summary>参考</summary>
+
+22
+33
+55
+44
+11
+
+- 先分析宏任务，及每个宏任务中的微任务（微任务优先宏任务执行）
+- 根据调用次序，确定宏任务中微任务执行次序
+- 根据宏任务触发规则和次序，确定宏任务的调用次序
+
+属于宏任务有：setTimeout, setInterval, setImmediate, requestAnimationFrame, I/O, UI rendering
+属于微任务有: process.nextTick, Promises, queueMicrotask
+
+</details>
 
 ### <a name="write10"></a> 题目10
 编写程序统计 1 到 10000 之间的数字中数字 0 的总数。
 
 （说明：例如 1 到 20 之间带 0 的数字有 10、20，数字 0 的总数就是 2 ）
 <details>
-<summary>解题思路一</summary>
+<summary>参考</summary>
 
 ```js
 function countZero(maxNum) {
@@ -165,33 +235,8 @@ countZero(1000)
 ```
 </details>
 
-### <a name="write11"></a> 题目11：css 布局
-- 居中
-- 一列固定一列自适应
-- 左右两边固定，中间自适应
-- 用 css 写一个三角形
-
-
-### <a name="write12"></a> 题目12
-css 定位
-
-### <a name="write13"></a> 题目13
-css link 标签和 @import 区别
-
-### <a name="write14"></a> 题目14
-写出你对文档流的理解
-
-### <a name="write15"></a> 题目15
-写出脱离文档流的方法
-
 ### <a name="write16"></a> 题目16
 写出 es5 和 es6 继承示例
-
-### <a name="write17"></a> 题目17
-写出解决跨域的方法，至少 5 种
-
-### <a name="write18"></a> 题目18
-写出 js 数组常用方法。（可能会根据答案问问题）
 
 ### <a name="write19"></a> 题目19
 删除 cookie 方式
@@ -340,18 +385,6 @@ LazyMan('Hank')
 ```
 
 </details>
-
-### <a name="write26"></a> 题目26
-301 和 302 是做什么的
-
-### <a name="write27"></a> 题目27
-xss csrf 是什么？防御怎么做？
-
-### <a name="write28"></a> 题目28
-如何设置浏览器缓存，缓存和不缓存两种。
-
-### <a name="write29"></a> 题目29
-使用 new 的时候，过程发生了什么
 
 
 <div align="right"><a href="#index">Back to top :arrow_up:</a></div>
