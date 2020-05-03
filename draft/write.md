@@ -65,7 +65,7 @@ undefined
 
 </details>
 
-### <a name="write4"></a> 题目3
+### <a name="write3"></a> 题目3
 下面打印结果什么并简单解释:
 ```javascript
 for(var i =0;i<4;i++) {
@@ -90,7 +90,7 @@ console.info(i);
 
 </details>
 
-### <a name="write5"></a> 题目4
+### <a name="write4"></a> 题目4
 var a = [1,2,3,4]，var b = [5,6,7]，怎么把数组 b 插入到 a 中，最后让 a 变为 [1,2,5,6,7,3,4]
 
 <details>
@@ -107,7 +107,7 @@ console.info(a);
 
 </details>
 
-### <a name="write6"></a> 题目5：数组去重
+### <a name="write5"></a> 题目5：数组去重
 数组去重，可能会问根据时间和空间复杂度，怎么优化。
 
 <details>
@@ -155,7 +155,7 @@ console.info(arr);
 
 </details>
 
-### <a name="write8"></a> 题目8：正则
+### <a name="write7"></a> 题目7：正则
 - 正则格式化金额
 - 正则检验手机号码
 
@@ -176,7 +176,7 @@ reg.test(123);
 
 </details>
 
-### <a name="write9"></a> 题目9
+### <a name="write8"></a> 题目8
 下面的输出结果是什么
 ```js
 setTimeout(() => {
@@ -215,7 +215,7 @@ console.log('55')
 
 </details>
 
-### <a name="write10"></a> 题目10
+### <a name="write9"></a> 题目9
 编写程序统计 1 到 10000 之间的数字中数字 0 的总数。
 
 （说明：例如 1 到 20 之间带 0 的数字有 10、20，数字 0 的总数就是 2 ）
@@ -235,26 +235,136 @@ countZero(1000)
 ```
 </details>
 
-### <a name="write16"></a> 题目16
+### <a name="write10"></a> 题目10
 写出 es5 和 es6 继承示例
 
-### <a name="write19"></a> 题目19
+<details>
+<summary>参考</summary>
+
+es5 示例使用组合继承
+```js
+function Fruit(name) {
+  this.name = name;
+}
+
+Fruit.prototype.printName = function() {
+  console.info('name:',this.name);
+}
+
+function Apple(name,color) {
+  Fruit.call(this,name);
+  this.color=color;
+}
+
+Apple.prototype = new Fruit();
+Apple.prototype.printColor = function() {
+  console.info('name:',this.color);
+}
+
+```
+es6 示例
+```js
+class Fruit {
+  constructor(name) {
+    this.name = name;
+  }
+
+  printName() {
+    console.info('name:',this.name);
+  }
+}
+
+class Apple extends Fruit {
+  constructor(name,color) {
+    super(name);
+
+    this.color = color;
+  }
+
+  printColor() {
+    console.info('color:',this.color);
+  }
+}
+```
+
+</details>
+
+### <a name="write11"></a> 题目11
 删除 cookie 方式
 
-### <a name="write20"></a> 题目20
-[1,1,2,3] 去重，然后抓换为 [1,2,3,2,1]，然后求和
+<details>
+<summary>参考</summary>
 
-### <a name="write21"></a> 题目21
+JavaScript清理Cookie首先要找到该Cookie对应的Name对应的值，然后设置其为过期。切记设置domain和path，只有这两个参数跟你要删除的参数完全一样才能把它删除掉。
+
+```js
+function getCookie(name){
+    var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+    if(arr != null){
+      return unescape(arr[2]); return null;
+    }
+}
+
+function setExpires(){
+    var exp  = new Date();
+    exp.setTime(exp.getTime() - 1);
+    var target=getCookie('name');
+    var lanObj=document.getElementById('lanOption');
+    var lanSel=lanObj.value;
+    if(lanSel=='en'){
+      if(target!=null){
+          document.cookie="name="+target+";domain=xx.xx.com;expires="+exp.toGMTString()+";path=/";
+      }else{
+        document.cookie="name=;domain=xx.xx.com;expires="+exp.toGMTString()+";path=/";
+      }
+    }
+}
+```
+
+</details>
+
+
+### <a name="write12"></a> 题目12
+[1,1,2,3] 去重，然后转换为 [1,2,3,2,1]，然后求和。
+
+<details>
+<summary>参考</summary>
+
+```js
+let arr = [1,1,2,3];
+let noRepeatArr = [];
+arr.reduce((acc,current)=>{
+  if(acc.indexOf(current)===-1) {
+    acc.push(current);
+  }
+
+  return acc;
+},noRepeatArr);
+
+let noRepeatArrCopy = [...noRepeatArr];
+noRepeatArrCopy.reverse();
+noRepeatArr.splice(2,1,...noRepeatArrCopy);
+console.info('noRepeatArr',noRepeatArr);
+
+let count = noRepeatArr.reduce((acc,current)=>{
+  return acc + current;
+});
+console.info('count',count);
+
+```
+
+</details>
+
+### <a name="write21"></a> 题目13
 一个最多 5 位的金额数字，转换为汉字描述，例如 30123 转换为 三万零一百二十三
 
-### <a name="write22"></a> 题目22
-前端优化的方式（会问一些不太常见的优化方式有那些）
+```js
+```
 
-
-### <a name="write23"></a> 题目23
+### <a name="write23"></a> 题目15
 实现js克隆方法，可以对5种主要基本类型数据进行复制（要考虑循环引用）
 
-### <a name="write24"></a> 题目24
+### <a name="write24"></a> 题目16
 下面这个 ul，如何点击每一列的时候 alert 其 index
 ```html
 <ul id='test'>
@@ -264,7 +374,7 @@ countZero(1000)
 </ul>
 ```
 
-### <a name="write25"></a> 题目25
+### <a name="write25"></a> 题目17
 实现一个LazyMan，可以按照以下方式调用:
 
 LazyMan(“Hank”)输出:
@@ -294,7 +404,7 @@ Eat supper
 以此类推。
 
 <details>
-<summary>解题思路一</summary>
+<summary>参考</summary>
 
 ```js
 class LazyManMain {
