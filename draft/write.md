@@ -355,16 +355,68 @@ console.info('count',count);
 
 </details>
 
-### <a name="write21"></a> 题目13
+### <a name="write13"></a> 题目13
 一个最多 5 位的金额数字，转换为汉字描述，例如 30123 转换为 三万零一百二十三
 
+
+<details>
+<summary>参考</summary>
+
 ```js
+let num = String(12345);
+let numChinese = {'0':'零','1':'一','2':'二','3':'三','4':'四','5':'五','6':'六','7':'七','8':'八','9':'九',};
+let unit = ['','十','百','千','万'];
+let numLen = num.length;
+let numUnit = unit.slice(0,numLen);
+numUnit.reverse();
+let numArr = [...num];
+
+let newArr=numArr.reduce((acc,current,index) => {
+  acc.push(`${numChinese[current]}${numUnit[index]}`);
+  return acc;
+},[]);
+
+let format = newArr.join('');
+console.info('format:',format);
+
+```
+</details>
+
+### <a name="write14"></a> 题目14
+实现js克隆方法，可以对5种主要基本类型数据进行复制（要考虑循环引用）。
+
+<details>
+<summary>参考</summary>
+
+简单实现，有缺陷，更全面的见[这里][url-blog-40] 。
+```js
+const deepClone = () {
+    var newObj= obj instanceof Array?[]:{};
+    for(var i in obj){
+       newObj[i]=typeof obj[i]=='object'?
+       deepClone(obj[i]):obj[i];
+    }
+    return newObj;
+}
+
+const clone = (value) => {
+  // null undefined
+  if (String(value) === 'null' || String(value) === 'undefined') {
+    return value;
+  }
+  const basicType = ['number','string','boolean'];
+  if (basicType.index(typeof value)>-1) {
+    return value;
+  }
+
+  return deepClone(value);
+}
+
 ```
 
-### <a name="write23"></a> 题目15
-实现js克隆方法，可以对5种主要基本类型数据进行复制（要考虑循环引用）
+</details>
 
-### <a name="write24"></a> 题目16
+### <a name="write15"></a> 题目15
 下面这个 ul，如何点击每一列的时候 alert 其 index
 ```html
 <ul id='test'>
@@ -374,7 +426,22 @@ console.info('count',count);
 </ul>
 ```
 
-### <a name="write25"></a> 题目17
+<details>
+<summary>参考</summary>
+
+
+```js
+document.querySelectorAll('#test li').forEach((ele,index)=>{
+  ele.index = index;
+  ele.onclick = function() {
+    alert(this.index);
+  }
+});
+```
+
+</details>
+
+### <a name="write16"></a> 题目16
 实现一个LazyMan，可以按照以下方式调用:
 
 LazyMan(“Hank”)输出:
@@ -506,6 +573,7 @@ LazyMan('Hank')
 
 
 [url-base]:https://xxholic.github.io/segment/images
+[url-blog-40]:github.com/XXHolic/blog/issues/40
 
 [url-github-interview]:https://github.com/Advanced-Frontend/Daily-Interview-Question
 [url-github-reverse-interview]:https://github.com/yifeikong/reverse-interview-zh
