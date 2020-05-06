@@ -361,6 +361,23 @@ CMD 通用模块定义，跟 AMD 不同的是，CMD 推崇依赖就近，AMD 是
 </details>
 
 ## 框架类
+### React 的理解
+
+<details>
+<summary>理解参考一</summary>
+
+- 从 React 0.14 开始，react 包估计只暴露了一些定义组件的 API。绝大多数的的实现都存在 “渲染器（renders）”中。react-dom、react-dom/server、 react-native、 react-test-renderer、 react-art都是常见的渲染器
+- React 包是独立于平台的。react包仅仅是让你使用 React 的特性，但是它完全不知道这些特性是如何实现的。而渲染器包(react-dom、react-native等)提供了React特性的实现以及平台特定的逻辑。
+- 由于以上的原因，想使用新特性时，react 和 react-dom都需要被更新。
+- 每个渲染器都在已创建的类上设置了一个特殊的字段。这个字段叫做updater。setState所做的一切就是委托渲染器创建这个组件的实例。
+- Hooks使用了一个“dispatcher”对象，代替了updater字段。当你调用React.useState()、React.useEffect()、 或者其他内置的Hook时，这些调用被转发给了当前的dispatcher。
+
+
+- https://overreacted.io/zh-hans/how-does-setstate-know-what-to-do/
+
+</details>
+
+
 ### Vue 和 React 的差异
 
 <details>
@@ -418,8 +435,6 @@ CMD 通用模块定义，跟 AMD 不同的是，CMD 推崇依赖就近，AMD 是
 
 </details>
 
-- DVA 做了什么
-- saga 的优缺点
 
 ## 工程化类
 - webpack 生成的 manifest 文件作用
