@@ -563,6 +563,39 @@ LazyMan('Hank')
 
 </details>
 
+### <a name="write17"></a> 题目17
+实现 sum 函数使得以下表达式的值正确:
+
+sum(1, 2, 3).sumOf(); //6
+sum(2, 3)(2).sumOf(); //7
+sum(1)(2)(3)(4).sumOf(); //10
+sum(2)(4, 1)(2).sumOf(); //9
+
+
+<details>
+<summary>参考</summary>
+
+```js
+  function sum(...args) {
+    var result = args.reduce((pre, current) => {
+      return pre + current;
+    });
+
+    var fn = function(...args2) {
+      return sum(...args, ...args2);
+    }
+
+    fn.sumOf = function() {
+      console.info(result);
+      return result;
+    };
+
+    return fn;
+  }
+```
+
+</details>
+
 
 <div align="right"><a href="#index">Back to top :arrow_up:</a></div>
 
