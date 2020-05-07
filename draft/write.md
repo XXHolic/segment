@@ -597,6 +597,20 @@ sum(2)(4, 1)(2).sumOf(); //9
 </details>
 
 
+### <a name="write18"></a> 题目18
+让表达式 a == 1 && a == 2 && a == 3 返回 true
+
+```js
+const a = {
+  i: 1,
+  toString: function () {
+    return a.i++;
+  }
+}
+```
+
+
+
 <div align="right"><a href="#index">Back to top :arrow_up:</a></div>
 
 
