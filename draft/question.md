@@ -305,6 +305,22 @@ CMD 通用模块定义，跟 AMD 不同的是，CMD 推崇依赖就近，AMD 是
 
 </details>
 
+## Map 和 Set
+
+<details>
+<summary>参考一</summary>
+
+- Set ： 它类似于数组，但是成员的值都是唯一的，没有重复的值。
+- WeakSet ： 也是不重复的值的集合。但是，它与 Set 有两个区别。WeakSet 的成员只能是对象，而不能是其他类型的值。WeakSet 适合临时存放一组对象，以及存放跟对象绑定的信息。只要这些对象在外部消失，它在 WeakSet 里面的引用就会自动消失。
+- Map ： 本质上是键值对的集合（Hash 结构），Map 的键实际上是跟内存地址绑定的，只要内存地址不一样，就视为两个键。
+- WeakMap ： WeakMap只接受对象作为键名（null除外），不接受其他类型的值作为键名。WeakMap的键名所指向的对象，不计入垃圾回收机制。
+
+- https://es6.ruanyifeng.com/#docs/set-map
+
+</details>
+
+
+
 
 ## 常用设计模式
 
