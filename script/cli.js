@@ -52,14 +52,14 @@ function dealFile(filePath) {
   const articleIndex = Number(fileNameArr[0]);
   const articleLink = fileNameArr[2];
 
-  const urlPrefix = "https://xxholic.github.io/segment";
+  const urlPrefix = "https://xxholic.github.io/segment/";
   const addText =
     "\r\n- [Origin][url-origin]\r\n- [My GitHub][url-my-github]\r\n\r\n";
   const addUrl = `\r\n\r\n[url-origin]:https://github.com/XXHolic/segment/issues/${articleLink}\r\n[url-my-github]:https://github.com/XXHolic`;
   let str = fs.readFileSync(filePath, { encoding: "utf-8" });
 
   // 替换 .. 为实际地址
-  str = str.replace(/\.\./g, urlPrefix);
+  str = str.replace(/\.\.\//g, urlPrefix);
 
   // 用于 GitHub
   let githubStr = str;
