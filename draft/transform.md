@@ -51,7 +51,9 @@
 - 66.Canvas 橡皮擦效果.75
 - 72.自定义 create-react-app.82
 - 16.JavaScript 新旧替换一：变量声明.18
-- 33.JavaScript 新旧替换一：变量声明.35
+- 33.JavaScript 新旧替换二：赋值和取值.35
+- 34.JavaScript 新旧替换三：参数转换.36
+- 47.JavaScript 新旧替换四：继承.49
 
 ### blog
 - 47.About Performanc.47
