@@ -2,9 +2,9 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [正则多次匹配无效的问题](https://github.com/XXHolic/segment/issues/85)
 - [Hoisting](https://github.com/XXHolic/segment/issues/84)
 - [自定义 create-react-app](https://github.com/XXHolic/segment/issues/82)
-- [Mac 配置记](https://github.com/XXHolic/segment/issues/81)
 
 ## 工作流
 - [GitLab Flow](https://github.com/XXHolic/segment/issues/80)
@@ -65,6 +65,7 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [GitHub 上常用之外的 Markdown 语法](https://github.com/XXHolic/segment/issues/12)
 
 ## 其它
+- [正则多次匹配无效的问题](https://github.com/XXHolic/segment/issues/85)
 - [h5 穿透滚动](https://github.com/XXHolic/segment/issues/72)
 - [Safari 导航栏](https://github.com/XXHolic/segment/issues/70)
 - [粘性头部效果](https://github.com/XXHolic/segment/issues/68)
