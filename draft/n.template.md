@@ -14,11 +14,21 @@
 
 
 ## <a name="reference"></a> 参考资料
-- [example][url-base]
+- [example][url-article-1]
 
 
-[url-base]:https://xxholic.github.io/segment
+[url-article-1]:https://xxholic.github.io/segment
 
-[url-aiticle1]:https://xxholic.github.io/segment
+[url-local-5]:../images/72/help.png
 
-[url-local-test]:https://xxholic.github.io/segment
+<details>
+<summary>:wastebasket:</summary>
+
+看的出来是哪个奥特曼么？
+
+![73-poster][url-local-poster]
+
+</details>
+
+[url-book]:https://book.douban.com/subject/26916012/
+[url-local-poster]:../images/73/poster.jpg
