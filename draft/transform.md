@@ -55,6 +55,7 @@
 - 34.JavaScript 新旧替换三：参数转换.36
 - 47.JavaScript 新旧替换四：继承.49
 - 52.JavaScript 新旧替换五：函数嵌套.59
+- 73.Hoisting.84
 
 ### blog
 - 47.About Performanc.47
@@ -67,3 +68,4 @@
 - 43.JavaScript 团队规范参考.43
 - 16.Git Commit 规范参考.16
 - 53.前端异常类型及捕获方式.53
+- 56.About Speed Tools.56
