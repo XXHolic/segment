@@ -5,7 +5,6 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [Canvas 绘制 1 px 直线模糊（非高清屏）的问题](https://github.com/XXHolic/segment/issues/86)
 - [正则多次匹配无效的问题](https://github.com/XXHolic/segment/issues/85)
 - [Hoisting](https://github.com/XXHolic/segment/issues/84)
-- [自定义 create-react-app](https://github.com/XXHolic/segment/issues/82)
 
 ## 工作流
 - [GitLab Flow](https://github.com/XXHolic/segment/issues/80)
