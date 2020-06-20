@@ -2,6 +2,7 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [Canvas 绘制 1 px 直线模糊（非高清屏）的问题](https://github.com/XXHolic/segment/issues/86)
 - [正则多次匹配无效的问题](https://github.com/XXHolic/segment/issues/85)
 - [Hoisting](https://github.com/XXHolic/segment/issues/84)
 - [自定义 create-react-app](https://github.com/XXHolic/segment/issues/82)
@@ -12,6 +13,7 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [Git branching model](https://github.com/XXHolic/segment/issues/78)
 
 ## Canvas
+- [Canvas 绘制 1 px 直线模糊（非高清屏）的问题](https://github.com/XXHolic/segment/issues/86)
 - [Canvas 橡皮擦效果](https://github.com/XXHolic/segment/issues/75)
 - [Canvas 图像灰度处理](https://github.com/XXHolic/segment/issues/74)
 - [Canvas 文本坐标(0,0)显示问题](https://github.com/XXHolic/segment/issues/29)
