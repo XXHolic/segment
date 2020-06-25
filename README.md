@@ -2,9 +2,9 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [instanceof](https://github.com/XXHolic/segment/issues/87)
 - [Canvas 绘制 1 px 直线模糊（非高清屏）的问题](https://github.com/XXHolic/segment/issues/86)
 - [正则多次匹配无效的问题](https://github.com/XXHolic/segment/issues/85)
-- [Hoisting](https://github.com/XXHolic/segment/issues/84)
 
 ## 工作流
 - [GitLab Flow](https://github.com/XXHolic/segment/issues/80)
@@ -31,6 +31,7 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [JavaScript 新旧替换五：函数嵌套](https://github.com/XXHolic/segment/issues/59)
 
 ## 概念
+- [instanceof](https://github.com/XXHolic/segment/issues/87)
 - [Hoisting](https://github.com/XXHolic/segment/issues/84)
 - [z-index](https://github.com/XXHolic/segment/issues/71)
 - [Font](https://github.com/XXHolic/segment/issues/62)
