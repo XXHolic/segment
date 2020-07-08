@@ -2,9 +2,9 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [获取页面元素位置](https://github.com/XXHolic/segment/issues/88)
 - [instanceof](https://github.com/XXHolic/segment/issues/87)
 - [Canvas 绘制 1 px 直线模糊（非高清屏）的问题](https://github.com/XXHolic/segment/issues/86)
-- [正则多次匹配无效的问题](https://github.com/XXHolic/segment/issues/85)
 
 ## 工作流
 - [GitLab Flow](https://github.com/XXHolic/segment/issues/80)
@@ -67,6 +67,7 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [GitHub 上常用之外的 Markdown 语法](https://github.com/XXHolic/segment/issues/12)
 
 ## 其它
+- [获取页面元素位置](https://github.com/XXHolic/segment/issues/88)
 - [正则多次匹配无效的问题](https://github.com/XXHolic/segment/issues/85)
 - [h5 穿透滚动](https://github.com/XXHolic/segment/issues/72)
 - [Safari 导航栏](https://github.com/XXHolic/segment/issues/70)
