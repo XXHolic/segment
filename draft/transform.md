@@ -56,6 +56,9 @@
 - 47.JavaScript 新旧替换四：继承.49
 - 52.JavaScript 新旧替换五：函数嵌套.59
 - 73.Hoisting.84
+- 17.canvas 宽高问题.19
+- 18.canvas 显示模糊问题.20
+- 19.canvas 设置边框问题.21
 
 ### blog
 - 47.About Performanc.47
