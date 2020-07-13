@@ -59,6 +59,7 @@
 - 17.canvas 宽高问题.19
 - 18.canvas 显示模糊问题.20
 - 19.canvas 设置边框问题.21
+- 22.canvas 图片圆角问题.24
 
 ### blog
 - 47.About Performanc.47
