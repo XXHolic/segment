@@ -18,7 +18,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.3",
     "npx": "^10.2.0",
-    "standard-version": "^4.4.0",
+    "standard-version": "^8.0.1",
     "yarn": "^1.7.0"
   },
   "scripts": {
