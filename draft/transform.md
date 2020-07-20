@@ -60,6 +60,8 @@
 - 18.canvas 显示模糊问题.20
 - 19.canvas 设置边框问题.21
 - 22.canvas 图片圆角问题.24
+- 22.canvas 图片圆角问题.24
+- 23.canvas 文字换行.25
 
 ### blog
 - 47.About Performanc.47
