@@ -62,6 +62,7 @@
 - 22.canvas 图片圆角问题.24
 - 22.canvas 图片圆角问题.24
 - 23.canvas 文字换行.25
+- 24.canvas 图片跨域处理.26
 
 ### blog
 - 47.About Performanc.47
