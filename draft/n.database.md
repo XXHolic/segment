@@ -58,6 +58,7 @@ brew install mongodb-community@version // version 为所需的版本号
 ```
 
 ### 操作
+启动服务：
 ```
 To have launchd start mongodb/brew/mongodb-community now and restart at login:
   brew services start mongodb/brew/mongodb-community
@@ -65,11 +66,18 @@ Or, if you don't want/need a background service you can just run:
   mongod --config /usr/local/etc/mongod.conf
 ```
 
+进入shell模式：
+```
+mongo db
+```
+![database-mongo-shell][url-local-1]
+
 <div align="right"><a href="#index">Back to top :arrow_up:</a></div>
 
 
 ## <a name="reference"></a> 参考资料
 - [example][url-base]
 
+[url-local-1]:../images/database/mongo-shell.png
 
 [url-base]:https://xxholic.github.io/segment
