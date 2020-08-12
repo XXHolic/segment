@@ -7,11 +7,12 @@
 
 
 ## <a name="start"></a> 引子
-要尝试 node ，先弄个简单的数据库。
+尝试数据库。
+brew services start mongodb/brew/mongodb-community
 
+
+## sql
 sql 版本 8.0.17 Homebrew， 环境 Mac 。
-
-## 命令
 
 ### 服务启动/关闭
 - mysql.server start
@@ -48,6 +49,21 @@ https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-a
 
 https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server/56509065#56509065
 
+
+## mongoDB
+### 安装
+```
+brew tap mongodb/brew
+brew install mongodb-community@version // version 为所需的版本号
+```
+
+### 操作
+```
+To have launchd start mongodb/brew/mongodb-community now and restart at login:
+  brew services start mongodb/brew/mongodb-community
+Or, if you don't want/need a background service you can just run:
+  mongod --config /usr/local/etc/mongod.conf
+```
 
 <div align="right"><a href="#index">Back to top :arrow_up:</a></div>
 
