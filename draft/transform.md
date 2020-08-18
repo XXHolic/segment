@@ -59,10 +59,12 @@
 - 17.canvas 宽高问题.19
 - 18.canvas 显示模糊问题.20
 - 19.canvas 设置边框问题.21
-- 22.canvas 图片圆角问题.24
+- Canvas 文本坐标(0,0)显示问题
 - 22.canvas 图片圆角问题.24
 - 23.canvas 文字换行.25
 - 24.canvas 图片跨域处理.26
+- Canvas 图像灰度处理
+- Canvas 橡皮擦效果
 
 ### blog
 - 47.About Performanc.47
