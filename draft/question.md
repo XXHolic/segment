@@ -378,6 +378,17 @@ CMD 通用模块定义，跟 AMD 不同的是，CMD 推崇依赖就近，AMD 是
 
 </details>
 
+## CSS 中 BFC 的理解
+
+<details>
+<summary>理解参考一</summary>
+
+见[这里][url-mdn-4]。
+
+https://www.cnblogs.com/chen-cong/p/7862832.html
+
+</details>
+
 ## 框架类
 ### React 的理解
 
@@ -489,6 +500,7 @@ CMD 通用模块定义，跟 AMD 不同的是，CMD 推崇依赖就近，AMD 是
 [url-mdn-1]:https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage
 [url-mdn-2]:https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create
 [url-mdn-3]:https://developer.mozilla.org/zh-CN/docs/Web/HTTP
+[url-mdn-4]:https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
 [url-segment-49]:https://github.com/XXHolic/segment/issues/49
 [url-segment-50]:https://github.com/XXHolic/segment/issues/50
 [url-segment-40]:https://github.com/XXHolic/segment/issues/40
