@@ -98,10 +98,7 @@ var a = [1,2,3,4]，var b = [5,6,7]，怎么把数组 b 插入到 a 中，最后
 
 ```js
 let a = [1,2,3,4],b = [5,6,7];
-for(let i=0,len = b.length;i<len;i++) {
-  let insertPos = 2+i;
-  a.splice(insertPos,0,b[i]);
-}
+a.splice(2,0,...b);
 console.info(a);
 ```
 
