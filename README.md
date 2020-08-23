@@ -2,9 +2,9 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [JavaScript 新旧替换六：键值对数据](https://github.com/XXHolic/segment/issues/90)
 - [获取页面元素位置](https://github.com/XXHolic/segment/issues/88)
 - [instanceof](https://github.com/XXHolic/segment/issues/87)
-- [Canvas 绘制 1 px 直线模糊（非高清屏）的问题](https://github.com/XXHolic/segment/issues/86)
 
 ## 工作流
 - [GitLab Flow](https://github.com/XXHolic/segment/issues/80)
@@ -29,6 +29,7 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [JavaScript 新旧替换三：参数转换](https://github.com/XXHolic/segment/issues/36)
 - [JavaScript 新旧替换四：继承](https://github.com/XXHolic/segment/issues/49)
 - [JavaScript 新旧替换五：函数嵌套](https://github.com/XXHolic/segment/issues/59)
+- [JavaScript 新旧替换六：键值对数据](https://github.com/XXHolic/segment/issues/90)
 
 ## 概念
 - [instanceof](https://github.com/XXHolic/segment/issues/87)
