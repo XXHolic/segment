@@ -65,6 +65,7 @@
 - 24.canvas 图片跨域处理.26
 - Canvas 图像灰度处理
 - Canvas 橡皮擦效果
+- 75.Canvas 绘制 1 px 直线模糊（非高清屏）的问题.86
 
 ### blog
 - 47.About Performanc.47
