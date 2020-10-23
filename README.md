@@ -31,6 +31,11 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [JavaScript 新旧替换五：函数嵌套](https://github.com/XXHolic/segment/issues/59)
 - [JavaScript 新旧替换六：键值对数据](https://github.com/XXHolic/segment/issues/90)
 
+## NPM
+- [npm Getting started](https://github.com/XXHolic/segment/issues/22)
+- [npm developer guide](https://github.com/XXHolic/blog/issues/29)
+- [npm 发布包遇到的问题](https://github.com/XXHolic/segment/issues/28)
+
 ## 概念
 - [instanceof](https://github.com/XXHolic/segment/issues/87)
 - [Hoisting](https://github.com/XXHolic/segment/issues/84)
@@ -64,7 +69,6 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [Node Command-line utility](https://github.com/XXHolic/segment/issues/46)
 - [Node 遍历文件](https://github.com/XXHolic/segment/issues/45)
 - [Lerna](https://github.com/XXHolic/segment/issues/23)
-- [npm-Getting started](https://github.com/XXHolic/segment/issues/22)
 - [GitHub 上常用之外的 Markdown 语法](https://github.com/XXHolic/segment/issues/12)
 
 ## 其它
@@ -84,7 +88,6 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [图片 src 为二进制的处理](https://github.com/XXHolic/segment/issues/33)
 - [打印分页问题](https://github.com/XXHolic/segment/issues/31)
 - [Chrome Failed to load response data](https://github.com/XXHolic/segment/issues/30)
-- [npm 发布包遇到的问题](https://github.com/XXHolic/segment/issues/28)
 - [预请求 405 问题](https://github.com/XXHolic/segment/issues/27)
 - [Date 转换问题](https://github.com/XXHolic/segment/issues/16)
 - [将数字转换为字符串碰到的问题](https://github.com/XXHolic/segment/issues/13)
