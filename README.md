@@ -6,6 +6,14 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [获取页面元素位置](https://github.com/XXHolic/segment/issues/88)
 - [instanceof](https://github.com/XXHolic/segment/issues/87)
 
+## JavaScript 新旧替换
+- [JavaScript 新旧替换一：变量声明](https://github.com/XXHolic/segment/issues/18)
+- [JavaScript 新旧替换二：赋值和取值](https://github.com/XXHolic/segment/issues/35)
+- [JavaScript 新旧替换三：参数转换](https://github.com/XXHolic/segment/issues/36)
+- [JavaScript 新旧替换四：继承](https://github.com/XXHolic/segment/issues/49)
+- [JavaScript 新旧替换五：函数嵌套](https://github.com/XXHolic/segment/issues/59)
+- [JavaScript 新旧替换六：键值对数据](https://github.com/XXHolic/segment/issues/90)
+
 ## 工作流
 - [GitLab Flow](https://github.com/XXHolic/segment/issues/80)
 - [GitHub flow](https://github.com/XXHolic/segment/issues/79)
@@ -23,41 +31,49 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [Canvas 显示模糊问题](https://github.com/XXHolic/segment/issues/20)
 - [Canvas 宽高问题](https://github.com/XXHolic/segment/issues/19)
 
-## JavaScript 新旧替换
-- [JavaScript 新旧替换一：变量声明](https://github.com/XXHolic/segment/issues/18)
-- [JavaScript 新旧替换二：赋值和取值](https://github.com/XXHolic/segment/issues/35)
-- [JavaScript 新旧替换三：参数转换](https://github.com/XXHolic/segment/issues/36)
-- [JavaScript 新旧替换四：继承](https://github.com/XXHolic/segment/issues/49)
-- [JavaScript 新旧替换五：函数嵌套](https://github.com/XXHolic/segment/issues/59)
-- [JavaScript 新旧替换六：键值对数据](https://github.com/XXHolic/segment/issues/90)
-
 ## NPM
 - [npm Getting started](https://github.com/XXHolic/segment/issues/22)
 - [npm developer guide](https://github.com/XXHolic/blog/issues/29)
 - [npm 发布包遇到的问题](https://github.com/XXHolic/segment/issues/28)
 
-## 概念
+## API
+- [Mouse Events & Touch Events](https://github.com/XXHolic/blog/issues/15)
+- [CSS 浮动 float 相关初解](https://github.com/XXHolic/blog/issues/9)
+- [Object.observe](https://github.com/XXHolic/blog/issues/25)
+- [Async Function](https://github.com/XXHolic/blog/issues/36)
+- [Generator Function](https://github.com/XXHolic/blog/issues/35)
+- [Promise](https://github.com/XXHolic/blog/issues/34)
+- [获取页面元素位置](https://github.com/XXHolic/segment/issues/88)
 - [instanceof](https://github.com/XXHolic/segment/issues/87)
-- [Hoisting](https://github.com/XXHolic/segment/issues/84)
 - [z-index](https://github.com/XXHolic/segment/issues/71)
-- [Font](https://github.com/XXHolic/segment/issues/62)
+- [String & Array Method](https://github.com/XXHolic/segment/issues/52)
+- [apply、call 和 bind 方法](https://github.com/XXHolic/segment/issues/41)
+- [position 属性值 sticky](https://github.com/XXHolic/segment/issues/15)
+- [toString() 和 String() 的区别](https://github.com/XXHolic/segment/issues/14)
+- [CSS 常见形状实现思路](https://github.com/XXHolic/blog/issues/7)
+- [CSS 形状初级理解](https://github.com/XXHolic/blog/issues/6)
+- [CSS 不定高宽度元素水平垂直居中](https://github.com/XXHolic/blog/issues/4)
+- [CSS 居中初级理解](https://github.com/XXHolic/blog/issues/3)
+
+## 概念
+- [Hoisting](https://github.com/XXHolic/segment/issues/84)
 - [图像](https://github.com/XXHolic/segment/issues/73)
 - [回车和换行](https://github.com/XXHolic/segment/issues/63)
+- [Font](https://github.com/XXHolic/segment/issues/62)
 - [SEO Concept](https://github.com/XXHolic/segment/issues/60)
 - [Webpack Concept](https://github.com/XXHolic/segment/issues/57)
 - [CORS](https://github.com/XXHolic/segment/issues/50)
-- [String & Array Method](https://github.com/XXHolic/segment/issues/52)
 - [Object Overview](https://github.com/XXHolic/segment/issues/48)
 - [Transaction processing](https://github.com/XXHolic/segment/issues/47)
 - [Programming paradigm](https://github.com/XXHolic/segment/issues/42)
+- [关于 this 的误解](https://github.com/XXHolic/segment/issues/40)
+- [关于 this 绑定](https://github.com/XXHolic/blog/issues/33)
 - [The new Operator](https://github.com/XXHolic/segment/issues/39)
 - [Writing Modes](https://github.com/XXHolic/segment/issues/38)
 - [ASCII 和 Base64](https://github.com/XXHolic/segment/issues/32)
-- [position 属性值 sticky](https://github.com/XXHolic/segment/issues/15)
+- [Date 字符串格式](https://github.com/XXHolic/segment/issues/17)
 - [模拟事件](https://github.com/XXHolic/segment/issues/11)
 - [计量长度](https://github.com/XXHolic/segment/issues/1)
-- [toString() 和 String() 的区别](https://github.com/XXHolic/segment/issues/14)
-- [Date 字符串格式](https://github.com/XXHolic/segment/issues/17)
 
 ## 工具
 - [自定义 create-react-app](https://github.com/XXHolic/segment/issues/82)
@@ -65,14 +81,13 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [Mac 快捷键](https://github.com/XXHolic/segment/issues/34)
 - [配置环境零碎点](https://github.com/XXHolic/segment/issues/77)
 - [Rich Text Editor](https://github.com/XXHolic/segment/issues/61)
-- [stylelint rules](https://github.com/XXHolic/segment/issues/51)
 - [Node Command-line utility](https://github.com/XXHolic/segment/issues/46)
 - [Node 遍历文件](https://github.com/XXHolic/segment/issues/45)
 - [Lerna](https://github.com/XXHolic/segment/issues/23)
 - [GitHub 上常用之外的 Markdown 语法](https://github.com/XXHolic/segment/issues/12)
+- [使用 Babel 的三类方式](https://github.com/XXHolic/blog/issues/19)
 
-## 其它
-- [获取页面元素位置](https://github.com/XXHolic/segment/issues/88)
+## 问题
 - [正则多次匹配无效的问题](https://github.com/XXHolic/segment/issues/85)
 - [h5 穿透滚动](https://github.com/XXHolic/segment/issues/72)
 - [Safari 导航栏](https://github.com/XXHolic/segment/issues/70)
@@ -82,8 +97,6 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [textarea](https://github.com/XXHolic/segment/issues/64)
 - [Linux 下克隆 GitHub 库很慢](https://github.com/XXHolic/segment/issues/44)
 - [sudo 找不到命令](https://github.com/XXHolic/segment/issues/43)
-- [apply、call 和 bind 方法](https://github.com/XXHolic/segment/issues/41)
-- [关于 this 的误解](https://github.com/XXHolic/segment/issues/40)
 - [复制到剪切板的问题](https://github.com/XXHolic/segment/issues/37)
 - [图片 src 为二进制的处理](https://github.com/XXHolic/segment/issues/33)
 - [打印分页问题](https://github.com/XXHolic/segment/issues/31)
@@ -98,3 +111,5 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [在 IOS 下，input 文本框获取焦点时，自动全选已有值](https://github.com/XXHolic/segment/issues/6)
 - [在 IOS 下，用了 iscroll.js，页面滑动明显卡顿](https://github.com/XXHolic/segment/issues/5)
 - [阻止自动填充帐号 input](https://github.com/XXHolic/segment/issues/4)
+- [关于 display: inline-block 产生的间隙](https://github.com/XXHolic/blog/issues/13)
+- [手机端的单击处理](https://github.com/XXHolic/blog/issues/20)
