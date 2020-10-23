@@ -2,9 +2,9 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [本地包调试 ：npm link](https://github.com/XXHolic/segment/issues/91)
 - [JavaScript 新旧替换六：键值对数据](https://github.com/XXHolic/segment/issues/90)
 - [获取页面元素位置](https://github.com/XXHolic/segment/issues/88)
-- [instanceof](https://github.com/XXHolic/segment/issues/87)
 
 ## JavaScript 新旧替换
 - [JavaScript 新旧替换一：变量声明](https://github.com/XXHolic/segment/issues/18)
@@ -35,6 +35,7 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [npm Getting started](https://github.com/XXHolic/segment/issues/22)
 - [npm developer guide](https://github.com/XXHolic/blog/issues/29)
 - [npm 发布包遇到的问题](https://github.com/XXHolic/segment/issues/28)
+- [本地包调试 ：npm link](https://github.com/XXHolic/segment/issues/91)
 
 ## API
 - [Mouse Events & Touch Events](https://github.com/XXHolic/blog/issues/15)
