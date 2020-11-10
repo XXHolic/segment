@@ -67,6 +67,8 @@
 - Canvas 橡皮擦效果
 - 75.Canvas 绘制 1 px 直线模糊（非高清屏）的问题.86
 - 78.JavaScript 新旧替换六：键值对数据.89
+- npm Getting started
+- npm developer guide
 
 ### blog
 - 47.About Performanc.47
