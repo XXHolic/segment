@@ -10,52 +10,52 @@ tinify.key = "LzZkNRr6tDlJ3xDLr6Y7V0bkdyYYBs61";
  * @param {String} dir 文件夹路径
  */
 function readDir(dir) {
-  var exist = fs.existsSync(dir);
-  // 排除不需要遍历的文件夹或文件
-  var excludeDir = /^(\.|node_module|wx|n)/;
-  if (!exist) {
-    console.error("目录路径不存在");
-    return;
-  }
-  var pa = fs.readdirSync(dir);
-
-  for (let index = 0; index < pa.length; index++) {
-    let file = pa[index];
-    var pathName = path.join(dir, file);
-    var info = fs.statSync(pathName);
-    if (info.isDirectory() && !excludeDir.test(file)) {
-      readDir(pathName);
-    } else {
-      let fileExt = path.extname(file);
-
-      if (fileExt === ".png" || fileExt === ".jpg" || fileExt === ".jpeg") {
-        fileArr.push(pathName);
-      }
+    var exist = fs.existsSync(dir);
+    // 排除不需要遍历的文件夹或文件
+    var excludeDir = /^(\.|node_module|wx|n)/;
+    if (!exist) {
+        console.error("目录路径不存在");
+        return;
     }
-  }
+    var pa = fs.readdirSync(dir);
+
+    for (let index = 0; index < pa.length; index++) {
+        let file = pa[index];
+        var pathName = path.join(dir, file);
+        var info = fs.statSync(pathName);
+        if (info.isDirectory() && !excludeDir.test(file)) {
+            readDir(pathName);
+        } else {
+            let fileExt = path.extname(file);
+
+            if (fileExt === ".png" || fileExt === ".jpg" || fileExt === ".jpeg") {
+                fileArr.push(pathName);
+            }
+        }
+    }
 }
 
 function traverseFile(file) {
 
-  file.length &&
-    file.forEach(ele => {
-      dealFile(ele);
-    });
+    file.length &&
+        file.forEach(ele => {
+            dealFile(ele);
+        });
 }
 
 function dealFile(filePath) {
-  var fileName = path.basename(filePath);
+    var fileName = path.basename(filePath);
 
-  const source = tinify.fromFile(filePath);
-  source.toFile(filePath,function() {
-    console.info(`${fileName}压缩完成`);
-  });
+    const source = tinify.fromFile(filePath);
+    source.toFile(filePath, function () {
+        console.info(`${fileName}压缩完成`);
+    });
 
 
 }
 
 // 获取当前执行路径,后续新加的图片，这个针对性的改一下，因为免费的有压缩数量限制
-var currentPath = "./images/80";
+var currentPath = "./images/81";
 var fileArr = []; // 存储目标文件路径
 
 readDir(currentPath);
