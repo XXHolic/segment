@@ -2,9 +2,9 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [CentOS 7 后台克隆远程库](https://github.com/XXHolic/segment/issues/96)
+- [CentOS 7 下 Git 超时](https://github.com/XXHolic/segment/issues/95)
 - [Lerna 实践记录](https://github.com/XXHolic/segment/issues/92)
-- [本地包调试 ：npm link](https://github.com/XXHolic/segment/issues/91)
-- [JavaScript 新旧替换六：键值对数据](https://github.com/XXHolic/segment/issues/90)
 
 ## JavaScript 新旧替换
 - [JavaScript 新旧替换一：变量声明](https://github.com/XXHolic/segment/issues/18)
@@ -90,6 +90,8 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [使用 Babel 的三类方式](https://github.com/XXHolic/blog/issues/19)
 
 ## 问题
+- [CentOS 7 后台克隆远程库](https://github.com/XXHolic/segment/issues/96)
+- [CentOS 7 下 Git 超时](https://github.com/XXHolic/segment/issues/95)
 - [正则多次匹配无效的问题](https://github.com/XXHolic/segment/issues/85)
 - [h5 穿透滚动](https://github.com/XXHolic/segment/issues/72)
 - [Safari 导航栏](https://github.com/XXHolic/segment/issues/70)
