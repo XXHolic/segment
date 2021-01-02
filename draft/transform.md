@@ -69,6 +69,12 @@
 - 78.JavaScript 新旧替换六：键值对数据.89
 - npm Getting started
 - npm developer guide
+- 26.npm 发布包遇到的问题.28
+- 79.本地包调试 ：npm link.91
+- [前端异常示例](https://github.com/XXHolic/blog/issues/68)
+- [前端异常解析](https://github.com/XXHolic/blog/issues/70)
+- [前端异常解析：Source Map](https://github.com/XXHolic/blog/issues/71)
+- [前端异常上报](https://github.com/XXHolic/blog/issues/73)
 
 ### blog
 - 47.About Performanc.47
