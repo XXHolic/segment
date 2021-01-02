@@ -2,9 +2,9 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [Windows 下 Nginx 开机自启动](https://github.com/XXHolic/segment/issues/97)
 - [CentOS 7 后台克隆远程库](https://github.com/XXHolic/segment/issues/96)
 - [CentOS 7 下 Git 超时](https://github.com/XXHolic/segment/issues/95)
-- [Lerna 实践记录](https://github.com/XXHolic/segment/issues/92)
 
 ## JavaScript 新旧替换
 - [JavaScript 新旧替换一：变量声明](https://github.com/XXHolic/segment/issues/18)
@@ -90,6 +90,7 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [使用 Babel 的三类方式](https://github.com/XXHolic/blog/issues/19)
 
 ## 问题
+- [Windows 下 Nginx 开机自启动](https://github.com/XXHolic/segment/issues/97)
 - [CentOS 7 后台克隆远程库](https://github.com/XXHolic/segment/issues/96)
 - [CentOS 7 下 Git 超时](https://github.com/XXHolic/segment/issues/95)
 - [正则多次匹配无效的问题](https://github.com/XXHolic/segment/issues/85)
