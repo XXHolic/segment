@@ -71,10 +71,7 @@
 - npm developer guide
 - 26.npm 发布包遇到的问题.28
 - 79.本地包调试 ：npm link.91
-- [前端异常示例](https://github.com/XXHolic/blog/issues/68)
-- [前端异常解析](https://github.com/XXHolic/blog/issues/70)
-- [前端异常解析：Source Map](https://github.com/XXHolic/blog/issues/71)
-- [前端异常上报](https://github.com/XXHolic/blog/issues/73)
+- 83.Windows 下 Nginx 开机自启动.97
 
 ### blog
 - 47.About Performanc.47
@@ -95,3 +92,7 @@
 - 62.Collision Detection ：Triangle.63
 - 63.Collision Detection ：Transformation.64
 - 64.Collision Detection ：Separating Axis Theorem.65
+- [前端异常示例](https://github.com/XXHolic/blog/issues/68)
+- [前端异常解析](https://github.com/XXHolic/blog/issues/70)
+- [前端异常解析：Source Map](https://github.com/XXHolic/blog/issues/71)
+- [前端异常上报](https://github.com/XXHolic/blog/issues/73)
