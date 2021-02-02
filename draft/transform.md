@@ -72,6 +72,10 @@
 - 26.npm 发布包遇到的问题.28
 - 79.本地包调试 ：npm link.91
 - 83.Windows 下 Nginx 开机自启动.97
+- 81.CentOS 7 下 Git 超时.95
+- 82.CentOS 7 后台克隆远程库.96
+- 84.Node 连接 MySql.98
+- 62.z-index.71
 
 ### blog
 - 47.About Performanc.47
