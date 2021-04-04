@@ -76,7 +76,8 @@
 - 82.CentOS 7 后台克隆远程库.96
 - 84.Node 连接 MySql.98
 - 62.z-index.71
-
+- 77.获取页面元素位置.88
+- [CSS 浮动 float 小结](https://github.com/XXHolic/blog/issues/9)
 ### blog
 - 47.About Performanc.47
 - 48.Performance Guide.48
@@ -96,7 +97,15 @@
 - 62.Collision Detection ：Triangle.63
 - 63.Collision Detection ：Transformation.64
 - 64.Collision Detection ：Separating Axis Theorem.65
-- [前端异常示例](https://github.com/XXHolic/blog/issues/68)
-- [前端异常解析](https://github.com/XXHolic/blog/issues/70)
-- [前端异常解析：Source Map](https://github.com/XXHolic/blog/issues/71)
-- [前端异常上报](https://github.com/XXHolic/blog/issues/73)
+- 67.前端异常示例
+- 69.前端异常解析
+- 70.前端异常解析：Source Map
+- 71.前端异常上报
+- 73.The Single Responsibility Principle.76
+- 74.NodeJS and Good Practices.77
+- The Clean Architecture
+- Scalable Frontend 1 — Architecture Fundamentals
+- [Scalable Frontend 2 — Common Patterns](https://github.com/XXHolic/blog/issues/79)
+- [Scalable Frontend 3 —The State Layer](https://github.com/XXHolic/blog/issues/80)
+- [10 Common Software Architectural Patterns in a nutshelle](https://github.com/XXHolic/blog/issues/82)
+-

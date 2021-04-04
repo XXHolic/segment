@@ -39,7 +39,7 @@ Scattered knowledge points here. Maybe you can find something useful.
 
 ## API
 - [Mouse Events & Touch Events](https://github.com/XXHolic/blog/issues/15)
-- [CSS 浮动 float 相关初解](https://github.com/XXHolic/blog/issues/9)
+- [CSS 浮动 float 小结](https://github.com/XXHolic/blog/issues/9)
 - [Object.observe](https://github.com/XXHolic/blog/issues/25)
 - [Async Function](https://github.com/XXHolic/blog/issues/36)
 - [Generator Function](https://github.com/XXHolic/blog/issues/35)
