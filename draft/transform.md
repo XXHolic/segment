@@ -78,6 +78,9 @@
 - 62.z-index.71
 - 77.获取页面元素位置.88
 - [CSS 浮动 float 小结](https://github.com/XXHolic/blog/issues/9)
+- 8.box-shadow设置后看不到的问题.10
+- Transaction processing
+- 74.正则多次匹配无效的问题.85
 ### blog
 - 47.About Performanc.47
 - 48.Performance Guide.48
@@ -108,4 +111,4 @@
 - [Scalable Frontend 2 — Common Patterns](https://github.com/XXHolic/blog/issues/79)
 - [Scalable Frontend 3 —The State Layer](https://github.com/XXHolic/blog/issues/80)
 - [10 Common Software Architectural Patterns in a nutshelle](https://github.com/XXHolic/blog/issues/82)
--
+- 超级微型编译器
