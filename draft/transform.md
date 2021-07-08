@@ -112,3 +112,4 @@
 - [Scalable Frontend 3 —The State Layer](https://github.com/XXHolic/blog/issues/80)
 - [10 Common Software Architectural Patterns in a nutshelle](https://github.com/XXHolic/blog/issues/82)
 - 超级微型编译器
+- 屏幕尺寸、像素、分辨率和 devicePixelRatio
