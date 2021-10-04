@@ -2,9 +2,9 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [JavaScript 数学曲线—阿基米德螺线](https://github.com/XXHolic/segment/issues/102)
 - [Node 连接 MySql](https://github.com/XXHolic/segment/issues/98)
 - [Windows 下 Nginx 开机自启动](https://github.com/XXHolic/segment/issues/97)
-- [CentOS 7 后台克隆远程库](https://github.com/XXHolic/segment/issues/96)
 
 ## JavaScript 新旧替换
 - [JavaScript 新旧替换一：变量声明](https://github.com/XXHolic/segment/issues/18)
