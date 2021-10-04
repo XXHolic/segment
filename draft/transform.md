@@ -83,6 +83,8 @@
 - 74.正则多次匹配无效的问题.85
 - 36.Writing Modes.38
 - ASCII 和 Base64
+- 图片 src 为二进制的处理
+- Lerna
 ### blog
 - 47.About Performanc.47
 - 48.Performance Guide.48
