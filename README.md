@@ -2,13 +2,14 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [JavaScript 数学曲线—连锁螺线](https://github.com/XXHolic/segment/issues/104)
 - [JavaScript 数学曲线—等角螺线](https://github.com/XXHolic/segment/issues/103)
 - [JavaScript 数学曲线—阿基米德螺线](https://github.com/XXHolic/segment/issues/102)
-- [Node 连接 MySql](https://github.com/XXHolic/segment/issues/98)
 
 ## 数学曲线
 - [JavaScript 数学曲线—阿基米德螺线](https://github.com/XXHolic/segment/issues/102)
 - [JavaScript 数学曲线—等角螺线](https://github.com/XXHolic/segment/issues/103)
+- [JavaScript 数学曲线—连锁螺线](https://github.com/XXHolic/segment/issues/104)
 ## JavaScript 新旧替换
 - [JavaScript 新旧替换一：变量声明](https://github.com/XXHolic/segment/issues/18)
 - [JavaScript 新旧替换二：赋值和取值](https://github.com/XXHolic/segment/issues/35)
