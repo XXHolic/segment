@@ -2,9 +2,9 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [JavaScript 数学曲线—心形线(Cardioid)](https://github.com/XXHolic/segment/issues/107)
 - [JavaScript 数学曲线—双角线(Bicorn)](https://github.com/XXHolic/segment/issues/106)
 - [JavaScript 数学曲线—星形线(Astroid)](https://github.com/XXHolic/segment/issues/105)
-- [JavaScript 数学曲线—连锁螺线(Lituus)](https://github.com/XXHolic/segment/issues/104)
 
 ## 数学曲线
 - [曲线总览](https://xxholic.github.io/lab/segment/curve/index.html)
@@ -13,6 +13,7 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [JavaScript 数学曲线—连锁螺线(Lituus)](https://github.com/XXHolic/segment/issues/104)
 - [JavaScript 数学曲线—星形线(Astroid)](https://github.com/XXHolic/segment/issues/105)
 - [JavaScript 数学曲线—双角线(Bicorn)](https://github.com/XXHolic/segment/issues/106)
+- [JavaScript 数学曲线—心形线(Cardioid)](https://github.com/XXHolic/segment/issues/107)
 ## JavaScript 新旧替换
 - [JavaScript 新旧替换一：变量声明](https://github.com/XXHolic/segment/issues/18)
 - [JavaScript 新旧替换二：赋值和取值](https://github.com/XXHolic/segment/issues/35)
