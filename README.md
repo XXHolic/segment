@@ -2,13 +2,14 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [JavaScript WebGL 基础疑惑点](https://github.com/XXHolic/segment/issues/110)
 - [JavaScript WebGL 绘制一条直线](https://github.com/XXHolic/segment/issues/109)
 - [JavaScript WebGL 基础概念](https://github.com/XXHolic/segment/issues/108)
-- [JavaScript 数学曲线—心形线(Cardioid)](https://github.com/XXHolic/segment/issues/107)
 
 ## WebGL
 - [JavaScript WebGL 基础概念](https://github.com/XXHolic/segment/issues/108)
 - [JavaScript WebGL 绘制一条直线](https://github.com/XXHolic/segment/issues/109)
+- [JavaScript WebGL 基础疑惑点](https://github.com/XXHolic/segment/issues/110)
 
 ## 数学曲线
 - [曲线总览](https://xxholic.github.io/lab/segment/curve/index.html)
