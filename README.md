@@ -19,13 +19,6 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [JavaScript 数学曲线—星形线(Astroid)](https://github.com/XXHolic/segment/issues/105)
 - [JavaScript 数学曲线—双角线(Bicorn)](https://github.com/XXHolic/segment/issues/106)
 - [JavaScript 数学曲线—心形线(Cardioid)](https://github.com/XXHolic/segment/issues/107)
-## JavaScript 新旧替换
-- [JavaScript 新旧替换一：变量声明](https://github.com/XXHolic/segment/issues/18)
-- [JavaScript 新旧替换二：赋值和取值](https://github.com/XXHolic/segment/issues/35)
-- [JavaScript 新旧替换三：参数转换](https://github.com/XXHolic/segment/issues/36)
-- [JavaScript 新旧替换四：继承](https://github.com/XXHolic/segment/issues/49)
-- [JavaScript 新旧替换五：函数嵌套](https://github.com/XXHolic/segment/issues/59)
-- [JavaScript 新旧替换六：键值对数据](https://github.com/XXHolic/segment/issues/90)
 
 ## 工作流
 - [GitLab Flow](https://github.com/XXHolic/segment/issues/80)
@@ -88,6 +81,14 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [Date 字符串格式](https://github.com/XXHolic/segment/issues/17)
 - [模拟事件](https://github.com/XXHolic/segment/issues/11)
 - [计量长度](https://github.com/XXHolic/segment/issues/1)
+
+## JavaScript 新旧替换
+- [JavaScript 新旧替换一：变量声明](https://github.com/XXHolic/segment/issues/18)
+- [JavaScript 新旧替换二：赋值和取值](https://github.com/XXHolic/segment/issues/35)
+- [JavaScript 新旧替换三：参数转换](https://github.com/XXHolic/segment/issues/36)
+- [JavaScript 新旧替换四：继承](https://github.com/XXHolic/segment/issues/49)
+- [JavaScript 新旧替换五：函数嵌套](https://github.com/XXHolic/segment/issues/59)
+- [JavaScript 新旧替换六：键值对数据](https://github.com/XXHolic/segment/issues/90)
 
 ## 工具
 - [Lerna 实践记录](https://github.com/XXHolic/segment/issues/92)
