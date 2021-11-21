@@ -2,9 +2,9 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [JavaScript WebGL 使用图片](https://github.com/XXHolic/segment/issues/113)
 - [JavaScript WebGL 设置颜色](https://github.com/XXHolic/segment/issues/112)
 - [JavaScript WebGL 绘制一个面](https://github.com/XXHolic/segment/issues/111)
-- [JavaScript WebGL 基础疑惑点](https://github.com/XXHolic/segment/issues/110)
 
 ## WebGL
 - [JavaScript WebGL 基础概念](https://github.com/XXHolic/segment/issues/108)
@@ -12,6 +12,7 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [JavaScript WebGL 基础疑惑点](https://github.com/XXHolic/segment/issues/110)
 - [JavaScript WebGL 绘制一个面](https://github.com/XXHolic/segment/issues/111)
 - [JavaScript WebGL 设置颜色](https://github.com/XXHolic/segment/issues/112)
+- [JavaScript WebGL 使用图片](https://github.com/XXHolic/segment/issues/113)
 
 ## 数学曲线
 - [曲线总览](https://xxholic.github.io/lab/segment/curve/index.html)
