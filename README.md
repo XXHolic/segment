@@ -29,16 +29,16 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [Git branching model](https://github.com/XXHolic/segment/issues/78)
 
 ## Canvas
-- [Canvas 绘制 1 px 直线模糊（非高清屏）的问题](https://github.com/XXHolic/segment/issues/86)
-- [Canvas 橡皮擦效果](https://github.com/XXHolic/segment/issues/75)
-- [Canvas 图像灰度处理](https://github.com/XXHolic/segment/issues/74)
-- [Canvas 文本坐标(0,0)显示问题](https://github.com/XXHolic/segment/issues/29)
-- [Canvas 图片跨域处理](https://github.com/XXHolic/segment/issues/26)
-- [Canvas 文字换行](https://github.com/XXHolic/segment/issues/25)
-- [Canvas 图片圆角问题](https://github.com/XXHolic/segment/issues/24)
-- [Canvas 设置边框问题](https://github.com/XXHolic/segment/issues/21)
-- [Canvas 显示模糊问题](https://github.com/XXHolic/segment/issues/20)
 - [Canvas 宽高问题](https://github.com/XXHolic/segment/issues/19)
+- [Canvas 显示模糊问题](https://github.com/XXHolic/segment/issues/20)
+- [Canvas 设置边框问题](https://github.com/XXHolic/segment/issues/21)
+- [Canvas 图片圆角问题](https://github.com/XXHolic/segment/issues/24)
+- [Canvas 文字换行](https://github.com/XXHolic/segment/issues/25)
+- [Canvas 图片跨域处理](https://github.com/XXHolic/segment/issues/26)
+- [Canvas 文本坐标(0,0)显示问题](https://github.com/XXHolic/segment/issues/29)
+- [Canvas 图像灰度处理](https://github.com/XXHolic/segment/issues/74)
+- [Canvas 橡皮擦效果](https://github.com/XXHolic/segment/issues/75)
+- [Canvas 绘制 1 px 直线模糊（非高清屏）的问题](https://github.com/XXHolic/segment/issues/86)
 
 ## NPM
 - [npm Getting started](https://github.com/XXHolic/segment/issues/22)
