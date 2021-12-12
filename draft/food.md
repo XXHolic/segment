@@ -29,6 +29,9 @@
 ## <a name="mushroom"></a> 辣椒
 - 水洗一下，切开，加些油盐，用锡箔包好，230 度，15 分钟左右。
 
+## <a name="mushroom"></a> 白萝卜
+- 水洗一下，切开，加些油盐，用锡箔包好，230 度，20 分钟左右。
+
 
 <div align="right"><a href="#index">Back to top :arrow_up:</a></div>
 
