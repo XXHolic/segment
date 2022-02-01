@@ -2,9 +2,9 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [JavaScript WebGL 帧缓冲区对象](https://github.com/XXHolic/segment/issues/116)
 - [JavaScript WebGL 图片透明处理](https://github.com/XXHolic/segment/issues/115)
 - [JavaScript WebGL 使用图片疑惑点](https://github.com/XXHolic/segment/issues/114)
-- [JavaScript WebGL 使用图片](https://github.com/XXHolic/segment/issues/113)
 
 ## WebGL
 - [JavaScript WebGL 基础概念](https://github.com/XXHolic/segment/issues/108)
@@ -15,6 +15,7 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [JavaScript WebGL 使用图片](https://github.com/XXHolic/segment/issues/113)
 - [JavaScript WebGL 使用图片疑惑点](https://github.com/XXHolic/segment/issues/114)
 - [JavaScript WebGL 图片透明处理](https://github.com/XXHolic/segment/issues/115)
+- [JavaScript WebGL 帧缓冲区对象](https://github.com/XXHolic/segment/issues/116)
 
 ## 数学曲线
 - [曲线总览](https://xxholic.github.io/lab/segment/curve/index.html)
