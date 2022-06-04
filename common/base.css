@@ -1,0 +1,155 @@
+html {
+  font-size: 14px;
+}
+
+/*
+ *  用于控制显示和隐藏的css
+ */
+.dn {
+  display: none;
+}
+.di {
+  display: inline;
+}
+.dib {
+  display: inline-block;
+}
+.db {
+  display: block;
+}
+.df {
+  display: -webkit-flex;
+  display: flex;
+}
+.dt {
+  display: table;
+}
+.dtc {
+  display: table-cell;
+}
+.dit {
+  display: inline-table;
+}
+.flex-column {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.flex-1 {
+  flex: 1;
+}
+
+.flex-ac {
+  -webkit-align-items: center;
+  align-items: center;
+}
+.flex-jc {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/*
+ *  用于控制方向的css
+ */
+.tc {
+  text-align: center;
+}
+.tl {
+  text-align: left;
+}
+.tr {
+  text-align: right;
+}
+
+/*
+ *  浮动
+ */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+/*
+ *  margin居中
+ */
+.ma {
+  margin: 0 auto;
+}
+/*
+ *  用于间隔
+ */
+.mb10 {
+  margin-bottom: 10px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+/*
+ *  方便定位的position
+ */
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.pf {
+  position: fixed;
+}
+
+/*
+ *  用于对齐
+ */
+.vam {
+  vertical-align: middle;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+a:active, a:hover {
+  color: #0366d6;
+  text-decoration: underline;
+}
+/*
+ *  顶部标题公用样式
+ */
+.fix-header {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin: 0;
+  box-shadow: 0 0 5px #333;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: #fff;
+}
+.normal-header {
+  margin: 0;
+  box-shadow: 0 0 5px #333;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: #fff;
+}
+.pt50 {
+  padding-top: 50px;
+}
+.pt30 {
+  padding-top: 30px;
+}
+.container-width {
+  width: 300px;
+}
+
+

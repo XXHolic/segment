@@ -27,7 +27,9 @@
     "release": "standard-version",
     "del": "node './script/del.js'",
     "tf": "node script/del.js && node script/cli.js",
-    "img": "node script/img.js"
+    "img": "node script/img.js",
+    "compressImg": "node script/compressImg.js",
+    "format": "node script/format.js"
   },
   "config": {
     "commitizen": {
