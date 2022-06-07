@@ -2,9 +2,9 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [JavaScript WebGL 三维相关概念](https://github.com/XXHolic/segment/issues/120)
 - [JavaScript WebGL 矩阵](https://github.com/XXHolic/segment/issues/117)
 - [JavaScript WebGL 帧缓冲区对象](https://github.com/XXHolic/segment/issues/116)
-- [JavaScript WebGL 图片透明处理](https://github.com/XXHolic/segment/issues/115)
 
 ## WebGL
 - [JavaScript WebGL 基础概念](https://github.com/XXHolic/segment/issues/108)
@@ -17,6 +17,7 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [JavaScript WebGL 图片透明处理](https://github.com/XXHolic/segment/issues/115)
 - [JavaScript WebGL 帧缓冲区对象](https://github.com/XXHolic/segment/issues/116)
 - [JavaScript WebGL 矩阵](https://github.com/XXHolic/segment/issues/117)
+- [JavaScript WebGL 三维相关概念](https://github.com/XXHolic/segment/issues/120)
 
 ## 数学曲线
 - [曲线总览](https://xxholic.github.io/lab/segment/curve/index.html)
@@ -122,7 +123,6 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [浮层滚动问题](https://github.com/XXHolic/segment/issues/67)
 - [Can I use xxx ?](https://github.com/XXHolic/segment/issues/66)
 - [textarea](https://github.com/XXHolic/segment/issues/64)
-- [Linux 下克隆 GitHub 库很慢](https://github.com/XXHolic/segment/issues/44)
 - [sudo 找不到命令](https://github.com/XXHolic/segment/issues/43)
 - [复制到剪切板的问题](https://github.com/XXHolic/segment/issues/37)
 - [图片 src 为二进制的处理](https://github.com/XXHolic/segment/issues/33)

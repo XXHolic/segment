@@ -1,18 +1,15 @@
 # JavaScript WebGL 三维相关概念
-## <a name="index"></a> 目录
-- [引子](#start)
-- [齐次坐标](#coord)
-- [空间转换](#transform)
-- [可视域](#view)
-- [参考资料](#reference)
-
-## <a name="start"></a> 引子
+## 引子
 在 [JavaScript WebGL 矩阵][url-pre]之后，发现三维编程之前还有一些概念需要理解，就去查了下资料，按照自己的习惯整合了一下。
 
-## <a name="coord"></a> 齐次坐标
+
+- [Origin][url-origin]
+- [My GitHub][url-my-github]
+
+## 齐次坐标
 三维坐标理论上三个分量就够了，但在看相关程序的时候，发现会出现 4 个分量，这种表示的方式称为**齐次坐标**，它将一个原本 n 维的向量用一个 n+1 维的向量表示。比如向量 (x, y, z) 的齐次坐标可表示为 (x, y, z, w)。这样表示有利于使用矩阵运算将一个点集从一个坐标系转换到另一个坐标系。齐次坐标 (x, y, z, w) 等价于三维坐标 (x/w, y/w, z/w) 。更详细的介绍见[这里][url-1]。
 
-## <a name="transform"></a> 空间转换
+## 空间转换
 WeGL 没有现成的 API ，可以直接用来绘制三维物体，需要进行一系列的空间转换，最终在二维空间（比如电脑屏幕）显示，从视觉上看上去是立体的效果。下面看看主要的几个转换过程。
 
 ### 模型空间
@@ -34,7 +31,7 @@ WeGL 没有现成的 API ，可以直接用来绘制三维物体，需要进行�
 从视图空间转换到裁剪空间，需要用到**投影矩阵(Projection Matrix)**。
 
 
-## <a name="view"></a> 可视域
+## 可视域
 找了一些资料，对比了一下，感觉还是《WebGL 编程指南》里面解释的比较好，这里从其中摘录的一部分内容。
 
 人眼的观察范围是有限的，WebGL 类似的限制了水平视角、垂直视角和可视深度，这些共同决定了**可视域(View Volume)**。
@@ -57,10 +54,10 @@ Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的�
 
 ![img-2][url-local-2]
 
-<div align="right"><a href="#index">Back to top :arrow_up:</a></div>
 
 
-## <a name="reference"></a> 参考资料
+
+## 参考资料
 - [WebGL model view projection][url-2]
 - [WebGL摄像机详解之一：模型、视图和投影矩阵变换的含义][url-3]
 - [坐标系统][url-4]
@@ -74,15 +71,11 @@ Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的�
 
 [url-example1]:https://xxholic.github.io/lab/starry-night/translate.html
 
-[url-local-1]:./image/10.png
-[url-local-2]:./image/11.png
+[url-local-1]:https://xxholic.github.io/segment/draft2/1/image/10.png
+[url-local-2]:https://xxholic.github.io/segment/draft2/1/image/11.png
 
 
-<details>
-<summary>:wastebasket:</summary>
 
-最近看了 2019 年出的电视剧《切尔诺贝利》，核辐射对毫不知情的人的摧残让人心惊。
 
-有些地方引用了豆瓣的评分，但现在看不到关于这部电视剧的豆瓣评分详情，真是奇怪。
-
-</details>
+[url-origin]:https://github.com/XXHolic/starry-night/issues/118
+[url-my-github]:https://github.com/XXHolic

@@ -74,8 +74,8 @@ Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的�
 
 [url-example1]:https://xxholic.github.io/lab/starry-night/translate.html
 
-[url-local-1]:./image/10.png
-[url-local-2]:./image/11.png
+[url-local-1]:https://xxholic.github.io/segment/draft2/1/image/10.png
+[url-local-2]:https://xxholic.github.io/segment/draft2/1/image/11.png
 
 
 <details>

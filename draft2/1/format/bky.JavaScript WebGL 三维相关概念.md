@@ -9,6 +9,10 @@
 ## <a name="start"></a> 引子
 在 [JavaScript WebGL 矩阵][url-pre]之后，发现三维编程之前还有一些概念需要理解，就去查了下资料，按照自己的习惯整合了一下。
 
+
+- [Origin][url-origin]
+- [My GitHub][url-my-github]
+
 ## <a name="coord"></a> 齐次坐标
 三维坐标理论上三个分量就够了，但在看相关程序的时候，发现会出现 4 个分量，这种表示的方式称为**齐次坐标**，它将一个原本 n 维的向量用一个 n+1 维的向量表示。比如向量 (x, y, z) 的齐次坐标可表示为 (x, y, z, w)。这样表示有利于使用矩阵运算将一个点集从一个坐标系转换到另一个坐标系。齐次坐标 (x, y, z, w) 等价于三维坐标 (x/w, y/w, z/w) 。更详细的介绍见[这里][url-1]。
 
@@ -57,7 +61,7 @@ Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的�
 
 ![img-2][url-local-2]
 
-<div align="right"><a href="#index">Back to top :arrow_up:</a></div>
+<div align="right"><a href="#index">Back to top </a></div>
 
 
 ## <a name="reference"></a> 参考资料
@@ -74,15 +78,11 @@ Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的�
 
 [url-example1]:https://xxholic.github.io/lab/starry-night/translate.html
 
-[url-local-1]:./image/10.png
-[url-local-2]:./image/11.png
+[url-local-1]:https://xxholic.github.io/segment/draft2/1/image/10.png
+[url-local-2]:https://xxholic.github.io/segment/draft2/1/image/11.png
 
 
-<details>
-<summary>:wastebasket:</summary>
 
-最近看了 2019 年出的电视剧《切尔诺贝利》，核辐射对毫不知情的人的摧残让人心惊。
 
-有些地方引用了豆瓣的评分，但现在看不到关于这部电视剧的豆瓣评分详情，真是奇怪。
-
-</details>
+[url-origin]:https://github.com/XXHolic/starry-night/issues/118
+[url-my-github]:https://github.com/XXHolic
