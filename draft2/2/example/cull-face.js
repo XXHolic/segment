@@ -44,8 +44,8 @@ window.onload = function () {
       const vertices = new Float32Array([
         // 面 1-底面
         0.5,-0.5,-0.5,
-       -0.5,-0.5,-0.5,
         0.0,-0.5,-0.5,
+       -0.5,-0.5,-0.5,
         // 面 2
         0.0, 0.5, 0.0,
         0.0,-0.5, 0.5,
@@ -53,7 +53,7 @@ window.onload = function () {
         // 面 3
         0.0, 0.5, 0.0,
         0.5,-0.5,-0.5,
-       -0.5,-0.5,-0.5,
+        -0.5,-0.5,-0.5,
         // 面 4
         0.0, 0.5, 0.0,
        -0.5,-0.5,-0.5,
@@ -176,10 +176,10 @@ window.onload = function () {
       let matrix = m4.identity();
       // const rotatePoint = [0, -0.5]; // 旋转的中心点
       // this.angle = this.angle + 1;
-      const rotate = [30, 30, 0];
-      matrix = m4.rotate(matrix, rotate[0], "x");
+      const rotate = [30, 60, 0];
+      // matrix = m4.rotate(matrix, rotate[0], "x");
       matrix = m4.rotate(matrix, rotate[1], "y");
-      matrix = m4.rotate(matrix, rotate[2], "z");
+      // matrix = m4.rotate(matrix, rotate[2], "z");
       return matrix;
     },
     /**
@@ -190,6 +190,9 @@ window.onload = function () {
     draw: function () {
       const gl = this.gl;
       this.canvasObj.clear();
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+      gl.enable(gl.CULL_FACE);
+      gl.enable(gl.DEPTH_TEST);
       const program = this.shaderProgram;
       const targetBuffer = this.screenBuffer;
 

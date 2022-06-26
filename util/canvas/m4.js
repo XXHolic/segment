@@ -144,4 +144,47 @@ const m4 = {
     const [sx, sy, sz] = data;
     return m4.multiply(m, m4.scaling(sx, sy, sz));
   },
+
+  setLookAt: function (eye, target, up) {
+    const [eyeX, eyeY, eyeZ] = eye;
+    const [targetX, targetY, targetZ] = target;
+    const [upX, upY, upZ] = up;
+    let fx, fy, fz, sx, sy, sz, ux, uy, uz;
+
+    fx = targetX - eyeX;
+    fy = targetY - eyeY;
+    fz = targetZ - eyeZ;
+
+    // 单位化
+    const rlf = 1 / Math.sqrt(fx * fx + fy * fy + fz * fz);
+    fx *= rlf;
+    fy *= rlf;
+    fz *= rlf;
+    // f 与上向量的叉乘
+    sx = fy * upZ - fz * upY;
+    sy = fz * upX - fx * upZ;
+    sz = fx * upY - fy * upX;
+    // 单位化
+    const rls = 1 / Math.sqrt(sx * sx + sy * sy + sz * sz);
+    sx *= rls;
+    sy *= rls;
+    sz *= rls;
+
+    // s 和 f 的叉乘
+    ux = sy * fz - sz * fy;
+    uy = sz * fx - sx * fz;
+    uz = sx * fy - sy * fx;
+
+    m12 = sx * -eyeX + sy * -eyeY + sz * -eyeZ;
+    m13 = ux * -eyeX + uy * -eyeY + uz * -eyeZ;
+    m14 = -fx * -eyeX + -fy * -eyeY + -fz * -eyeZ;
+
+    // prettier-ignore
+    return [
+      sx, ux, -fx, 0,
+      sy, uy, -fy, 0,
+      sz, uz, -fz, 0,
+     m12,m13, m14, 1,
+    ];
+  },
 };

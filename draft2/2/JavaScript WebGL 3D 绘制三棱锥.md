@@ -7,12 +7,20 @@
 - [参考资料](#reference)
 
 ## <a name="start"></a> 引子
-在 [JavaScript WebGL 三维相关概念][url-pre]之后，差不多可以开始绘制 3D 了，网上找到很多讲解都是绘制立方体，感觉顶点数量太多了，这里以三棱锥为示例。
+接着 [JavaScript WebGL 三维相关概念][url-pre]，具体看看三维中的几个矩阵，最后绘制三棱锥。
+
+## 模型矩阵
+
+
+## 视图矩阵
+## 投影矩阵
 
 ## <a name="coord"></a> 绘制三棱锥
 三棱锥由 4 个面组成，基于 [JavaScript WebGL 绘制一个面][url-pre2] 主要有下面的变化：
 - 顶点
 - 绘制方法
+
+### 顶点
 
 ## 正面和背面
 
@@ -31,6 +39,7 @@
 
 [url-pre]:https://github.com/XXHolic/segment/issues/120
 [url-pre2]:https://github.com/XXHolic/segment/issues/111
+[url-pre3]:https://github.com/XXHolic/segment/issues/117
 
 
 [url-1]:https://zhuanlan.zhihu.com/p/148760721
