@@ -1,7 +1,7 @@
 window.onload = function () {
   const page = {
     canvasObj: null,
-    angle: 0,
+    angle: 23,
     init: function () {
       const canvasObj = new WebGL(400, 400);
       this.canvasObj = canvasObj;
@@ -44,32 +44,20 @@ window.onload = function () {
       // prettier-ignore
       const vertices = new Float32Array([
         // 面 1
-        0.0,  0.5, -0.4,
-       -0.5, -0.5, -0.4,
-        0.5, -0.5, -0.4,
+        0.0, 0.5, -0.4, -0.5, -0.5, -0.4, 0.5, -0.5, -0.4,
         // 面 2
-        0.5,  0.4, -0.2,
-       -0.5,  0.4, -0.2,
-        0.0, -0.6, -0.2,
+        0.5, 0.4, -0.2, -0.5, 0.4, -0.2, 0.0, -0.6, -0.2,
         // 面 3
-        0.0,  0.5,  0.0,
-       -0.5, -0.5,  0.0,
-        0.5, -0.5,  0.0,
+        0.0, 0.5, 0.0, -0.5, -0.5, 0.0, 0.5, -0.5, 0.0,
       ]);
       // prettier-ignore
       const verticesColor = new Uint8Array([
         // 面 1 - 红色
-        255, 0, 0,
-        255, 0, 0,
-        255, 0, 0,
+        255, 0, 0, 255, 0, 0, 255, 0, 0,
         // 面 2 - 绿色
-        0, 255, 0,
-        0, 255, 0,
-        0, 255, 0,
+        0, 255, 0, 0, 255, 0, 0, 255, 0,
         // 面 3 - 蓝色
-        0, 0, 255,
-        0, 0, 255,
-        0, 0, 255,
+        0, 0, 255, 0, 0, 255, 0, 0, 255,
       ]);
 
       const obj = {};
@@ -167,7 +155,8 @@ window.onload = function () {
     },
     getTransform: function () {
       let m4Object = new M4();
-      // m4Object.setLookAt([0.1, 0.1, 0.1], [0, 0, 0], [0, 1, 0]);
+      m4Object.setLookAt([0.2, 0.2, 0.1], [0, 0, 0], [0, 1, 0]);
+      m4Object.rotate(-this.angle, "y");
       // console.info("matrix", m4Object);
       return m4Object.matrix;
     },
@@ -205,7 +194,16 @@ window.onload = function () {
       gl.drawArrays(gl.TRIANGLES, 0, 3 * 3);
       // requestAnimationFrame(this.draw.bind(this));
     },
-    pageEvent: function () {},
+    pageEvent: function () {
+      const xEle = document.querySelector("#xRotate");
+      const yEle = document.querySelector("#yTransform");
+      xEle.onchange = (e) => {
+        const value = e.target.value;
+        console.info("绕 y 轴旋转：", value);
+        this.angle = value;
+        this.draw();
+      };
+    },
   };
 
   page.init();

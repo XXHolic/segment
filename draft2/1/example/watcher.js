@@ -17,6 +17,7 @@ window.onload = function () {
         attribute vec4 aVertexPos;
         attribute vec4 aColor;
         uniform mat4 uMatrix;
+
         varying vec4 vColor;
 
         void main(void){
@@ -42,41 +43,21 @@ window.onload = function () {
     initBuffersForScreen: function (gl) {
       // prettier-ignore
       const vertices = new Float32Array([
-        // 面 1-底面
-        0.5,-0.5,-0.5,
-        0.0,-0.5,-0.5,
-       -0.5,-0.5,-0.5,
+        // 面 1
+        0.0, 0.5, -0.4, -0.5, -0.5, -0.4, 0.5, -0.5, -0.4,
         // 面 2
-        0.0, 0.5, 0.0,
-        0.0,-0.5, 0.5,
-        0.5,-0.5,-0.5,
+        0.5, 0.4, -0.2, -0.5, 0.4, -0.2, 0.0, -0.6, -0.2,
         // 面 3
-        0.0, 0.5, 0.0,
-        0.5,-0.5,-0.5,
-        -0.5,-0.5,-0.5,
-        // 面 4
-        0.0, 0.5, 0.0,
-       -0.5,-0.5,-0.5,
-        0.0,-0.5,-0.5,
+        0.0, 0.5, 0.0, -0.5, -0.5, 0.0, 0.5, -0.5, 0.0,
       ]);
       // prettier-ignore
       const verticesColor = new Uint8Array([
-        // 面 1 -黑色
-        0, 0, 0,
-        0, 0, 0,
-        0, 0, 0,
-        // 面 2 - 红色
-        255, 0, 0,
-        255, 0, 0,
-        255, 0, 0,
-        // 面 3 - 绿色
-        0, 255, 0,
-        0, 255, 0,
-        0, 255, 0,
-        // 面 4 - 蓝色
-        0, 0, 255,
-        0, 0, 255,
-        0, 0, 255,
+        // 面 1 - 红色
+        255, 0, 0, 255, 0, 0, 255, 0, 0,
+        // 面 2 - 绿色
+        0, 255, 0, 0, 255, 0, 0, 255, 0,
+        // 面 3 - 蓝色
+        0, 0, 255, 0, 0, 255, 0, 0, 255,
       ]);
 
       const obj = {};
@@ -173,16 +154,10 @@ window.onload = function () {
       return wrapper;
     },
     getTransform: function () {
-      let matrix = new m4Class();
-      console.info("matrix", matrix);
-      // let matrix = m4.identity();
-      // const rotatePoint = [0, -0.5]; // 旋转的中心点
-      // this.angle = this.angle + 1;
-      const rotate = [30, 60, 0];
-      // matrix = m4.rotate(matrix, rotate[0], "x");
-      // matrix = m4.rotate(matrix, rotate[1], "y");
-      // matrix = m4.rotate(matrix, rotate[2], "z");
-      return matrix;
+      let m4Object = new M4();
+      m4Object.setLookAt([0.1, 0.1, 0.1], [0, 0, 0], [0, 1, 0]);
+      // console.info("matrix", m4Object);
+      return m4Object.matrix;
     },
     /**
      * 绘制
@@ -215,7 +190,7 @@ window.onload = function () {
         true
       );
       gl.uniformMatrix4fv(program.uMatrix, false, transformValue);
-      gl.drawArrays(gl.TRIANGLES, 0, 3 * 4);
+      gl.drawArrays(gl.TRIANGLES, 0, 3 * 3);
       // requestAnimationFrame(this.draw.bind(this));
     },
     pageEvent: function () {},

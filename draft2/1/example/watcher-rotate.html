@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="canvas,css,html,js,webgl">
   <meta content="JavaScript webgl">
-  <title>指定观察者</title>
+  <title>部分消失的现象</title>
   <link rel="shortcut icon" href="https://xxholic.github.io/lab/icon.ico">
   <link rel="stylesheet" href="../../../common/reset.css">
   <link rel="stylesheet" href="../../../common/base.css">
@@ -17,14 +17,23 @@
       height: 400px;
       background: url(./bg.png);
     }
+    input.input-range {
+      -webkit-appearance: auto;
+    }
   </style>
 </head>
 <body class="pt50 tc">
-  <div>指定观察者示例</div>
+  <div>部分消失的现象示例</div>
   <div id="demo"></div>
+  <div class="df flex-ac">
+    <div>绕 y 轴旋转：</div>
+    <div>0</div>
+    <input id="xRotate" class="input-range" value="23" type="range" name="x" min="0" step="1" max="360">
+    <div>360</div>
+  </div>
   <script src="../../../util/insertLink.js"></script>
   <script src="../../../util/canvas/webgl.js"></script>
   <script src="../../../util/canvas/m4Class.js"></script>
-  <script src="./watcher.js"></script>
+  <script src="./watcher-rotate.js"></script>
 </body>
 </html>

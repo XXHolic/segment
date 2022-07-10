@@ -128,7 +128,6 @@ function setLookAt(eye, target, up) {
   const m13 = ux * -eyeX + uy * -eyeY + uz * -eyeZ;
   const m14 = -fx * -eyeX + -fy * -eyeY + -fz * -eyeZ;
 
-  // prettier-ignore
   return [
     sx, ux, -fx, 0,
     sy, uy, -fy, 0,
@@ -137,13 +136,18 @@ function setLookAt(eye, target, up) {
   ];
 }
 ```
-这里用到了[叉乘][url-5]，通过两个向量的叉乘，可以生成垂直于这两个向量的法向量，从而构建一个坐标系。
+这里用到了[叉乘][url-5]，通过两个向量的叉乘，可以生成垂直于这两个向量的法向量，从而构建一个坐标系，也就是观察者所在的空间。
+
+下面是三维有无自定义观察者的示例：
+- [有自定义观察者][url-example1]
+- [无自定义观察者][url-example2]
 
 ### 裁剪空间
+基于上面的示例，旋转一下就会发现有[部分角消失的现象][url-example3]，这是因为超出了 WebGL 的可视范围。
+
 在 WebGL 程序中，顶点着色器会将点转换到一个称为**裁剪空间**的特殊坐标系上。延展到裁剪空间之外的任何数据都会被剪裁并且不会被渲染。
 
 从视图空间转换到裁剪空间，需要用到**投影矩阵(Projection Matrix)**。
-
 
 ## <a name="view"></a> 可视域
 找了一些资料，对比了一下，感觉还是《WebGL 编程指南》里面解释的比较好，这里从其中摘录的一部分内容。
@@ -160,6 +164,8 @@ function setLookAt(eye, target, up) {
 正射投影的可视域由前后两个矩形表面确定，分别称为**近裁剪面**和**远裁剪面**，近裁剪面和远裁剪面之间的空间就是可视域，只有在这个空间内的物体会被显示出来。正射投影下，近裁剪面和远裁剪面的尺寸是一样的。
 
 ![img-1][url-local-1]
+
+这是示例。
 
 Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的宽高比和 Canvas 的不一样，画面就会按照 Canvas 的宽高比进行压缩，物体会被扭曲。
 
@@ -184,7 +190,9 @@ Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的�
 [url-4]:https://learnopengl-cn.github.io/01%20Getting%20started/08%20Coordinate%20Systems/#_1
 [url-5]:https://www.shuxuele.com/algebra/vectors-cross-product.html
 
-[url-example1]:https://xxholic.github.io/lab/starry-night/translate.html
+[url-example1]:https://xxholic.github.io/segment/draft2/1/example/watcher.html
+[url-example2]:https://xxholic.github.io/segment/draft2/1/example/no-watcher.html
+[url-example3]:https://xxholic.github.io/segment/draft2/1/example/watcher-rotate.html
 
 [url-local-1]:./image/10.png
 [url-local-2]:./image/11.png
