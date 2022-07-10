@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="canvas,css,html,js,webgl">
+  <meta content="JavaScript webgl">
+  <title>正射投影</title>
+  <link rel="shortcut icon" href="https://xxholic.github.io/lab/icon.ico">
+  <link rel="stylesheet" href="../../../common/reset.css">
+  <link rel="stylesheet" href="../../../common/base.css">
+  <style>
+    #demo {
+      margin: 0 auto;
+      width: 400px;
+      height: 400px;
+      background: url(./bg.png);
+    }
+    input.input-range {
+      -webkit-appearance: auto;
+    }
+    .label {
+      width: 100px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body class="pt50 tc">
+  <div>正射投影示例</div>
+  <div id="demo"></div>
+  <div class="df flex-ac mb10">
+    <div class="label">left 边界：</div>
+    <div>-1</div>
+    <input id="leftBoundary" class="input-range" value="-1" type="range" name="x" min="-1" step="0.01" max="0">
+    <div class="mr10">0</div>
+    <div>当前值：<span id="leftValue">-1</span></div>
+  </div>
+  <div class="df flex-ac mb10">
+    <div class="label">right 边界：</div>
+    <div>0</div>
+    <input id="rightBoundary" class="input-range" value="1" type="range" name="x" min="0" step="0.01" max="1">
+    <div class="mr10">1</div>
+    <div>当前值：<span id="rightValue">1</span></div>
+  </div>
+  <div class="df flex-ac mb10">
+    <div class="label">bottom 边界：</div>
+    <div>-1</div>
+    <input id="bottomBoundary" class="input-range" value="-1" type="range" name="x" min="-1" step="0.01" max="0">
+    <div class="mr10">0</div>
+    <div>当前值：<span id="bottomValue">-1</span></div>
+  </div>
+  <div class="df flex-ac mb10">
+    <div class="label">top 边界：</div>
+    <div>0</div>
+    <input id="topBoundary" class="input-range" value="1" type="range" name="x" min="0" step="0.01" max="1">
+    <div class="mr10">1</div>
+    <div>当前值：<span id="topValue">1</span></div>
+  </div>
+  <div class="df flex-ac mb10">
+    <div class="label">近裁剪面：</div>
+    <div>0</div>
+    <input id="nearBoundary" class="input-range" value="0" type="range" name="x" min="0" step="0.01" max="1">
+    <div class="mr10">1</div>
+    <div>当前值：<span id="nearValue">0</span></div>
+  </div>
+  <div class="df flex-ac mb10">
+    <div class="label">远裁剪面：</div>
+    <div>0</div>
+    <input id="farBoundary" class="input-range" value="0.5" type="range" name="x" min="0" step="0.01" max="1">
+    <div class="mr10">1</div>
+    <div>当前值：<span id="farValue">0.5</span></div>
+  </div>
+  <script src="../../../util/insertLink.js"></script>
+  <script src="../../../util/canvas/webgl.js"></script>
+  <script src="../../../util/canvas/m4Class.js"></script>
+  <script src="./orthographic-projection.js"></script>
+</body>
+</html>

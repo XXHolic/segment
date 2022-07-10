@@ -210,4 +210,33 @@ class M4 {
 
     return this;
   }
+  // 正射投影
+  serOrthographicProjection(data) {
+    const [left, right, bottom, top, near, far] = data;
+
+    if (left === right || bottom === top || near === far) {
+      throw "Invalid Projection";
+    }
+
+    const rw = 1 / (right - left);
+    const rh = 1 / (top - bottom);
+    const rd = 1 / (far - near);
+
+    const m0 = 2 * rw;
+    const m5 = 2 * rh;
+    const m10 = -2 * rd;
+    const m12 = -(right + left) * rw;
+    const m13 = -(top + bottom) * rh;
+    const m14 = -(far + near) * rd;
+
+    // prettier-ignore
+    this.matrix = [
+      m0,   0,  0,  0,
+       0,  m5,  0,  0,
+       0,   0, m10, 0,
+     m12, m13, m14, 1,
+    ];
+
+    return this;
+  }
 }

@@ -168,8 +168,6 @@ window.onload = function () {
       const gl = this.gl;
       this.canvasObj.clear();
       gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-      gl.enable(gl.CULL_FACE);
-      gl.enable(gl.DEPTH_TEST);
       const program = this.shaderProgram;
       const targetBuffer = this.screenBuffer;
 

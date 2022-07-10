@@ -2,6 +2,12 @@ window.onload = function () {
   const page = {
     canvasObj: null,
     angle: 23,
+    left: -1,
+    right: 1,
+    bottom: -1,
+    top: 1,
+    near: 0,
+    far: 1,
     init: function () {
       const canvasObj = new WebGL(400, 400);
       this.canvasObj = canvasObj;
@@ -44,9 +50,9 @@ window.onload = function () {
       // prettier-ignore
       const vertices = new Float32Array([
         // 面 1
-        0.0, 0.5, -0.4, -0.5, -0.5, -0.4, 0.5, -0.5, -0.4,
+        0.0,  0.6,  -0.4, -0.5, -0.4,  -0.4, 0.5, -0.4,  -0.4,
         // 面 2
-        0.5, 0.4, -0.2, -0.5, 0.4, -0.2, 0.0, -0.6, -0.2,
+        0.5,  0.4,  -0.2, -0.5, 0.4, -0.2, 0.0, -0.6, -0.2,
         // 面 3
         0.0, 0.5, 0.0, -0.5, -0.5, 0.0, 0.5, -0.5, 0.0,
       ]);
@@ -160,6 +166,18 @@ window.onload = function () {
       // console.info("matrix", m4Object);
       return m4Object.matrix;
     },
+    setProjection: function () {
+      let m4Object = new M4();
+      m4Object.serOrthographicProjection([
+        this.left,
+        this.right,
+        this.bottom,
+        this.top,
+        this.near,
+        this.far,
+      ]);
+      return m4Object.matrix;
+    },
     /**
      * 绘制
      * @param {*} gl WebGL 上下文
@@ -173,7 +191,6 @@ window.onload = function () {
       const targetBuffer = this.screenBuffer;
 
       gl.useProgram(program.program);
-      const transformValue = this.getTransform();
       this.bindEnableBuffer(
         gl,
         targetBuffer.verticesBuffer,
@@ -188,17 +205,59 @@ window.onload = function () {
         gl.UNSIGNED_BYTE,
         true
       );
-      gl.uniformMatrix4fv(program.uMatrix, false, transformValue);
+      const matrixValue = this.setProjection();
+      gl.uniformMatrix4fv(program.uMatrix, false, matrixValue);
       gl.drawArrays(gl.TRIANGLES, 0, 3 * 3);
       // requestAnimationFrame(this.draw.bind(this));
     },
     pageEvent: function () {
-      const xEle = document.querySelector("#xRotate");
-      const yEle = document.querySelector("#yTransform");
-      xEle.onchange = (e) => {
+      const leftEle = document.querySelector("#leftBoundary");
+      const leftValue = document.querySelector("#leftValue");
+      leftEle.onchange = (e) => {
         const value = e.target.value;
-        console.info("绕 y 轴旋转：", value);
-        this.angle = value;
+        this.left = Number(value);
+        leftValue.innerHTML = value;
+        this.draw();
+      };
+      const rightEle = document.querySelector("#rightBoundary");
+      const rightValue = document.querySelector("#rightValue");
+      rightEle.onchange = (e) => {
+        const value = e.target.value;
+        this.right = Number(value);
+        rightValue.innerHTML = value;
+        this.draw();
+      };
+      const bottomEle = document.querySelector("#bottomBoundary");
+      const bottomValue = document.querySelector("#bottomValue");
+      bottomEle.onchange = (e) => {
+        const value = e.target.value;
+        this.bottom = Number(value);
+        bottomValue.innerHTML = value;
+        this.draw();
+      };
+      const topEle = document.querySelector("#topBoundary");
+      const topValue = document.querySelector("#topValue");
+      topEle.onchange = (e) => {
+        const value = e.target.value;
+        this.top = Number(value);
+        topValue.innerHTML = value;
+        this.draw();
+      };
+
+      const nearEle = document.querySelector("#nearBoundary");
+      const nearValue = document.querySelector("#nearValue");
+      nearEle.onchange = (e) => {
+        const value = e.target.value;
+        this.near = Number(value);
+        nearValue.innerHTML = value;
+        this.draw();
+      };
+      const farEle = document.querySelector("#farBoundary");
+      const farValue = document.querySelector("#farValue");
+      farEle.onchange = (e) => {
+        const value = e.target.value;
+        this.far = Number(value);
+        farValue.innerHTML = value;
         this.draw();
       };
     },

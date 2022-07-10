@@ -165,7 +165,7 @@ function setLookAt(eye, target, up) {
 
 ![img-1][url-local-1]
 
-这是示例。
+这是[示例][url-example4]，通过改变各个边界感受带来可视范围变化。
 
 Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的宽高比和 Canvas 的不一样，画面就会按照 Canvas 的宽高比进行压缩，物体会被扭曲。
 
@@ -193,6 +193,7 @@ Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的�
 [url-example1]:https://xxholic.github.io/segment/draft2/1/example/watcher.html
 [url-example2]:https://xxholic.github.io/segment/draft2/1/example/no-watcher.html
 [url-example3]:https://xxholic.github.io/segment/draft2/1/example/watcher-rotate.html
+[url-example4]:https://xxholic.github.io/segment/draft2/1/example/orthographic-projection.html
 
 [url-local-1]:./image/10.png
 [url-local-2]:./image/11.png
