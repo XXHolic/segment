@@ -65,6 +65,8 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [apply、call 和 bind 方法](https://github.com/XXHolic/segment/issues/41)
 - [position 属性值 sticky](https://github.com/XXHolic/segment/issues/15)
 - [toString() 和 String() 的区别](https://github.com/XXHolic/segment/issues/14)
+- [事件处理程序](https://github.com/XXHolic/blog/issues/18)
+- [JavaScript 事件](https://github.com/XXHolic/blog/issues/14)
 - [CSS 常见形状实现思路](https://github.com/XXHolic/blog/issues/7)
 - [CSS 形状初级理解](https://github.com/XXHolic/blog/issues/6)
 - [CSS 不定高宽度元素水平垂直居中](https://github.com/XXHolic/blog/issues/4)
@@ -89,6 +91,13 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [Date 字符串格式](https://github.com/XXHolic/segment/issues/17)
 - [模拟事件](https://github.com/XXHolic/segment/issues/11)
 - [计量长度](https://github.com/XXHolic/segment/issues/1)
+- [超级微型编译器](https://github.com/XXHolic/blog/issues/24)
+- [屏幕尺寸、像素、分辨率和 devicePixelRatio](https://github.com/XXHolic/blog/issues/11)
+- [CSS Flexible Box Layout](https://github.com/XXHolic/blog/issues/32)
+- [正则表达式](https://github.com/XXHolic/blog/issues/28)
+- [关于 HTTP](https://github.com/XXHolic/blog/issues/31)
+- [+0 和 -0](https://github.com/XXHolic/blog/issues/27)
+
 
 ## JavaScript 新旧替换
 - [JavaScript 新旧替换一：变量声明](https://github.com/XXHolic/segment/issues/18)
@@ -99,6 +108,7 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [JavaScript 新旧替换六：键值对数据](https://github.com/XXHolic/segment/issues/90)
 
 ## 工具
+- [Git 常用操作](https://github.com/XXHolic/blog/issues/23)
 - [Lerna 实践记录](https://github.com/XXHolic/segment/issues/92)
 - [自定义 create-react-app](https://github.com/XXHolic/segment/issues/82)
 - [Mac 配置记](https://github.com/XXHolic/segment/issues/81)
@@ -110,7 +120,6 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [Lerna](https://github.com/XXHolic/segment/issues/23)
 - [GitHub 上常用之外的 Markdown 语法](https://github.com/XXHolic/segment/issues/12)
 - [使用 Babel 的三类方式](https://github.com/XXHolic/blog/issues/19)
-
 ## 问题
 - [Node 连接 MySql](https://github.com/XXHolic/segment/issues/98)
 - [Windows 下 Nginx 开机自启动](https://github.com/XXHolic/segment/issues/97)
