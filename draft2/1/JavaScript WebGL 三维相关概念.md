@@ -165,7 +165,36 @@ function setLookAt(eye, target, up) {
 
 ![img-1][url-local-1]
 
-这是[示例][url-example4]，通过改变各个边界感受带来可视范围变化。
+正射投影实现的一种方式：
+```js
+function serOrthographicProjection(data) {
+  const [left, right, bottom, top, near, far] = data;
+
+  if (left === right || bottom === top || near === far) {
+    throw "Invalid Projection";
+  }
+
+  const rw = 1 / (right - left);
+  const rh = 1 / (top - bottom);
+  const rd = 1 / (far - near);
+
+  const m0 = 2 * rw;
+  const m5 = 2 * rh;
+  const m10 = -2 * rd;
+  const m12 = -(right + left) * rw;
+  const m13 = -(top + bottom) * rh;
+  const m14 = -(far + near) * rd;
+
+  return [
+    m0,   0,  0,  0,
+      0,  m5,  0,  0,
+      0,   0, m10, 0,
+    m12, m13, m14, 1,
+  ];
+}
+```
+
+这是[示例][url-example4]，通过改变各个边界感受带来可视范围变化。更加详细的解释见[这里][url-6]。
 
 Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的宽高比和 Canvas 的不一样，画面就会按照 Canvas 的宽高比进行压缩，物体会被扭曲。
 
@@ -173,6 +202,11 @@ Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的�
 透视投影的可视域产生跟正射投影的类似，只是近裁剪面和远裁剪面的尺寸不一样。
 
 ![img-2][url-local-2]
+
+透视投影实现的一种方式：
+```js
+```
+这是[示例][url-example5]，更加详细的解释见[这里][url-7]。
 
 <div align="right"><a href="#index">Back to top :arrow_up:</a></div>
 
@@ -189,6 +223,8 @@ Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的�
 [url-3]:http://www.jiazhengblog.com/blog/2015/03/05/480/
 [url-4]:https://learnopengl-cn.github.io/01%20Getting%20started/08%20Coordinate%20Systems/#_1
 [url-5]:https://www.shuxuele.com/algebra/vectors-cross-product.html
+[url-6]:http://learnwebgl.brown37.net/08_projections/projections_ortho.html
+[url-7]:http://learnwebgl.brown37.net/08_projections/projections_perspective.html
 
 [url-example1]:https://xxholic.github.io/segment/draft2/1/example/watcher.html
 [url-example2]:https://xxholic.github.io/segment/draft2/1/example/no-watcher.html
