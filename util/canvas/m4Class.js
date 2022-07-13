@@ -211,8 +211,8 @@ class M4 {
     return this;
   }
   // 正射投影
-  serOrthographicProjection(data) {
-    const [left, right, bottom, top, near, far] = data;
+  setOrthographicProjection(config) {
+    const [left, right, bottom, top, near, far] = config;
 
     if (left === right || bottom === top || near === far) {
       throw "Invalid Projection";
@@ -235,6 +235,43 @@ class M4 {
        0,  m5,  0,  0,
        0,   0, m10, 0,
      m12, m13, m14, 1,
+    ];
+
+    return this;
+  }
+  // 透视投影
+  setPerspectiveProjection(config) {
+    let [fovy, aspect, near, far] = config;
+
+    if (near === far || aspect === 0) {
+      throw "null frustum";
+    }
+    if (near <= 0) {
+      throw "near <= 0";
+    }
+    if (far <= 0) {
+      throw "far <= 0";
+    }
+
+    fovy = (Math.PI * fovy) / 180 / 2;
+    const s = Math.sin(fovy);
+    if (s === 0) {
+      throw "null frustum";
+    }
+
+    const rd = 1 / (far - near);
+    const ct = Math.cos(fovy) / s;
+
+    const m0 = ct / aspect;
+    const m5 = ct;
+    const m10 = -(far + near) * rd;
+    const m14 = -2 * near * far * rd;
+    // prettier-ignore
+    this.matrix = [
+      m0,   0,  0,  0,
+       0,  m5,  0,  0,
+       0,   0, m10,-1,
+       0,   0, m14, 0,
     ];
 
     return this;

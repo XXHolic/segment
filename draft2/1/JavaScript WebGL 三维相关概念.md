@@ -165,9 +165,9 @@ function setLookAt(eye, target, up) {
 
 ![img-1][url-local-1]
 
-正射投影实现的一种方式：
+正射投影矩阵实现的一种方式：
 ```js
-function serOrthographicProjection(data) {
+function setOrthographicProjection(data) {
   const [left, right, bottom, top, near, far] = data;
 
   if (left === right || bottom === top || near === far) {
@@ -194,7 +194,7 @@ function serOrthographicProjection(data) {
 }
 ```
 
-这是[示例][url-example4]，通过改变各个边界感受带来可视范围变化。更加详细的解释见[这里][url-6]。
+这是[示例][url-example4]，通过改变各个边界感受带来可视范围变化。更加详细的原理解释见[这里][url-6]。
 
 Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的宽高比和 Canvas 的不一样，画面就会按照 Canvas 的宽高比进行压缩，物体会被扭曲。
 
@@ -203,10 +203,10 @@ Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的�
 
 ![img-2][url-local-2]
 
-透视投影实现的一种方式：
+透视投影矩阵实现的一种方式：
 ```js
 ```
-这是[示例][url-example5]，更加详细的解释见[这里][url-7]。
+这是[示例][url-example5]，更加详细的原理解释见[这里][url-7]。
 
 <div align="right"><a href="#index">Back to top :arrow_up:</a></div>
 

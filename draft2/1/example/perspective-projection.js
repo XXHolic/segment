@@ -22,12 +22,13 @@ window.onload = function () {
       const source = `
         attribute vec4 aVertexPos;
         attribute vec4 aColor;
-        uniform mat4 uMatrix;
+        uniform mat4 uProMatrix;
+        uniform mat4 uViewMatrix;
 
         varying vec4 vColor;
 
         void main(void){
-          gl_Position = uMatrix * aVertexPos;
+          gl_Position = uProMatrix * uViewMatrix * aVertexPos;
           vColor = aColor;
         }
       `;
@@ -50,11 +51,11 @@ window.onload = function () {
       // prettier-ignore
       const vertices = new Float32Array([
         // 面 1
-        0.0,  0.6,  -0.4, -0.5, -0.4,  -0.4, 0.5, -0.4,  -0.4,
+        0.75,  1.0,  -4.0, 0.25, -1.0,  -4.0,1.25, -1.0,  -4.0,
         // 面 2
-        0.5,  0.4,  -0.2, -0.5, 0.4, -0.2, 0.0, -0.6, -0.2,
+        0.75,  1.0,  -2.0, 0.25, -1.0,  -2.0, 1.25, -1.0,  -2.0,
         // 面 3
-        0.0, 0.5, 0.0, -0.5, -0.5, 0.0, 0.5, -0.5, 0.0,
+        0.75,  1.0,   0.0, 0.25, -1.0,   0.0, 1.25, -1.0,   0.0,
       ]);
       // prettier-ignore
       const verticesColor = new Uint8Array([
@@ -168,7 +169,7 @@ window.onload = function () {
     },
     setProjection: function () {
       let m4Object = new M4();
-      m4Object.setOrthographicProjection([
+      m4Object.setPerspectiveProjection([
         this.left,
         this.right,
         this.bottom,
@@ -205,28 +206,17 @@ window.onload = function () {
         gl.UNSIGNED_BYTE,
         true
       );
-      const matrixValue = this.setProjection();
-      gl.uniformMatrix4fv(program.uMatrix, false, matrixValue);
+      const m4View = new M4();
+      // 0, 0, 7, 0, 0, -10, 0, 1, 0
+      m4View.setLookAt([0, 0, 7], [0, 0, -10], [0, 1, 0]);
+      const m4Pro = new M4();
+      m4Pro.setPerspectiveProjection([30, 1 / 1, 1, 100]);
+      gl.uniformMatrix4fv(program.uViewMatrix, false, m4View.matrix);
+      gl.uniformMatrix4fv(program.uProMatrix, false, m4Pro.matrix);
       gl.drawArrays(gl.TRIANGLES, 0, 3 * 3);
       // requestAnimationFrame(this.draw.bind(this));
     },
     pageEvent: function () {
-      const leftEle = document.querySelector("#leftBoundary");
-      const leftValue = document.querySelector("#leftValue");
-      leftEle.onchange = (e) => {
-        const value = e.target.value;
-        this.left = Number(value);
-        leftValue.innerHTML = value;
-        this.draw();
-      };
-      const rightEle = document.querySelector("#rightBoundary");
-      const rightValue = document.querySelector("#rightValue");
-      rightEle.onchange = (e) => {
-        const value = e.target.value;
-        this.right = Number(value);
-        rightValue.innerHTML = value;
-        this.draw();
-      };
       const bottomEle = document.querySelector("#bottomBoundary");
       const bottomValue = document.querySelector("#bottomValue");
       bottomEle.onchange = (e) => {
