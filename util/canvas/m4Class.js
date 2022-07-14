@@ -165,11 +165,17 @@ class M4 {
     return this;
   }
 
-  // 描述观察者
+  /**
+   * 描述观察者
+   * @param {*} eye 视点 默认 (0, 0, 0)
+   * @param {*} target 观察目标点 默认 (0, 0, -1)
+   * @param {*} up 上方向 默认 (0,1,0)
+   * @returns
+   */
   setLookAt(eye, target, up) {
-    const [eyeX, eyeY, eyeZ] = eye;
-    const [targetX, targetY, targetZ] = target;
-    const [upX, upY, upZ] = up;
+    const [eyeX = 0, eyeY = 0, eyeZ = 0] = eye;
+    const [targetX = 0, targetY = 0, targetZ = -1] = target;
+    const [upX = 0, upY = 1, upZ = 0] = up;
     let fx, fy, fz, sx, sy, sz, ux, uy, uz;
 
     fx = targetX - eyeX;
@@ -210,7 +216,11 @@ class M4 {
 
     return this;
   }
-  // 正射投影
+  /**
+   * 正射投影
+   * @param {*} config， 数组顺序 left, right, bottom, top, near, far
+   * @returns
+   */
   setOrthographicProjection(config) {
     const [left, right, bottom, top, near, far] = config;
 
@@ -239,7 +249,14 @@ class M4 {
 
     return this;
   }
-  // 透视投影
+  /**
+   * 透视投影
+   * @param {*} config  顺序 fovy, aspect, near, far
+   * fovy - 垂直视角，可是空间顶面和地面的夹角，必须大于 0
+   * aspect - 近裁剪面的宽高比（宽/高）
+   * near - 近裁剪面的位置，必须大于 0
+   * far - 远裁剪面的位置，必须大于 0
+   */
   setPerspectiveProjection(config) {
     let [fovy, aspect, near, far] = config;
 

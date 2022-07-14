@@ -1,13 +1,10 @@
 window.onload = function () {
   const page = {
     canvasObj: null,
-    angle: 23,
-    left: -1,
-    right: 1,
-    bottom: -1,
-    top: 1,
-    near: 0,
-    far: 1,
+    angle: 30,
+    ratio: 1, // 宽/高 比
+    near: 1,
+    far: 20,
     init: function () {
       const canvasObj = new WebGL(400, 400);
       this.canvasObj = canvasObj;
@@ -210,27 +207,32 @@ window.onload = function () {
       // 0, 0, 7, 0, 0, -10, 0, 1, 0
       m4View.setLookAt([0, 0, 7], [0, 0, -10], [0, 1, 0]);
       const m4Pro = new M4();
-      m4Pro.setPerspectiveProjection([30, 1 / 1, 1, 100]);
+      m4Pro.setPerspectiveProjection([
+        this.angle,
+        this.ratio,
+        this.near,
+        this.far,
+      ]);
       gl.uniformMatrix4fv(program.uViewMatrix, false, m4View.matrix);
       gl.uniformMatrix4fv(program.uProMatrix, false, m4Pro.matrix);
       gl.drawArrays(gl.TRIANGLES, 0, 3 * 3);
       // requestAnimationFrame(this.draw.bind(this));
     },
     pageEvent: function () {
-      const bottomEle = document.querySelector("#bottomBoundary");
-      const bottomValue = document.querySelector("#bottomValue");
-      bottomEle.onchange = (e) => {
+      const angleEle = document.querySelector("#angleBoundary");
+      const angleValue = document.querySelector("#angleValue");
+      angleEle.onchange = (e) => {
         const value = e.target.value;
-        this.bottom = Number(value);
-        bottomValue.innerHTML = value;
+        this.angle = Number(value);
+        angleValue.innerHTML = value;
         this.draw();
       };
-      const topEle = document.querySelector("#topBoundary");
-      const topValue = document.querySelector("#topValue");
-      topEle.onchange = (e) => {
+      const ratioEle = document.querySelector("#ratioBoundary");
+      const ratioValue = document.querySelector("#ratioValue");
+      ratioEle.onchange = (e) => {
         const value = e.target.value;
-        this.top = Number(value);
-        topValue.innerHTML = value;
+        this.ratio = Number(value);
+        ratioValue.innerHTML = value;
         this.draw();
       };
 
