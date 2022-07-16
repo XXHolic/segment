@@ -48,11 +48,17 @@ window.onload = function () {
       // prettier-ignore
       const vertices = new Float32Array([
         // 面 1
-        0.75,  1.0,  -4.0, 0.25, -1.0,  -4.0,1.25, -1.0,  -4.0,
+        1, 1.0, -4.0, 0.5, -1.0, -4.0, 1.5, -1.0, -4.0,
         // 面 2
-        0.75,  1.0,  -2.0, 0.25, -1.0,  -2.0, 1.25, -1.0,  -2.0,
+        1, 1.0, -2.0, 0.5, -1.0, -2.0, 1.5, -1.0, -2.0,
         // 面 3
-        0.75,  1.0,   0.0, 0.25, -1.0,   0.0, 1.25, -1.0,   0.0,
+        1, 1.0, 0.0, 0.5, -1.0, 0.0, 1.5, -1.0, 0.0,
+        // 面 4
+        -1, 1.0, -4.0, -0.5, -1.0, -4.0, -1.5, -1.0, -4.0,
+        // 面 5
+        -1, 1.0, -2.0, -0.5, -1.0, -2.0, -1.5, -1.0, -2.0,
+        // 面 6
+        -1, 1.0, 0.0, -0.5, -1.0, 0.0, -1.5, -1.0, 0.0,
       ]);
       // prettier-ignore
       const verticesColor = new Uint8Array([
@@ -61,6 +67,12 @@ window.onload = function () {
         // 面 2 - 绿色
         0, 255, 0, 0, 255, 0, 0, 255, 0,
         // 面 3 - 蓝色
+        0, 0, 255, 0, 0, 255, 0, 0, 255,
+        // 面 4 - 红色
+        255, 0, 0, 255, 0, 0, 255, 0, 0,
+        // 面 5 - 绿色
+        0, 255, 0, 0, 255, 0, 0, 255, 0,
+        // 面 6 - 蓝色
         0, 0, 255, 0, 0, 255, 0, 0, 255,
       ]);
 
@@ -215,7 +227,7 @@ window.onload = function () {
       ]);
       gl.uniformMatrix4fv(program.uViewMatrix, false, m4View.matrix);
       gl.uniformMatrix4fv(program.uProMatrix, false, m4Pro.matrix);
-      gl.drawArrays(gl.TRIANGLES, 0, 3 * 3);
+      gl.drawArrays(gl.TRIANGLES, 0, 3 * 3 * 2);
       // requestAnimationFrame(this.draw.bind(this));
     },
     pageEvent: function () {

@@ -155,7 +155,7 @@ window.onload = function () {
     },
     getTransform: function () {
       let m4Object = new M4();
-      m4Object.setLookAt([0.2, 0.2, 0.1], [0, 0, 0], [0, 1, 0]);
+      m4Object.setLookAt([0.5, 0.2, 0.1], [0, 0, 0], [0, 1, 0]);
       m4Object.rotate(-this.angle, "y");
       // console.info("matrix", m4Object);
       return m4Object.matrix;
