@@ -207,5 +207,6 @@ window.onload = function () {
   };
 
   page.init();
-  // insertLink({ title: "JavaScript WebGL 矩阵", linkIndex: 117 });
+  insertLink({ title: "JavaScript WebGL 三维相关概念", linkIndex: 120 });
+
 };
