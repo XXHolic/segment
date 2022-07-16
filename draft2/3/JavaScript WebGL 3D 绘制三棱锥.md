@@ -7,13 +7,7 @@
 - [参考资料](#reference)
 
 ## <a name="start"></a> 引子
-接着 [JavaScript WebGL 三维相关概念][url-pre]，具体看看三维中的几个矩阵，最后绘制三棱锥。
-
-## 模型矩阵
-
-
-## 视图矩阵
-## 投影矩阵
+接着 [JavaScript WebGL 三维相关概念][url-pre]，终于可以进行三维绘制了，很多示例都是正方体，我想绘制一个三棱锥。
 
 ## <a name="coord"></a> 绘制三棱锥
 三棱锥由 4 个面组成，基于 [JavaScript WebGL 绘制一个面][url-pre2] 主要有下面的变化：
