@@ -1,10 +1,7 @@
 window.onload = function () {
   const page = {
     canvasObj: null,
-    angle: 30,
-    ratio: 1, // 宽/高 比
-    near: 1,
-    far: 20,
+    angle: 0,
     init: function () {
       const canvasObj = new WebGL(400, 400);
       this.canvasObj = canvasObj;
@@ -45,35 +42,22 @@ window.onload = function () {
       this.pageEvent();
     },
     initBuffersForScreen: function (gl) {
-      // prettier-ignore
       const vertices = new Float32Array([
-        // 面 1
-        1, 1.0, -4.0, 0.5, -1.0, -4.0, 1.5, -1.0, -4.0,
-        // 面 2
-        1, 1.0, -2.0, 0.5, -1.0, -2.0, 1.5, -1.0, -2.0,
-        // 面 3
-        1, 1.0, 0.0, 0.5, -1.0, 0.0, 1.5, -1.0, 0.0,
-        // 面 4
-        -1, 1.0, -4.0, -0.5, -1.0, -4.0, -1.5, -1.0, -4.0,
-        // 面 5
-        -1, 1.0, -2.0, -0.5, -1.0, -2.0, -1.5, -1.0, -2.0,
-        // 面 6
-        -1, 1.0, 0.0, -0.5, -1.0, 0.0, -1.5, -1.0, 0.0,
+        // prettier-ignore
+        0.0, 0.5, -2, -0.5, -0.5, -2, 0.5, -0.5, -2,
+        // prettier-ignore
+        0.5, 0.4, -4, -0.5, 0.4, -4, 0.0, -0.6, -4,
+        // prettier-ignore
+        0.0, 0.5, -6, -0.5, -0.5, -6, 0.5, -0.5, -6,
       ]);
       // prettier-ignore
       const verticesColor = new Uint8Array([
-        // 面 1 - 红色
-        255, 0, 0, 255, 0, 0, 255, 0, 0,
-        // 面 2 - 绿色
-        0, 255, 0, 0, 255, 0, 0, 255, 0,
-        // 面 3 - 蓝色
+        // 蓝色
         0, 0, 255, 0, 0, 255, 0, 0, 255,
-        // 面 4 - 红色
-        255, 0, 0, 255, 0, 0, 255, 0, 0,
-        // 面 5 - 绿色
+        // 绿色
         0, 255, 0, 0, 255, 0, 0, 255, 0,
-        // 面 6 - 蓝色
-        0, 0, 255, 0, 0, 255, 0, 0, 255,
+        // 红色
+        255, 0, 0, 255, 0, 0, 255, 0, 0,
       ]);
 
       const obj = {};
@@ -171,21 +155,9 @@ window.onload = function () {
     },
     getTransform: function () {
       let m4Object = new M4();
-      m4Object.setLookAt([0.2, 0.2, 0.1], [0, 0, 0], [0, 1, 0]);
-      m4Object.rotate(-this.angle, "y");
+      m4Object.setLookAt([0.1, 0.1, 0.1], [0, 0, 0], [0, 1, 0]);
+      m4Object.rotate(-50, "y");
       // console.info("matrix", m4Object);
-      return m4Object.matrix;
-    },
-    setProjection: function () {
-      let m4Object = new M4();
-      m4Object.setPerspectiveProjection([
-        this.left,
-        this.right,
-        this.bottom,
-        this.top,
-        this.near,
-        this.far,
-      ]);
       return m4Object.matrix;
     },
     /**
@@ -196,10 +168,10 @@ window.onload = function () {
     draw: function () {
       const gl = this.gl;
       this.canvasObj.clear();
+      gl.enable(gl.DEPTH_TEST);
       gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
       const program = this.shaderProgram;
       const targetBuffer = this.screenBuffer;
-
       gl.useProgram(program.program);
       this.bindEnableBuffer(
         gl,
@@ -216,57 +188,18 @@ window.onload = function () {
         true
       );
       const m4View = new M4();
-      m4View.setLookAt([0, 0, 7], [0, 0, -10], [0, 1, 0]);
+      m4View.setLookAt([0, 0, 4], [0, 0, -10], [0, 1, 0]);
+      m4View.rotate(10, "y");
       const m4Pro = new M4();
-      m4Pro.setPerspectiveProjection([
-        this.angle,
-        this.ratio,
-        this.near,
-        this.far,
-      ]);
+      m4Pro.setPerspectiveProjection([20, 1, 1, 100]);
       gl.uniformMatrix4fv(program.uViewMatrix, false, m4View.matrix);
       gl.uniformMatrix4fv(program.uProMatrix, false, m4Pro.matrix);
-      gl.drawArrays(gl.TRIANGLES, 0, 3 * 3 * 2);
+      gl.drawArrays(gl.TRIANGLES, 0, 3 * 3);
       // requestAnimationFrame(this.draw.bind(this));
     },
-    pageEvent: function () {
-      const angleEle = document.querySelector("#angleBoundary");
-      const angleValue = document.querySelector("#angleValue");
-      angleEle.onchange = (e) => {
-        const value = e.target.value;
-        this.angle = Number(value);
-        angleValue.innerHTML = value;
-        this.draw();
-      };
-      const ratioEle = document.querySelector("#ratioBoundary");
-      const ratioValue = document.querySelector("#ratioValue");
-      ratioEle.onchange = (e) => {
-        const value = e.target.value;
-        this.ratio = Number(value);
-        ratioValue.innerHTML = value;
-        this.draw();
-      };
-
-      const nearEle = document.querySelector("#nearBoundary");
-      const nearValue = document.querySelector("#nearValue");
-      nearEle.onchange = (e) => {
-        const value = e.target.value;
-        this.near = Number(value);
-        nearValue.innerHTML = value;
-        this.draw();
-      };
-      const farEle = document.querySelector("#farBoundary");
-      const farValue = document.querySelector("#farValue");
-      farEle.onchange = (e) => {
-        const value = e.target.value;
-        this.far = Number(value);
-        farValue.innerHTML = value;
-        this.draw();
-      };
-    },
+    pageEvent: function () {},
   };
 
   page.init();
-  insertLink({ title: "JavaScript WebGL 三维相关概念", linkIndex: 120 });
-
+  // insertLink({ title: "JavaScript WebGL 三维相关概念", linkIndex: 120 });
 };

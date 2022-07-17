@@ -41,11 +41,14 @@ window.onload = function () {
       this.pageEvent();
     },
     initBuffersForScreen: function (gl) {
-      // prettier-ignore
+
       const vertices = new Float32Array([
-        0.0, 0.5, -1, -0.5, -0.5, -1, 0.5, -0.5, -1,
-        0.5, 0.4, -2, -0.5, 0.4, -2, 0.0, -0.6, 2,
-        0.0, 0.5, -3, -0.5, -0.5, -3, 0.5, -0.5, -3,
+        // prettier-ignore
+        0.0, 0.5, -0.2, -0.5, -0.5, -0.2, 0.5, -0.5, -0.2,
+        // prettier-ignore
+        0.5, 0.4, -0.4, -0.5, 0.4, -0.4, 0.0, -0.6, -0.4,
+        // prettier-ignore
+        0.0, 0.5, -0.6, -0.5, -0.5, -0.6, 0.5, -0.5, -0.6,
       ]);
       // prettier-ignore
       const verticesColor = new Uint8Array([

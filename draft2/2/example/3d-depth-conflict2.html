@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="canvas,css,html,js,webgl">
+  <meta content="JavaScript webgl">
+  <title>绘制顺序</title>
+  <link rel="shortcut icon" href="https://xxholic.github.io/lab/icon.ico">
+  <link rel="stylesheet" href="../../../common/reset.css">
+  <link rel="stylesheet" href="../../../common/base.css">
+  <style>
+    #demo {
+      width: 400px;
+      height: 400px;
+      background: url(./bg.png);
+    }
+  </style>
+</head>
+<body class="pt50">
+  <div>三维面绘制开启 DEPTH_TEST 产生冲突现象2</div>
+  <div>注意这个示例中两个三角形绘制是进行一次 drawArrays</div>
+
+  <div id="demo"></div>
+  <script src="../../../util/insertLink.js"></script>
+  <script src="../../../util/canvas/webgl.js"></script>
+  <script src="../../../util/canvas/m4Class.js"></script>
+  <script src="./3d-depth-conflict.js"></script>
+</body>
+</html>
