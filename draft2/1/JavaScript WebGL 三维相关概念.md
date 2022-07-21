@@ -260,6 +260,7 @@ Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的�
 
 
 ## <a name="reference"></a> 参考资料
+- [WebGL编程指南在线版][url-8]
 - [WebGL model view projection][url-2]
 - [WebGL摄像机详解之一：模型、视图和投影矩阵变换的含义][url-3]
 - [坐标系统][url-4]
@@ -273,6 +274,7 @@ Canvas 上显示的就是物体在近裁剪面上的投影。如果裁剪面的�
 [url-5]:https://www.shuxuele.com/algebra/vectors-cross-product.html
 [url-6]:http://learnwebgl.brown37.net/08_projections/projections_ortho.html
 [url-7]:http://learnwebgl.brown37.net/08_projections/projections_perspective.html
+[url-8]:https://sites.google.com/site/webglbook/
 
 [url-example1]:https://xxholic.github.io/segment/draft2/1/example/watcher.html
 [url-example2]:https://xxholic.github.io/segment/draft2/1/example/no-watcher.html

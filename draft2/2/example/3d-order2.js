@@ -193,5 +193,5 @@ window.onload = function () {
   };
 
   page.init();
-  // insertLink({ title: "JavaScript WebGL 三维相关概念", linkIndex: 120 });
+  insertLink({ title: "JavaScript WebGL 绘制顺序", linkIndex: 121 });
 };
