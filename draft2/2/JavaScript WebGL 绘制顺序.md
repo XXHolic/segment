@@ -1,7 +1,4 @@
 # JavaScript WebGL 绘制顺序
-## <a name="index"></a> 目录
-- [引子](#start)
-- [参考资料](#reference)
 
 ## <a name="start"></a> 引子
 在 [JavaScript WebGL 三维相关概念][url-pre]中尝试一些效果的时候，又碰到了新问题，就去查了资料，自己尝试后总结下。
@@ -32,7 +29,7 @@ gl.enable(gl.DEPTH_TEST)
 
 示例 1 的情况是一次绘制多个面，通过调整 z 分量比较容易解决。
 
-示例 2 的情况是多次绘制多个面，不确定性相对更强，这个时候就需要借助**多边形偏移(polygon offset)**来解决。在两次绘制之间指定偏移：
+示例 2 的情况是多次绘制多个面，不确定性相对更强，这个时候可以借助**多边形偏移(polygon offset)**来解决。在两次绘制之间指定偏移：
 ```js
   // 代码省略
   gl.enable(gl.POLYGON_OFFSET_FILL);
@@ -44,7 +41,6 @@ gl.enable(gl.DEPTH_TEST)
 
 [polygonOffset(factor, units)][url-1] 指定加到每个顶点绘制 z 值上的偏移量，两个参数都是比例因子，最终值的计算公式是 factor × DZ + r × units ，其中 DZ 是顶点所在表面相对于观察者视线的角度， r 是设备能够解析偏移量的最小值。这个方法对于渲染隐藏线图像、将贴花应用于表面以及渲染具有高亮显示边缘立体图形很有用。
 
-<div align="right"><a href="#index">Back to top :arrow_up:</a></div>
 
 
 ## <a name="reference"></a> 参考资料
@@ -71,8 +67,8 @@ gl.enable(gl.DEPTH_TEST)
 <details>
 <summary>:wastebasket:</summary>
 
-最近看了[《红线》][url-waste]这部作品，里面赛车设计和场面看着还是蛮过瘾的！
+最近看了[《废头》][url-waste]这部作品，蛮有意思的，里面对一种生命轮回设定很新奇。
 
 </details>
 
-[url-waste]:https://movie.douban.com/subject/3903715/
+[url-waste]:https://movie.douban.com/subject/27098373/
