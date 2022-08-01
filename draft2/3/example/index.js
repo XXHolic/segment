@@ -1,7 +1,10 @@
 window.onload = function () {
   const page = {
     canvasObj: null,
-    angle: 0,
+    angle: 30,
+    ratio: 1, // 宽/高 比
+    near: 1,
+    far: 20,
     init: function () {
       const canvasObj = new WebGL(400, 400);
       this.canvasObj = canvasObj;
@@ -16,11 +19,13 @@ window.onload = function () {
       const source = `
         attribute vec4 aVertexPos;
         attribute vec4 aColor;
-        uniform mat4 uMatrix;
+        uniform mat4 uProMatrix;
+        uniform mat4 uViewMatrix;
+
         varying vec4 vColor;
 
         void main(void){
-          gl_Position = uMatrix * aVertexPos;
+          gl_Position = uProMatrix * uViewMatrix * aVertexPos;
           vColor = aColor;
         }
       `;
@@ -42,22 +47,14 @@ window.onload = function () {
     initBuffersForScreen: function (gl) {
       // prettier-ignore
       const vertices = new Float32Array([
-        // 面 1-底面
-        0.5,-0.5,-0.5,
-       -0.5,-0.5,-0.5,
-        0.0,-0.5,-0.5,
-        // 面 2
-        0.0, 0.5, 0.0,
-        0.0,-0.5, 0.5,
-        0.5,-0.5,-0.5,
-        // 面 3
-        0.0, 0.5, 0.0,
-        0.5,-0.5,-0.5,
-       -0.5,-0.5,-0.5,
-        // 面 4
-        0.0, 0.5, 0.0,
-       -0.5,-0.5,-0.5,
-        0.0,-0.5,-0.5,
+        // 面 1-底面 黑色
+        0.5, -0.5, -0.5, -0.5, -0.5, -0.5, 0.0, -0.5, -0.5,
+        // 面 2 红色
+        0.0, 0.5, 0.0, 0.0, -0.5, 0.5, 0.5, -0.5, -0.5,
+        // 面 3 绿色
+        0.0, 0.5, 0.0, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5,
+        // 面 4 蓝色
+        0.0, 0.5, 0.0, -0.5, -0.5, -0.5, 0.0, -0.5, -0.5,
       ]);
       // prettier-ignore
       const verticesColor = new Uint8Array([
@@ -190,11 +187,12 @@ window.onload = function () {
     draw: function () {
       const gl = this.gl;
       this.canvasObj.clear();
+      gl.enable(gl.DEPTH_TEST);
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
       const program = this.shaderProgram;
       const targetBuffer = this.screenBuffer;
 
       gl.useProgram(program.program);
-      const transformValue = this.getTransform();
       this.bindEnableBuffer(
         gl,
         targetBuffer.verticesBuffer,
@@ -209,7 +207,17 @@ window.onload = function () {
         gl.UNSIGNED_BYTE,
         true
       );
-      gl.uniformMatrix4fv(program.uMatrix, false, transformValue);
+      const m4View = new M4();
+      m4View.setLookAt([1, 1, 4], [0, 0, 0], [0, 1, 0]);
+      const m4Pro = new M4();
+      m4Pro.setPerspectiveProjection([
+        this.angle,
+        this.ratio,
+        this.near,
+        this.far,
+      ]);
+      gl.uniformMatrix4fv(program.uViewMatrix, false, m4View.matrix);
+      gl.uniformMatrix4fv(program.uProMatrix, false, m4Pro.matrix);
       gl.drawArrays(gl.TRIANGLES, 0, 3 * 4);
       // requestAnimationFrame(this.draw.bind(this));
     },
