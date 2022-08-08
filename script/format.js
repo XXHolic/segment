@@ -2,7 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const currentPath = "./draft2/2"; // 目标执行路径
+const currentPath = "./draft2/1"; // 目标执行路径
 const config = JSON.parse(fs.readFileSync(`${currentPath}/config.json`));
 const formatFilePrefix = `${currentPath}/format`;
 let filePath = ""; // 需要解析文件的绝对路径
