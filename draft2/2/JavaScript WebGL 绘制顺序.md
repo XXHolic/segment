@@ -10,17 +10,17 @@
 - [二维面顺序示例 1][url-example1]
 - [二维面顺序示例 2][url-example2]
 
-面的颜色始终保持一致，但顺序变了，发现 **WebGL 默认情况下会按照缓冲区中顺序绘制**，也就是后绘制的图形会覆盖先绘制的图形。这个就像一层一层贴纸一样，比较符合一般认知，所以在二维绘制时并没发现明显不对劲的地方。
+两个面的形状和对应颜色始终保持一致，就是缓冲的顺序变了，发现 **WebGL 默认情况下会按照缓冲区中顺序绘制**，也就是后绘制的图形会覆盖先绘制的图形。这个就像一层一层贴纸一样，比较符合一般认知，所以在二维绘制时并没发现明显不对劲的地方。
 
 关于三维绘制顺序先思考一下：三维的顶点坐标有三个分量，第三个分量是在 z 轴上表示深度信息，默认垂直屏幕向内为负方向，那么 z 值越大表示离屏幕越近，既然都有区分的依据，直接按照这个顺序绘制应该就可以了。实际试试：
 - [三维面顺序示例 1][url-example3]
 - [三维面顺序示例 2][url-example4]
 
-发现示例 2 中 z 分量的设置并没有效果，还是跟二维绘制面顺序一样。查资料说要开启**隐藏面消除**功能：
+示例 1 和示例 2 顶点和对应颜色都保持了一样，只有 z 分量和缓冲的顺序不同，如果是按照 z 分量区分的话，应该要保持一致才对，但发现示例 2 还是跟二维绘制面顺序一样，z 分量的设置并没有效果。查资料说要开启**隐藏面消除**功能：
 ```js
 gl.enable(gl.DEPTH_TEST)
 ```
-再来看看[示例 2 开启 DEPTH_TEST][url-example5]，发现还是没有效果，找到网上的一些示例并进行对比，发现还需要投影，才能看到效果，见[示例 2 开启 DEPTH_TEST 且产生正确投影][url-example5]。
+再来看看[示例 2 并开启 DEPTH_TEST][url-example5]，发现还是没有效果，找到网上的一些示例并进行对比，发现还需要投影，才能看到效果，见[示例 2 开启 DEPTH_TEST 且产生正确投影][url-example9]。
 
 ## 深度冲突
 开启隐藏面消除功能之后，在绘制两个很靠近的面时，可能会出现显示异常的情况，这个现象称为**深度冲突(Z fighting)**。这里有两类这个现象的示例：
@@ -60,6 +60,7 @@ gl.enable(gl.DEPTH_TEST)
 [url-example6]:https://xxholic.github.io/segment/draft2/2/example/3d-depth-conflict.html
 [url-example7]:https://xxholic.github.io/segment/draft2/2/example/3d-depth-conflict2.html
 [url-example8]:https://xxholic.github.io/segment/draft2/2/example/3d-depth-offset.html
+[url-example9]:https://xxholic.github.io/segment/draft2/2/example/3d-order2-projection-depth.html
 
 [url-local-1]:./image/1.png
 
