@@ -1,4 +1,3 @@
-/* prettier-ignore */
 window.onload = function () {
   const page = {
     canvasObj: null,
@@ -46,35 +45,45 @@ window.onload = function () {
       this.pageEvent();
     },
     initBuffersForScreen: function (gl) {
-      //    v3 ------ v2
-      //    \  \    / /
-      //     \   v1  /
-      //      \  |  /
-      //       \ | /
-      //         v0
-
+      //    v6----- v5
+      //   /|      /|
+      //  v1------v0|
+      //  | |     | |
+      //  | |v7---|-|v4
+      //  |/      |/
+      //  v2------v3
       // prettier-ignore
       const vertices = new Float32Array([
-        0.0,  -1.0,  0.0,   // v0
-        0.0,  1.0,  1.0,   // v1
-        1.0, 1.0,  -1.0,   // v2
-        -1.0, 1.0,  -1.0,   // v3
+        1.0,  1.0,  1.0,   // v0
+        -1.0,  1.0,  1.0,   // v1
+        -1.0, -1.0,  1.0,   // v2
+        1.0, -1.0,  1.0,   // v3
+        1.0, -1.0, -1.0,   // v4
+        1.0,  1.0, -1.0,   // v5
+        -1.0,  1.0, -1.0,  // v6
+        -1.0, -1.0, -1.0,  // v7
       ]);
 
       // prettier-ignore
       const verticesColor = new Float32Array([
-        0.0,  0.0,  0.0, // v0
-        1.0,  1.0,  1.0, // v1
-        0.0,  0.0,  0.0, // v2
-        1.0,  1.0,  1.0, // v3
+        1.0,  1.0,  1.0, // v0
+        0.0,  0.0,  0.0, // v1
+        1.0,  1.0,  1.0, // v2
+        0.0,  0.0,  0.0, // v3
+        1.0,  1.0,  1.0, // v4
+        0.0,  0.0,  0.0, // v5
+        1.0,  1.0,  1.0, // v6
+        0.0,  0.0,  0.0, // v7
       ]);
 
       // prettier-ignore
       const verticesIndex = new Uint8Array([
-        0, 1, 3, // left
-        0, 2, 1, // right
-        1, 2, 3, // up
-        0, 3, 2, // back
+        0, 1, 2,   0, 2, 3,    // front
+        0, 3, 4,   0, 4, 5,    // right
+        0, 5, 6,   0, 6, 1,    // up
+        1, 6, 7,   1, 7, 2,    // left
+        7, 4, 3,   7, 3, 2,    // down
+        4, 7, 6,   4, 6, 5     // back
       ]);
 
       const obj = {};
@@ -227,12 +236,12 @@ window.onload = function () {
         targetBuffer.verticesIndex
       );
       const m4View = new M4();
-      m4View.setLookAt([0, 4, 10], [0, 0, 0], [0, 1, 0]);
+      m4View.setLookAt([3, 3, 7], [0, 0, 0], [0, 1, 0]);
       const m4Pro = new M4();
       m4Pro.setPerspectiveProjection([30, 1, 1, 100]);
       gl.uniformMatrix4fv(program.uViewMatrix, false, m4View.matrix);
       gl.uniformMatrix4fv(program.uProMatrix, false, m4Pro.matrix);
-      gl.drawElements(gl.TRIANGLES, 12, gl.UNSIGNED_BYTE, 0);
+      gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_BYTE, 0);
       // requestAnimationFrame(this.draw.bind(this));
     },
     pageEvent: function () {},
