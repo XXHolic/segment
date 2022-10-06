@@ -38,11 +38,13 @@ window.onload = function () {
           gl_FragColor = vColor;
         }
       `;
-
-      this.shaderProgram = this.createShaderProgram(gl, source, fragmentSource);
-      this.screenBuffer = this.initBuffersForScreen(gl);
+      // 初始化着色器程序
+      const shaderProgram = this.createShaderProgram(gl, source, fragmentSource);
+      // 集中初始化顶点、颜色和索引数据
+      const screenBuffer = this.initBuffersForScreen(gl);
       // requestAnimationFrame(this.draw.bind(this));
-      this.draw();
+      // 绘制
+      this.draw(gl, shaderProgram, screenBuffer);
       this.pageEvent();
     },
     initBuffersForScreen: function (gl) {
@@ -196,42 +198,47 @@ window.onload = function () {
      * 绘制
      * @param {*} gl WebGL 上下文
      * @param {*} shaderProgram 着色器程序
+     * @param {*} screenBuffer 顶点、颜色、索引缓冲数据都放在这个对象中
      */
-    draw: function () {
-      const gl = this.gl;
+    draw: function (gl, shaderProgram, screenBuffer) {
       this.canvasObj.clear();
+      // 开启隐藏面消除
       gl.enable(gl.DEPTH_TEST);
-      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-      const program = this.shaderProgram;
-      const targetBuffer = this.screenBuffer;
-
-      gl.useProgram(program.program);
+      gl.useProgram(shaderProgram.program);
+      // 绑定顶点数据并启用对应属性
       this.bindEnableBuffer(
         gl,
         gl.ARRAY_BUFFER,
-        targetBuffer.verticesBuffer,
-        program.aVertexPos,
+        screenBuffer.verticesBuffer,
+        shaderProgram.aVertexPos,
         3
       );
+      // 绑定顶点颜色数据并启用对应属性
       this.bindEnableBuffer(
         gl,
         gl.ARRAY_BUFFER,
-        targetBuffer.verticesColorBuffer,
-        program.aColor,
+        screenBuffer.verticesColorBuffer,
+        shaderProgram.aColor,
         3
       );
-      // 不绑定就报错
+      // 使索引缓冲数据生效，需要与 drawElements 一起使用
       this.bindTargetBuffer(
         gl,
         gl.ELEMENT_ARRAY_BUFFER,
-        targetBuffer.verticesIndex
+        screenBuffer.verticesIndex
       );
       const m4View = new M4();
+      // 生成视图矩阵
       m4View.setLookAt([0, 4, 10], [0, 0, 0], [0, 1, 0]);
       const m4Pro = new M4();
+      // 生成投影矩阵
       m4Pro.setPerspectiveProjection([30, 1, 1, 100]);
-      gl.uniformMatrix4fv(program.uViewMatrix, false, m4View.matrix);
-      gl.uniformMatrix4fv(program.uProMatrix, false, m4Pro.matrix);
+      // 赋给着色器对应变量
+      gl.uniformMatrix4fv(shaderProgram.uViewMatrix, false, m4View.matrix);
+      gl.uniformMatrix4fv(shaderProgram.uProMatrix, false, m4Pro.matrix);
+      // 清理颜色和深度缓冲
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+      // 绘制顶点
       gl.drawElements(gl.TRIANGLES, 12, gl.UNSIGNED_BYTE, 0);
       // requestAnimationFrame(this.draw.bind(this));
     },
@@ -239,5 +246,5 @@ window.onload = function () {
   };
 
   page.init();
-  // insertLink({ title: "JavaScript WebGL 矩阵", linkIndex: 117 });
+  insertLink({ title: "JavaScript WebGL 3D 绘制三棱锥", linkIndex: 122 });
 };
