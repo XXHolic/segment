@@ -2,9 +2,9 @@
 Scattered knowledge points here. Maybe you can find something useful.
 
 ## 最近更新
+- [JavaScript WebGL 3D 绘制三棱锥](https://github.com/XXHolic/segment/issues/122)
 - [JavaScript WebGL 绘制顺序](https://github.com/XXHolic/segment/issues/121)
 - [JavaScript WebGL 三维相关概念](https://github.com/XXHolic/segment/issues/120)
-- [JavaScript WebGL 矩阵](https://github.com/XXHolic/segment/issues/117)
 
 ## WebGL
 - [JavaScript WebGL 基础概念](https://github.com/XXHolic/segment/issues/108)
@@ -19,6 +19,7 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [JavaScript WebGL 矩阵](https://github.com/XXHolic/segment/issues/117)
 - [JavaScript WebGL 三维相关概念](https://github.com/XXHolic/segment/issues/120)
 - [JavaScript WebGL 绘制顺序](https://github.com/XXHolic/segment/issues/121)
+- [JavaScript WebGL 3D 绘制三棱锥](https://github.com/XXHolic/segment/issues/122)
 
 ## 数学曲线
 - [曲线总览](https://xxholic.github.io/lab/segment/curve/index.html)

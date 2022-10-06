@@ -1,17 +1,24 @@
 # JavaScript WebGL 3D 绘制三棱锥
-
+## <a name="index"></a> 目录
+- [引子](#start)
+- [相关知识点](#knowledge)
+- [顶点数据](#data)
+- [顶点着色器](#vertex)
+- [片元着色器](#fragment)
+- [绘制](#draw)
+- [参考资料](#reference)
 ## <a name="start"></a> 引子
-接着 [JavaScript WebGL 绘制顺序][url-pre]，终于可以进行三维绘制了，很多示例都是正方体，感觉顶点数据有些多，就来绘制一个三棱锥。
+接着 [JavaScript WebGL 绘制顺序][url-pre]，终于可以进行三维绘制了，很多示例都是正方体，顶点数据有些多看着感觉很复杂，就想着先绘制一个三棱锥试试。
 
-## <a name="coord"></a> 绘制三棱锥
-以下是为了进行三维绘制去了解的知识点：
+## <a name="knowledge"></a> 相关知识点
+以下是进行三维绘制会涉及到的知识点：
 - [JavaScript WebGL 矩阵][url-2]
 - [JavaScript WebGL 三维相关概念][url-3]
 - [JavaScript WebGL 绘制顺序][url-pre]
 
 由于相邻面会公用顶点数据，所以还会涉及到**索引缓冲对象**，在前面的 [JavaScript WebGL 绘制一个面][url-4]中有介绍。
 
-下面代码涉及到上面的相关点不会再详细介绍。这里[在线示例][url-example1]。
+下面代码涉及到上面的相关点不会再详细介绍，这是[在线示例][url-example1]。
 ## <a name="data"></a> 顶点数据
 ```js
 //    v3 ------ v2
@@ -62,8 +69,8 @@ const source = `
 ```
 - `aVertexPos` ：顶点数据
 - `aColor` ：顶点对应颜色
-- `uProMatrix` ：投影矩阵。
-- `uViewMatrix` ：视图矩阵，模拟观察者。
+- `uProMatrix` ：投影矩阵，更详细介绍见 [JavaScript WebGL 三维相关概念][url-3]。
+- `uViewMatrix` ：视图矩阵，模拟观察者，更详细介绍见 [JavaScript WebGL 三维相关概念][url-3]。
 
 ## <a name="fragment"></a> 片元着色器
 ```js
@@ -142,6 +149,7 @@ function draw(gl, shaderProgram, screenBuffer) {
 - `M4` 类是一个简单的矩阵处理类，看源码即可。
 - 看了好几个示例，都是在各个地方分别给着色器中变量赋值，这里按照个人习惯为了方便对照，都集中到了 `draw` 方法中。
 
+这是[在线示例][url-example1]。
 
 <div align="right"><a href="#index">Back to top :arrow_up:</a></div>
 
