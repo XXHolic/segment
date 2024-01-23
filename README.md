@@ -96,14 +96,6 @@ Scattered knowledge points here. Maybe you can find something useful.
 - [+0 和 -0](https://github.com/XXHolic/blog/issues/27)
 
 
-## JavaScript 新旧替换
-- [JavaScript 新旧替换一：变量声明](https://github.com/XXHolic/segment/issues/18)
-- [JavaScript 新旧替换二：赋值和取值](https://github.com/XXHolic/segment/issues/35)
-- [JavaScript 新旧替换三：参数转换](https://github.com/XXHolic/segment/issues/36)
-- [JavaScript 新旧替换四：继承](https://github.com/XXHolic/segment/issues/49)
-- [JavaScript 新旧替换五：函数嵌套](https://github.com/XXHolic/segment/issues/59)
-- [JavaScript 新旧替换六：键值对数据](https://github.com/XXHolic/segment/issues/90)
-
 ## 工具
 - [Git 常用操作](https://github.com/XXHolic/blog/issues/23)
 - [Lerna 实践记录](https://github.com/XXHolic/segment/issues/92)
